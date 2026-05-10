@@ -118,9 +118,17 @@ if [ "$INCLUDE_POSES" = "true" ]; then
 fi
 
 # ─── GPU torch upgrade if available ─────────────────────────────────
+# Only attempts the upgrade when (a) nvidia-smi is present, (b) python
+# is importable, and (c) pip is on PATH. Outside an activated env any
+# of those can be missing - in that case we skip cleanly rather than
+# spamming "command not found".
 if command -v nvidia-smi >/dev/null && nvidia-smi >/dev/null 2>&1; then
-  if python -c "import torch; assert torch.cuda.is_available()" 2>/dev/null; then
+  if ! command -v python >/dev/null; then
+    log "GPU detected but no python on PATH - skipping torch upgrade (activate the env first)"
+  elif python -c "import torch; assert torch.cuda.is_available()" 2>/dev/null; then
     log "torch CUDA already available - skipping torch upgrade"
+  elif ! command -v pip >/dev/null; then
+    log "GPU detected but no pip on PATH - skipping torch upgrade (activate the env first)"
   else
     log "Upgrading torch to CUDA 12.8 wheel (NVIDIA GPU detected) ..."
     pip install --quiet --force-reinstall --no-deps \
