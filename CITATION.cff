@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this work or its analysis pipeline, please cite as below."
+title: >
+  TBXT Hit Identification Pipeline — Multi-signal computational
+  consensus for chordoma drug discovery
+authors:
+  - family-names: "Sahu"
+    given-names: "Anand"
+    email: "anandsahujnu11@gmail.com"
+    affiliation: "Project lead"
+  - given-names: "Rabia"
+  - family-names: "M"
+    given-names: "Mark"
+  - given-names: "Jack"
+  - family-names: "Weiss"
+    given-names: "Jake"
+  - given-names: "Pridhi"
+  - family-names: "Özkırşehirli"
+    given-names: "Kemal"
+  - family-names: "Mehta"
+    given-names: "Zankhana"
+  - family-names: "Erkoç"
+    given-names: "Zeynep Gülen"
+  - family-names: "Yu"
+    given-names: "Lihua"
+  - given-names: "Arup"
+date-released: 2026-05-09
+url: "https://github.com/anandsahuofficial/tbxt-hit-id"
+repository-code: "https://github.com/anandsahuofficial/tbxt-hit-id"
+version: "v3.0"
+type: software
+license: "Proprietary"
+keywords:
+  - chordoma
+  - TBXT
+  - Brachyury
+  - drug-discovery
+  - virtual-screening
+  - Boltz-2
+  - GNINA
+  - MMGBSA
+  - alchemical-FEP
+  - onepot
+  - hit-identification
+abstract: >
+  Computational pipeline integrating six orthogonal signals (Vina ensemble,
+  GNINA CNN pose + pKd, TBXT-specific QSAR on 650 measured Naar SPR Kd,
+  Boltz-2 generative co-folding, MMGBSA implicit-solvent refinement, and
+  T-box paralog selectivity) gated by a 100%-onepot non-covalent + Chordoma
+  chemistry filter chain. Developed by the project lead and team for the
+  2026 TBXT Hit Identification Hackathon (Boston, hosted by muni.bio in
+  collaboration with Rowan and onepot). The workflow yields 137 fully
+  organizer-compliant candidate molecules ranked across 4 tiers, with 4
+  ranked picks for hackathon judging and 20 additional picks queued for
+  the experimental prize program.

@@ -1,0 +1,61 @@
+# --- Secrets / credentials (never commit) ---
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+credentials.json
+rowan_info.txt
+**/rowan_info.txt
+api_keys.txt
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+*~
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# --- Conda / venv ---
+.conda/
+env/
+venv/
+.venv/
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+
+# --- Large data / regeneratable intermediates ---
+# (Tracked: small curated CSVs/JSONs in results/. Untracked: raw poses,
+#  full dock CSVs, multi-GB intermediates — fetched via setup/setup_hf.sh)
+data/
+*.pdbqt
+*.dcd
+*.xtc
+*.trr
+*.h5
+results/poses/
+results/raw/
+
+# --- Working drafts (use docs/ for finalized) ---
+*_draft.md
+DRAFT_*
+WIP_*
