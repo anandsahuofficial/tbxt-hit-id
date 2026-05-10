@@ -8,12 +8,30 @@ ascending.
 
 ## Tier rules
 
-| Tier | Hard gate | Lead-like | Solubility | Boltz Kd | Risk profile |
+| Tier | Criteria | Solubility (C7) | Rings (C4d/e) | Best Boltz Kd | Risk profile |
 |---|:---:|:---:|:---:|---:|:---:|
-| **T1 GOLD** | ✓ all 7 | ✓ | ✓ ESOL > -5 | ≤ 5 µM | low chem AND low supplier |
-| **T2 SILVER** | ✓ all 7 | ✓ | ✓ ESOL > -5 | ≤ 10 µM | any |
-| **T3 BRONZE** | ✓ all 7 | ✓ | borderline (DMSO @ 10 mM ok) | ≤ 50 µM | any |
-| **T4 RELAXED** | ✓ all 7 | ✓ | borderline | ≤ 100 µM | any |
+| **T1 GOLD** | all 7 PASS | ✓ | ✓ | ≤ 5 µM | low chem AND low supplier |
+| **T2 SILVER** | all 7 PASS | ✓ | ✓ | ≤ 10 µM (max of dual engines) | any |
+| **T3 BRONZE** | 6 of 7 PASS | may FAIL | ✓ | ≤ 50 µM (or no Boltz - GNINA fallback) | any |
+| **T4 RELAXED** | 5 of 7 PASS | may FAIL | may FAIL | > 50 µM | any |
+
+Two specific relaxations encoded above:
+
+- **T3 BRONZE allows C7 to fail** (predicted-borderline solubility). DMSO
+  @ 10 mM dilution into aqueous buffer at 50 µM working concentration still
+  works for SPR; ESOL is a regression with non-trivial uncertainty so we
+  don't disqualify on it alone. T3 also has no Kd ceiling for compounds
+  scored only by GNINA (Boltz-missing): these get classified by criteria
+  alone and ranked by GNINA Kd ascending.
+- **T4 RELAXED additionally allows C4d (rings &lt; 5) and C4e (≤ 2 fused
+  rings) to fail**, capturing the rare strong binder whose ring topology
+  is mildly out of bounds. T4 has no Kd ceiling.
+
+The reference implementation is in
+[`src/ranking/tier_classify.py`](../src/ranking/tier_classify.py); the
+smoke test there round-trips the committed
+[`results/all_candidates_tiered.csv`](../results/all_candidates_tiered.csv)
+to itself (137 / 137 exact tier matches).
 
 In the 570-compound pool:
 

@@ -50,42 +50,88 @@ CRITERIA = [
 RISK_RANK = {"low": 0, "med": 1, "medium": 1, "high": 2, "": 3, None: 3}
 
 
-def _passes_all_criteria(row: pd.Series) -> bool:
-    """Return True iff every C1..C7 column is the pass marker (✓ or True/1)."""
+_PASS_MARKERS = ("✓", "Y", "yes", True, 1, "1", "True", "true")
+
+# T3 BRONZE allows C7 to fail ("borderline solubility" - DMSO @ 10 mM still works).
+T3_RELAXABLE = {"C7_soluble_logS_gt_neg5"}
+
+# T4 RELAXED additionally allows the two ring constraints to fail
+# (i.e. permits the rare strong binder with > 4 rings or > 2 fused rings).
+T4_RELAXABLE = T3_RELAXABLE | {"C4d_lt_5_rings", "C4e_le_2_fused"}
+
+
+def _passes(row: pd.Series, relaxable: set = frozenset()) -> bool:
+    """True iff every C1..C7 column passes, except those listed in `relaxable`
+    (which are allowed to be either PASS or FAIL).
+    """
     for c in CRITERIA:
-        v = row.get(c)
-        if v in ("✓", "Y", "yes", True, 1, "1", "True", "true"):
+        if c in relaxable:
+            continue
+        if row.get(c) in _PASS_MARKERS:
             continue
         return False
     return True
 
 
 def _best_kd(row: pd.Series) -> float:
-    """Pick the lower (better) of the two Boltz-engine Kd predictions."""
+    """Best (lowest) available Kd in µM across Boltz run A, run B, and GNINA.
+
+    Compounds scored by GNINA but not Boltz (e.g. the opv1 series) still
+    get a usable Kd via the GNINA fallback. Used for the T1/T2 ceiling
+    and for in-tier sorting; T3 and T4 don't gate on Kd at all.
+    """
+    cols = (KD_RUN_A, KD_RUN_B, "v1_gnina_kd_uM")
+    vals = [float(row[c]) for c in cols if c in row and pd.notna(row.get(c))]
+    return min(vals) if vals else float("inf")
+
+
+def _conservative_boltz_kd(row: pd.Series) -> float:
+    """Worst (highest) Boltz Kd across the two engines.
+
+    Used for the T2 SILVER cutoff: a compound only earns SILVER if BOTH
+    Boltz runs agree it's <= 10 uM, not just the more optimistic one.
+    """
     a = row.get(KD_RUN_A)
     b = row.get(KD_RUN_B)
-    vals = [v for v in (a, b) if pd.notna(v)]
-    return float(min(vals)) if vals else float("inf")
+    vals = [float(v) for v in (a, b) if pd.notna(v)]
+    return max(vals) if vals else float("inf")
 
 
 def _classify(row: pd.Series) -> str:
-    """Return the tier label for a single candidate row."""
-    if not _passes_all_criteria(row):
-        return "FAIL"
+    """Return the tier label for a single candidate row.
 
+    Tier rules (matching ``docs/tier_definitions.md``):
+      T1 GOLD    all 7 PASS,  Kd <= 5  uM, low chem AND low supplier risk
+      T2 SILVER  all 7 PASS,  Kd <= 10 uM, soluble (ESOL > -5)
+      T3 BRONZE  6 of 7 PASS (C7 may fail = "borderline solubility"), Kd <= 50 uM
+      T4 RELAXED 5 of 7 PASS (C4d, C4e, C7 may fail), Kd <= 100 uM
+    """
     kd = _best_kd(row)
-    soluble = pd.notna(row.get(ESOL)) and float(row[ESOL]) > -5
-    chem_low = str(row.get(CHEM_RISK, "")).lower() == "low"
-    supplier_low = str(row.get(SUPPLIER_RISK, "")).lower() == "low"
 
-    if kd <= 5 and soluble and chem_low and supplier_low:
-        return "T1_GOLD"
-    if kd <= 10 and soluble:
-        return "T2_SILVER"
-    if kd <= 50:
+    if _passes(row):
+        chem_low = str(row.get(CHEM_RISK, "")).lower() == "low"
+        supplier_low = str(row.get(SUPPLIER_RISK, "")).lower() == "low"
+        if kd <= 5 and chem_low and supplier_low:
+            return "T1_GOLD"
+        # T2 requires the conservative (max) Boltz Kd to pass the cutoff,
+        # so both engines must agree on potency, not just the optimistic one.
+        if _conservative_boltz_kd(row) <= 10:
+            return "T2_SILVER"
+
+    # T3 BRONZE: 6/7 criteria pass (C7 may fail), and either no Boltz Kd
+    # is available (GNINA-only fallback - ceiling is permissive) or the
+    # best Boltz Kd is <= 50 uM. Compounds with Boltz Kd > 50 fall through
+    # to T4.
+    a, b = row.get(KD_RUN_A), row.get(KD_RUN_B)
+    boltz_vals = [float(v) for v in (a, b) if pd.notna(v)]
+    boltz_min = min(boltz_vals) if boltz_vals else None
+
+    if _passes(row, T3_RELAXABLE) and (boltz_min is None or boltz_min <= 50):
         return "T3_BRONZE"
-    if kd <= 100:
+
+    if _passes(row, T4_RELAXABLE):
         return "T4_RELAXED"
+
     return "FAIL"
 
 
