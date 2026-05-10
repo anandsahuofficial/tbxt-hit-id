@@ -93,6 +93,11 @@ style: |
   .pill.warn { background: #fff3e0; color: var(--warn); }
   .footnote { color: var(--muted); font-size: 0.82em; margin-top: 14px; }
   img { display: block; }
+  /* Architecture-only slide: image fills the slide on the longest axis */
+  section.arch { padding: 0; display: flex; align-items: center; justify-content: center;
+                  background: #f7f9fc; }
+  section.arch .arch-img { max-width: 100%; max-height: 100%; object-fit: contain;
+                            margin: 0 auto; }
   .figure { text-align: center; }
   .figure img { margin: 0 auto 8px; }
   .figure .caption { color: var(--muted); font-size: 0.8em; margin-top: 6px; }
@@ -195,16 +200,9 @@ Why these methods, why this target, why these 137 candidates.
 
 ---
 
-## Pipeline architecture
+<!-- _class: arch -->
 
-<span class="axis">Axis 1</span>
-
-<div class="figure">
-
-<img src="architecture.png" style="width:84%; max-height:460px; object-fit:contain;">
-
-<div class="caption">End-to-end flow: pool ingest → 6 orthogonal scorers → 7-criterion strict gate → tiered ranking → 4 picks</div>
-</div>
+<img src="architecture.png" class="arch-img">
 
 ---
 
