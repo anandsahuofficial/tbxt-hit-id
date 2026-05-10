@@ -1,0 +1,81 @@
+# tbxt-hit-id — single-command environment spec.
+#
+# Create:
+#   conda env create -f environment.yml
+#   conda activate tbxt-hit-id
+#
+# Update an existing env:
+#   conda env update -f environment.yml --prune
+#
+# Notes
+#   - Python 3.11 is the supported version (some scoring tools' wheels lag).
+#   - The conda layer installs everything that has a clean conda recipe.
+#     The pip layer installs Boltz-2 and a few PyPI-only packages.
+#   - For GPU runs: conda installs PyTorch CPU; the pip layer upgrades
+#     to the matching CUDA wheel if `nvidia-smi` is available
+#     (handled by setup/fetch_data.sh on first run).
+#   - GNINA is shipped as a binary, not via conda — see setup/HPC.md.
+
+name: tbxt-hit-id
+channels:
+  - conda-forge
+  - bioconda
+  - pytorch
+  - nvidia
+dependencies:
+  # Core scientific stack
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - jupyter
+  - tqdm
+  - pyyaml
+  - click
+  - rich
+
+  # Cheminformatics
+  - rdkit>=2024.03.1
+  - openbabel
+  - mordred                    # extended descriptors
+
+  # Docking
+  - vina                       # AutoDock Vina 1.2.x
+  - meeko                      # Vina ligand prep
+
+  # ML / QSAR
+  - scikit-learn>=1.4
+  - xgboost>=2.0
+  - pytorch-cpu                # upgraded to CUDA wheel by setup/fetch_data.sh
+  - lightning
+
+  # MMGBSA / MD
+  - openmm>=8.1
+  - openmmforcefields>=0.11
+  - openff-toolkit>=0.16
+  - openff-units
+  - mdanalysis
+
+  # Structural biology I/O
+  - biopython
+  - biotite
+  - prody
+
+  # Plotting + reporting
+  - seaborn
+  - plotly
+
+  # Dev / lint
+  - black
+  - ruff
+  - pytest
+
+  # Pip layer: PyPI-only packages
+  - pip
+  - pip:
+    - boltz                    # Boltz-2 co-folding
+    - playwright               # used by tools/render_slides.py for slide PDFs
+    - markdown                 # same — Markdown -> HTML for the renderer
+    - pubchempy                # used by enumeration scripts
+    - molfeat                  # additional descriptor backends
