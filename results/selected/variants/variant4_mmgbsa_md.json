@@ -1,0 +1,309 @@
+{
+  "variant_name": "variant4_alchemical_fep",
+  "task_id": "task5_md",
+  "status": "OK",
+  "metrics": {
+    "config": {
+      "md_ns": 1.0,
+      "n_frames_averaged": 10
+    },
+    "processed": {
+      "n_ok": 29,
+      "n_blowups": 1
+    },
+    "all_results": [
+      {
+        "id": "gen_0007",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-n3nc4ccccn4c3=O)c2cc1N",
+        "delta_e_kcal": -7.7
+      },
+      {
+        "id": "Z795991852_analog_0087",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "delta_e_kcal": -4.44
+      },
+      {
+        "id": "FM001452_analog_0145",
+        "smiles": "Nc1cccc(OCc2cccc(-c3ccccn3)c2)c1",
+        "delta_e_kcal": -3.3
+      },
+      {
+        "id": "gen_0004",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Cn3nc4ccccn4c3=O)c2cc1N",
+        "delta_e_kcal": -3.14
+      },
+      {
+        "id": "Z795991852_analog_0011",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNC(=O)C3Cc4ccccc4O3)nnc12",
+        "delta_e_kcal": -2.97
+      },
+      {
+        "id": "gen_0025",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(NS(=O)(=O)c3ccc(C)cc3)c2cc1N",
+        "delta_e_kcal": -2.51
+      },
+      {
+        "id": "Z795991852_analog_0001",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC(=O)C3Cc4ccccc4O3)nnc12",
+        "delta_e_kcal": -2.33
+      },
+      {
+        "id": "FM001452_analog_0112",
+        "smiles": "CC(C)c1ccccc1COc1cccc(N)c1",
+        "delta_e_kcal": -2.02
+      },
+      {
+        "id": "FM001452_analog_0137",
+        "smiles": "Nc1cccc(OCc2cccc(OCCO)c2)c1",
+        "delta_e_kcal": -1.32
+      },
+      {
+        "id": "FM001452_analog_0169",
+        "smiles": "CC(C)c1ccc(COc2cccc(N)c2)cc1",
+        "delta_e_kcal": -1.27
+      },
+      {
+        "id": "FM001452_analog_0128",
+        "smiles": "Nc1cccc(OCc2cccc(C(F)(F)F)c2)c1",
+        "delta_e_kcal": -1.23
+      },
+      {
+        "id": "FM001452_analog_0166",
+        "smiles": "Nc1cccc(OCc2ccc(CO)cc2)c1",
+        "delta_e_kcal": -1.21
+      },
+      {
+        "id": "FM001452_analog_0141",
+        "smiles": "CC(C)c1cccc(COc2cccc(N)c2)c1",
+        "delta_e_kcal": -1.17
+      },
+      {
+        "id": "FM001452_analog_0129",
+        "smiles": "CS(=O)(=O)c1cccc(COc2cccc(N)c2)c1",
+        "delta_e_kcal": -1.13
+      },
+      {
+        "id": "FM001580_analog_0048",
+        "smiles": "CNC(=O)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "delta_e_kcal": -0.95
+      },
+      {
+        "id": "FM001452_analog_0140",
+        "smiles": "CCCc1cccc(COc2cccc(N)c2)c1",
+        "delta_e_kcal": -0.93
+      },
+      {
+        "id": "FM001452_analog_0097",
+        "smiles": "COc1ccccc1COc1cccc(N)c1",
+        "delta_e_kcal": -0.92
+      },
+      {
+        "id": "FM001452_analog_0101",
+        "smiles": "Nc1cccc(OCc2ccccc2S(N)(=O)=O)c1",
+        "delta_e_kcal": -0.9
+      },
+      {
+        "id": "FM001580_analog_0022",
+        "smiles": "O=C(O)c1c(CO)cccc1OC(F)(F)F",
+        "delta_e_kcal": -0.83
+      },
+      {
+        "id": "FM001580_analog_0015",
+        "smiles": "NC(=O)c1cccc(OC(F)(F)F)c1C(=O)O",
+        "delta_e_kcal": -0.81
+      },
+      {
+        "id": "FM001452_analog_0138",
+        "smiles": "Nc1cccc(OCc2cccc(CO)c2)c1",
+        "delta_e_kcal": -0.79
+      },
+      {
+        "id": "FM001452_analog_0102",
+        "smiles": "NC(=O)c1ccccc1COc1cccc(N)c1",
+        "delta_e_kcal": -0.74
+      },
+      {
+        "id": "FM001580_analog_0002",
+        "smiles": "NC(=O)c1ccccc1OC(F)(F)F",
+        "delta_e_kcal": -0.67
+      },
+      {
+        "id": "FM001452_analog_0130",
+        "smiles": "Nc1cccc(OCc2cccc(S(N)(=O)=O)c2)c1",
+        "delta_e_kcal": -0.64
+      },
+      {
+        "id": "FM001580_analog_0044",
+        "smiles": "NC(=O)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "delta_e_kcal": -0.61
+      },
+      {
+        "id": "FM001580_analog_0051",
+        "smiles": "O=C(O)c1cc(CO)ccc1OC(F)(F)F",
+        "delta_e_kcal": -0.55
+      },
+      {
+        "id": "Z795991852_analog_0051",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC3Cc4ccccc4O3)nnc12",
+        "delta_e_kcal": -0.46
+      },
+      {
+        "id": "FM002150_analog_0068",
+        "smiles": "NS(=O)(=O)c1ccc(COCC(=O)O)cc1",
+        "delta_e_kcal": -0.33
+      },
+      {
+        "id": "FM001452_analog_0200",
+        "smiles": "O=C(Nc1cccc(OCc2ccccc2)c1)c1ccccc1",
+        "delta_e_kcal": 0.11
+      }
+    ],
+    "top_30_results": [
+      {
+        "id": "gen_0007",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-n3nc4ccccn4c3=O)c2cc1N",
+        "delta_e_kcal": -7.7
+      },
+      {
+        "id": "Z795991852_analog_0087",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "delta_e_kcal": -4.44
+      },
+      {
+        "id": "FM001452_analog_0145",
+        "smiles": "Nc1cccc(OCc2cccc(-c3ccccn3)c2)c1",
+        "delta_e_kcal": -3.3
+      },
+      {
+        "id": "gen_0004",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Cn3nc4ccccn4c3=O)c2cc1N",
+        "delta_e_kcal": -3.14
+      },
+      {
+        "id": "Z795991852_analog_0011",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNC(=O)C3Cc4ccccc4O3)nnc12",
+        "delta_e_kcal": -2.97
+      },
+      {
+        "id": "gen_0025",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(NS(=O)(=O)c3ccc(C)cc3)c2cc1N",
+        "delta_e_kcal": -2.51
+      },
+      {
+        "id": "Z795991852_analog_0001",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC(=O)C3Cc4ccccc4O3)nnc12",
+        "delta_e_kcal": -2.33
+      },
+      {
+        "id": "FM001452_analog_0112",
+        "smiles": "CC(C)c1ccccc1COc1cccc(N)c1",
+        "delta_e_kcal": -2.02
+      },
+      {
+        "id": "FM001452_analog_0137",
+        "smiles": "Nc1cccc(OCc2cccc(OCCO)c2)c1",
+        "delta_e_kcal": -1.32
+      },
+      {
+        "id": "FM001452_analog_0169",
+        "smiles": "CC(C)c1ccc(COc2cccc(N)c2)cc1",
+        "delta_e_kcal": -1.27
+      },
+      {
+        "id": "FM001452_analog_0128",
+        "smiles": "Nc1cccc(OCc2cccc(C(F)(F)F)c2)c1",
+        "delta_e_kcal": -1.23
+      },
+      {
+        "id": "FM001452_analog_0166",
+        "smiles": "Nc1cccc(OCc2ccc(CO)cc2)c1",
+        "delta_e_kcal": -1.21
+      },
+      {
+        "id": "FM001452_analog_0141",
+        "smiles": "CC(C)c1cccc(COc2cccc(N)c2)c1",
+        "delta_e_kcal": -1.17
+      },
+      {
+        "id": "FM001452_analog_0129",
+        "smiles": "CS(=O)(=O)c1cccc(COc2cccc(N)c2)c1",
+        "delta_e_kcal": -1.13
+      },
+      {
+        "id": "FM001580_analog_0048",
+        "smiles": "CNC(=O)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "delta_e_kcal": -0.95
+      },
+      {
+        "id": "FM001452_analog_0140",
+        "smiles": "CCCc1cccc(COc2cccc(N)c2)c1",
+        "delta_e_kcal": -0.93
+      },
+      {
+        "id": "FM001452_analog_0097",
+        "smiles": "COc1ccccc1COc1cccc(N)c1",
+        "delta_e_kcal": -0.92
+      },
+      {
+        "id": "FM001452_analog_0101",
+        "smiles": "Nc1cccc(OCc2ccccc2S(N)(=O)=O)c1",
+        "delta_e_kcal": -0.9
+      },
+      {
+        "id": "FM001580_analog_0022",
+        "smiles": "O=C(O)c1c(CO)cccc1OC(F)(F)F",
+        "delta_e_kcal": -0.83
+      },
+      {
+        "id": "FM001580_analog_0015",
+        "smiles": "NC(=O)c1cccc(OC(F)(F)F)c1C(=O)O",
+        "delta_e_kcal": -0.81
+      },
+      {
+        "id": "FM001452_analog_0138",
+        "smiles": "Nc1cccc(OCc2cccc(CO)c2)c1",
+        "delta_e_kcal": -0.79
+      },
+      {
+        "id": "FM001452_analog_0102",
+        "smiles": "NC(=O)c1ccccc1COc1cccc(N)c1",
+        "delta_e_kcal": -0.74
+      },
+      {
+        "id": "FM001580_analog_0002",
+        "smiles": "NC(=O)c1ccccc1OC(F)(F)F",
+        "delta_e_kcal": -0.67
+      },
+      {
+        "id": "FM001452_analog_0130",
+        "smiles": "Nc1cccc(OCc2cccc(S(N)(=O)=O)c2)c1",
+        "delta_e_kcal": -0.64
+      },
+      {
+        "id": "FM001580_analog_0044",
+        "smiles": "NC(=O)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "delta_e_kcal": -0.61
+      },
+      {
+        "id": "FM001580_analog_0051",
+        "smiles": "O=C(O)c1cc(CO)ccc1OC(F)(F)F",
+        "delta_e_kcal": -0.55
+      },
+      {
+        "id": "Z795991852_analog_0051",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC3Cc4ccccc4O3)nnc12",
+        "delta_e_kcal": -0.46
+      },
+      {
+        "id": "FM002150_analog_0068",
+        "smiles": "NS(=O)(=O)c1ccc(COCC(=O)O)cc1",
+        "delta_e_kcal": -0.33
+      },
+      {
+        "id": "FM001452_analog_0200",
+        "smiles": "O=C(Nc1cccc(OCc2ccccc2)c1)c1ccccc1",
+        "delta_e_kcal": 0.11
+      }
+    ]
+  }
+}

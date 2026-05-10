@@ -1,0 +1,78 @@
+{
+  "variant_name": "variant4_alchemical_fep",
+  "task_id": "task8_alchemical",
+  "status": "OK",
+  "metrics": {
+    "config": {
+      "n_lambda": 12,
+      "md_ns": 5.0
+    },
+    "n_pairs": 8,
+    "all_results": [
+      {
+        "pair": "Z795991852_analog_0052_vs_Z795991852_analog_0008",
+        "candidate_id": "Z795991852_analog_0052",
+        "delta_dg_kcal": 9898669844138170.0,
+        "error_kcal": 0.077,
+        "n_lambda": 12,
+        "md_ns": 5.0
+      },
+      {
+        "pair": "gen_0004_vs_Z795991852_analog_0008",
+        "candidate_id": "gen_0004",
+        "delta_dg_kcal": 0.53,
+        "error_kcal": 0.077,
+        "n_lambda": 12,
+        "md_ns": 5.0
+      },
+      {
+        "pair": "FM001452_analog_0130_vs_Z795991852_analog_0008",
+        "candidate_id": "FM001452_analog_0130",
+        "delta_dg_kcal": 3.08,
+        "error_kcal": 0.077,
+        "n_lambda": 12,
+        "md_ns": 5.0
+      },
+      {
+        "pair": "gen_0025_vs_Z795991852_analog_0008",
+        "candidate_id": "gen_0025",
+        "delta_dg_kcal": 1.14,
+        "error_kcal": 0.077,
+        "n_lambda": 12,
+        "md_ns": 5.0
+      },
+      {
+        "pair": "FM001452_analog_0145_vs_Z795991852_analog_0008",
+        "candidate_id": "FM001452_analog_0145",
+        "delta_dg_kcal": 1.3,
+        "error_kcal": 0.077,
+        "n_lambda": 12,
+        "md_ns": 5.0
+      },
+      {
+        "pair": "FM001452_analog_0200_vs_Z795991852_analog_0008",
+        "candidate_id": "FM001452_analog_0200",
+        "delta_dg_kcal": 3.87,
+        "error_kcal": 0.077,
+        "n_lambda": 12,
+        "md_ns": 5.0
+      },
+      {
+        "pair": "Z795991852_analog_0011_vs_Z795991852_analog_0008",
+        "candidate_id": "Z795991852_analog_0011",
+        "delta_dg_kcal": 0.74,
+        "error_kcal": 0.077,
+        "n_lambda": 12,
+        "md_ns": 5.0
+      },
+      {
+        "pair": "gen_0007_vs_Z795991852_analog_0008",
+        "candidate_id": "gen_0007",
+        "delta_dg_kcal": -3.97,
+        "error_kcal": 0.077,
+        "n_lambda": 12,
+        "md_ns": 5.0
+      }
+    ]
+  }
+}

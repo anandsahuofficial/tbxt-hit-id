@@ -1,0 +1,5716 @@
+{
+  "variant_name": "variant2_full_pool_boltz",
+  "task_id": "task4",
+  "task_name": "Boltz-2 co-fold on full pool",
+  "status": "OK",
+  "metrics": {
+    "config": {
+      "samples": 3,
+      "sampling_steps": 200,
+      "recycling": 3
+    },
+    "input": {
+      "n": 570,
+      "source": "full_pool_input.csv"
+    },
+    "processed": {
+      "n_ok": 576,
+      "n_failed": -6
+    },
+    "summary_stats": {
+      "n_predicted_binders": 182,
+      "mean_prob_binder": 0.4069,
+      "mean_kd_uM": 24.22
+    },
+    "top_50_ids": [
+      "gen_0008",
+      "D203-0031",
+      "Z795991852_analog_0039",
+      "gen_0011",
+      "Z795991852_analog_0030",
+      "Z795991852_analog_0021",
+      "Z795991852_analog_0035",
+      "gen_0022",
+      "Z795991852_analog_0024",
+      "Z795991852_analog_0023",
+      "Z795991852_analog_0048",
+      "Z795991852_analog_0022",
+      "gen_0036",
+      "Z795991852_analog_0044",
+      "Z795991852_analog_0047",
+      "gen_0034",
+      "gen_0006",
+      "gen_0031",
+      "FM001452_analog_0130",
+      "gen_0014",
+      "Z795991852_analog_0003",
+      "Z795991852_analog_0010",
+      "gen_0023",
+      "gen_0005",
+      "gen_0001",
+      "Z795991852_analog_0093",
+      "Z795991852_analog_0041",
+      "Z795991852_analog_0038",
+      "Z795991852_analog_0040",
+      "Z795991852_analog_0026",
+      "Z795991852_analog_0046",
+      "gen_0046",
+      "Z795991852_analog_0014",
+      "Z795991852_analog_0027",
+      "Z795991852_analog_0016",
+      "Z795991852_analog_0018",
+      "Z795991852_analog_0086",
+      "Z795991852_analog_0028",
+      "Z795991852_analog_0050",
+      "Z795991852",
+      "Z795991852_analog_0042",
+      "Z795991852_analog_0031",
+      "Z795991852_analog_0087",
+      "Z795991852_analog_0029",
+      "gen_0040",
+      "Z795991852_analog_0081",
+      "gen_0009",
+      "Z795991852_analog_0005",
+      "gen_0003",
+      "Z795991852_analog_0036"
+    ],
+    "top_50_results": [
+      {
+        "id": "gen_0008",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3cnc4[nH]c(=O)n(C)c4c3)c2cc1N",
+        "pLDDT": 0.854,
+        "ipTM": 0.7436,
+        "affinity_kd_uM": 0.235,
+        "affinity_pkd": 6.628,
+        "prob_binder": 0.4032
+      },
+      {
+        "id": "D203-0031",
+        "smiles": "O=C(c1ccc2c(c1)OCO2)N1CCC(c2nc(O)c3nnn(Cc4ccc(F)cc4)c3n2)CC1",
+        "pLDDT": 0.8412,
+        "ipTM": 0.5842,
+        "affinity_kd_uM": 0.262,
+        "affinity_pkd": 6.582,
+        "prob_binder": 0.5107
+      },
+      {
+        "id": "Z795991852_analog_0039",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)OC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8145,
+        "ipTM": 0.7108,
+        "affinity_kd_uM": 0.335,
+        "affinity_pkd": 6.475,
+        "prob_binder": 0.7343
+      },
+      {
+        "id": "gen_0011",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(C(=O)c3ccc4c(c3)NC(=O)C(C)O4)c2cc1N",
+        "pLDDT": 0.8396,
+        "ipTM": 0.6632,
+        "affinity_kd_uM": 0.355,
+        "affinity_pkd": 6.45,
+        "prob_binder": 0.6109
+      },
+      {
+        "id": "Z795991852_analog_0030",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)NCc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.852,
+        "ipTM": 0.7838,
+        "affinity_kd_uM": 0.438,
+        "affinity_pkd": 6.358,
+        "prob_binder": 0.572
+      },
+      {
+        "id": "Z795991852_analog_0021",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)NC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.826,
+        "ipTM": 0.7726,
+        "affinity_kd_uM": 0.478,
+        "affinity_pkd": 6.321,
+        "prob_binder": 0.6368
+      },
+      {
+        "id": "Z795991852_analog_0035",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8381,
+        "ipTM": 0.7596,
+        "affinity_kd_uM": 0.5,
+        "affinity_pkd": 6.301,
+        "prob_binder": 0.6
+      },
+      {
+        "id": "gen_0022",
+        "smiles": "CCN1CCC(Nc2nc(-c3cccc(N)c3)nc3cc(OC)c(N)cc23)CC1",
+        "pLDDT": 0.8542,
+        "ipTM": 0.7365,
+        "affinity_kd_uM": 0.531,
+        "affinity_pkd": 6.275,
+        "prob_binder": 0.5562
+      },
+      {
+        "id": "Z795991852_analog_0024",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC(=O)c3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.853,
+        "ipTM": 0.8475,
+        "affinity_kd_uM": 0.532,
+        "affinity_pkd": 6.274,
+        "prob_binder": 0.6473
+      },
+      {
+        "id": "Z795991852_analog_0023",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC(=O)c3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8331,
+        "ipTM": 0.8376,
+        "affinity_kd_uM": 0.584,
+        "affinity_pkd": 6.233,
+        "prob_binder": 0.652
+      },
+      {
+        "id": "Z795991852_analog_0048",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Oc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8775,
+        "ipTM": 0.6974,
+        "affinity_kd_uM": 0.643,
+        "affinity_pkd": 6.192,
+        "prob_binder": 0.6349
+      },
+      {
+        "id": "Z795991852_analog_0022",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8385,
+        "ipTM": 0.7188,
+        "affinity_kd_uM": 0.857,
+        "affinity_pkd": 6.067,
+        "prob_binder": 0.6317
+      },
+      {
+        "id": "gen_0036",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Nc3ccc4c(c3)CCC(=O)N4)c2cc1N",
+        "pLDDT": 0.8515,
+        "ipTM": 0.781,
+        "affinity_kd_uM": 0.89,
+        "affinity_pkd": 6.051,
+        "prob_binder": 0.5661
+      },
+      {
+        "id": "Z795991852_analog_0044",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OC(=O)c3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8275,
+        "ipTM": 0.8186,
+        "affinity_kd_uM": 0.927,
+        "affinity_pkd": 6.033,
+        "prob_binder": 0.6151
+      },
+      {
+        "id": "Z795991852_analog_0047",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Oc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8555,
+        "ipTM": 0.7285,
+        "affinity_kd_uM": 0.954,
+        "affinity_pkd": 6.021,
+        "prob_binder": 0.6061
+      },
+      {
+        "id": "gen_0034",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3C(=O)NC4(CCc5ccccc54)C3=O)c2cc1N",
+        "pLDDT": 0.8228,
+        "ipTM": 0.664,
+        "affinity_kd_uM": 0.964,
+        "affinity_pkd": 6.016,
+        "prob_binder": 0.5498
+      },
+      {
+        "id": "gen_0006",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(NCc3ccc4c(c3)C(=O)NCC4)c2cc1N",
+        "pLDDT": 0.847,
+        "ipTM": 0.819,
+        "affinity_kd_uM": 0.994,
+        "affinity_pkd": 6.003,
+        "prob_binder": 0.62
+      },
+      {
+        "id": "gen_0031",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ccc4c(c3)CCC(=O)N4)c2cc1N",
+        "pLDDT": 0.8605,
+        "ipTM": 0.7038,
+        "affinity_kd_uM": 1.007,
+        "affinity_pkd": 5.997,
+        "prob_binder": 0.5496
+      },
+      {
+        "id": "FM001452_analog_0130",
+        "smiles": "Nc1cccc(OCc2cccc(S(N)(=O)=O)c2)c1",
+        "pLDDT": 0.8778,
+        "ipTM": 0.7873,
+        "affinity_kd_uM": 1.049,
+        "affinity_pkd": 5.979,
+        "prob_binder": 0.3031
+      },
+      {
+        "id": "gen_0014",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ccc4c(c3)NC(=O)C(C)O4)c2cc1N",
+        "pLDDT": 0.8461,
+        "ipTM": 0.6267,
+        "affinity_kd_uM": 1.103,
+        "affinity_pkd": 5.957,
+        "prob_binder": 0.6079
+      },
+      {
+        "id": "Z795991852_analog_0003",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(NC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8441,
+        "ipTM": 0.7443,
+        "affinity_kd_uM": 1.141,
+        "affinity_pkd": 5.943,
+        "prob_binder": 0.5543
+      },
+      {
+        "id": "Z795991852_analog_0010",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)NC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8297,
+        "ipTM": 0.8374,
+        "affinity_kd_uM": 1.19,
+        "affinity_pkd": 5.925,
+        "prob_binder": 0.6522
+      },
+      {
+        "id": "gen_0023",
+        "smiles": "CCn1cc(Nc2nc(-c3cccc(N)c3)nc3cc(OC)c(N)cc23)cn1",
+        "pLDDT": 0.8533,
+        "ipTM": 0.6977,
+        "affinity_kd_uM": 1.218,
+        "affinity_pkd": 5.914,
+        "prob_binder": 0.647
+      },
+      {
+        "id": "gen_0005",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3nnc4n3CCCCC4)c2cc1N",
+        "pLDDT": 0.864,
+        "ipTM": 0.853,
+        "affinity_kd_uM": 1.328,
+        "affinity_pkd": 5.877,
+        "prob_binder": 0.3984
+      },
+      {
+        "id": "gen_0001",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3CCOC[C@]34CCOC4)c2cc1N",
+        "pLDDT": 0.848,
+        "ipTM": 0.7685,
+        "affinity_kd_uM": 1.336,
+        "affinity_pkd": 5.874,
+        "prob_binder": 0.5827
+      },
+      {
+        "id": "Z795991852_analog_0093",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COCc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8314,
+        "ipTM": 0.8048,
+        "affinity_kd_uM": 1.425,
+        "affinity_pkd": 5.846,
+        "prob_binder": 0.5619
+      },
+      {
+        "id": "Z795991852_analog_0041",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OC(=O)c3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8454,
+        "ipTM": 0.7913,
+        "affinity_kd_uM": 1.426,
+        "affinity_pkd": 5.846,
+        "prob_binder": 0.613
+      },
+      {
+        "id": "Z795991852_analog_0038",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8425,
+        "ipTM": 0.743,
+        "affinity_kd_uM": 1.498,
+        "affinity_pkd": 5.825,
+        "prob_binder": 0.5998
+      },
+      {
+        "id": "Z795991852_analog_0040",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8453,
+        "ipTM": 0.7445,
+        "affinity_kd_uM": 1.508,
+        "affinity_pkd": 5.822,
+        "prob_binder": 0.5744
+      },
+      {
+        "id": "Z795991852_analog_0026",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Nc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8602,
+        "ipTM": 0.8154,
+        "affinity_kd_uM": 1.516,
+        "affinity_pkd": 5.819,
+        "prob_binder": 0.5295
+      },
+      {
+        "id": "Z795991852_analog_0046",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Oc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8456,
+        "ipTM": 0.755,
+        "affinity_kd_uM": 1.535,
+        "affinity_pkd": 5.814,
+        "prob_binder": 0.5506
+      },
+      {
+        "id": "gen_0046",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3nc4cc(Br)cnc4[nH]3)c2cc1N",
+        "pLDDT": 0.8732,
+        "ipTM": 0.7369,
+        "affinity_kd_uM": 1.591,
+        "affinity_pkd": 5.798,
+        "prob_binder": 0.6178
+      },
+      {
+        "id": "Z795991852_analog_0014",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(OC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8645,
+        "ipTM": 0.7163,
+        "affinity_kd_uM": 1.599,
+        "affinity_pkd": 5.796,
+        "prob_binder": 0.5292
+      },
+      {
+        "id": "Z795991852_analog_0027",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Nc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8664,
+        "ipTM": 0.8072,
+        "affinity_kd_uM": 1.601,
+        "affinity_pkd": 5.796,
+        "prob_binder": 0.5941
+      },
+      {
+        "id": "Z795991852_analog_0016",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(OC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8431,
+        "ipTM": 0.697,
+        "affinity_kd_uM": 1.605,
+        "affinity_pkd": 5.794,
+        "prob_binder": 0.5398
+      },
+      {
+        "id": "Z795991852_analog_0018",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)OC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8469,
+        "ipTM": 0.7226,
+        "affinity_kd_uM": 1.638,
+        "affinity_pkd": 5.786,
+        "prob_binder": 0.6643
+      },
+      {
+        "id": "Z795991852_analog_0086",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8455,
+        "ipTM": 0.8331,
+        "affinity_kd_uM": 1.639,
+        "affinity_pkd": 5.785,
+        "prob_binder": 0.5319
+      },
+      {
+        "id": "Z795991852_analog_0028",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Nc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8232,
+        "ipTM": 0.6996,
+        "affinity_kd_uM": 1.671,
+        "affinity_pkd": 5.777,
+        "prob_binder": 0.5817
+      },
+      {
+        "id": "Z795991852_analog_0050",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)OCc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8291,
+        "ipTM": 0.8369,
+        "affinity_kd_uM": 1.699,
+        "affinity_pkd": 5.77,
+        "prob_binder": 0.5244
+      },
+      {
+        "id": "Z795991852",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COC(=O)c3cccc(NC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8414,
+        "ipTM": 0.7461,
+        "affinity_kd_uM": 1.72,
+        "affinity_pkd": 5.764,
+        "prob_binder": 0.5559
+      },
+      {
+        "id": "Z795991852_analog_0042",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(C(=O)OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.814,
+        "ipTM": 0.7702,
+        "affinity_kd_uM": 1.732,
+        "affinity_pkd": 5.761,
+        "prob_binder": 0.6101
+      },
+      {
+        "id": "Z795991852_analog_0031",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8419,
+        "ipTM": 0.8098,
+        "affinity_kd_uM": 1.746,
+        "affinity_pkd": 5.758,
+        "prob_binder": 0.5566
+      },
+      {
+        "id": "Z795991852_analog_0087",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8878,
+        "ipTM": 0.7317,
+        "affinity_kd_uM": 1.807,
+        "affinity_pkd": 5.743,
+        "prob_binder": 0.519
+      },
+      {
+        "id": "Z795991852_analog_0029",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)NCC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8604,
+        "ipTM": 0.7785,
+        "affinity_kd_uM": 1.821,
+        "affinity_pkd": 5.74,
+        "prob_binder": 0.4347
+      },
+      {
+        "id": "gen_0040",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Nc3cccnc3)c2cc1N",
+        "pLDDT": 0.8749,
+        "ipTM": 0.834,
+        "affinity_kd_uM": 1.855,
+        "affinity_pkd": 5.732,
+        "prob_binder": 0.6751
+      },
+      {
+        "id": "Z795991852_analog_0081",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8541,
+        "ipTM": 0.7731,
+        "affinity_kd_uM": 1.861,
+        "affinity_pkd": 5.73,
+        "prob_binder": 0.4743
+      },
+      {
+        "id": "gen_0009",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3C(=O)c4ccc(C)cc4C3=O)c2cc1N",
+        "pLDDT": 0.835,
+        "ipTM": 0.5698,
+        "affinity_kd_uM": 1.867,
+        "affinity_pkd": 5.729,
+        "prob_binder": 0.6277
+      },
+      {
+        "id": "Z795991852_analog_0005",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(NC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8338,
+        "ipTM": 0.7572,
+        "affinity_kd_uM": 1.898,
+        "affinity_pkd": 5.722,
+        "prob_binder": 0.5632
+      },
+      {
+        "id": "gen_0003",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3C(=O)c4ccccc4C3=O)c2cc1N",
+        "pLDDT": 0.8465,
+        "ipTM": 0.7115,
+        "affinity_kd_uM": 1.938,
+        "affinity_pkd": 5.713,
+        "prob_binder": 0.6396
+      },
+      {
+        "id": "Z795991852_analog_0036",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8547,
+        "ipTM": 0.7089,
+        "affinity_kd_uM": 1.998,
+        "affinity_pkd": 5.699,
+        "prob_binder": 0.5883
+      }
+    ],
+    "all_results": [
+      {
+        "id": "Z795991852",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COC(=O)c3cccc(NC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8414,
+        "ipTM": 0.7461,
+        "affinity_kd_uM": 1.72,
+        "affinity_pkd": 5.764,
+        "prob_binder": 0.5559
+      },
+      {
+        "id": "Z979336988",
+        "smiles": "Cc1ccc2[nH]c(C3CCCN(C(=O)c4cccc(CN5C(=O)c6ccccc6C5=O)c4)C3)nc2c1",
+        "pLDDT": 0.8202,
+        "ipTM": 0.7605,
+        "affinity_kd_uM": 3.947,
+        "affinity_pkd": 5.404,
+        "prob_binder": 0.485
+      },
+      {
+        "id": "D203-0031",
+        "smiles": "O=C(c1ccc2c(c1)OCO2)N1CCC(c2nc(O)c3nnn(Cc4ccc(F)cc4)c3n2)CC1",
+        "pLDDT": 0.8412,
+        "ipTM": 0.5842,
+        "affinity_kd_uM": 0.262,
+        "affinity_pkd": 6.582,
+        "prob_binder": 0.5107
+      },
+      {
+        "id": "FM001580",
+        "smiles": "O=C(O)c1ccccc1OC(F)(F)F",
+        "pLDDT": 0.9106,
+        "ipTM": 0.7101,
+        "affinity_kd_uM": 33.456,
+        "affinity_pkd": 4.476,
+        "prob_binder": 0.1892
+      },
+      {
+        "id": "FM001452",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1",
+        "pLDDT": 0.9121,
+        "ipTM": 0.7434,
+        "affinity_kd_uM": 17.25,
+        "affinity_pkd": 4.763,
+        "prob_binder": 0.3177
+      },
+      {
+        "id": "FM002150",
+        "smiles": "O=C(O)COCc1ccccc1",
+        "pLDDT": 0.9136,
+        "ipTM": 0.6991,
+        "affinity_kd_uM": 38.751,
+        "affinity_pkd": 4.412,
+        "prob_binder": 0.2483
+      },
+      {
+        "id": "Z795991852_analog_0008",
+        "smiles": "O=C(Nc1cccc(-c2cccc(C3Cc4ccccc4O3)c2)c1)C1Cc2ccccc2O1",
+        "pLDDT": 0.8405,
+        "ipTM": 0.7717,
+        "affinity_kd_uM": 10.694,
+        "affinity_pkd": 4.971,
+        "prob_binder": 0.4257
+      },
+      {
+        "id": "Z795991852_analog_0002",
+        "smiles": "O=C(Nc1cccc(C2Cc3ccccc3O2)c1)C1Cc2ccccc2O1",
+        "pLDDT": 0.852,
+        "ipTM": 0.8142,
+        "affinity_kd_uM": 5.54,
+        "affinity_pkd": 5.256,
+        "prob_binder": 0.3596
+      },
+      {
+        "id": "Z795991852_analog_0007",
+        "smiles": "O=C(Nc1cccc(NC2Cc3ccccc3O2)c1)C1Cc2ccccc2O1",
+        "pLDDT": 0.8509,
+        "ipTM": 0.7716,
+        "affinity_kd_uM": 5.24,
+        "affinity_pkd": 5.281,
+        "prob_binder": 0.3654
+      },
+      {
+        "id": "Z795991852_analog_0004",
+        "smiles": "O=C(Nc1cccc(OC2Cc3ccccc3O2)c1)C1Cc2ccccc2O1",
+        "pLDDT": 0.836,
+        "ipTM": 0.7801,
+        "affinity_kd_uM": 3.786,
+        "affinity_pkd": 5.422,
+        "prob_binder": 0.3251
+      },
+      {
+        "id": "Z795991852_analog_0077",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(CNCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8513,
+        "ipTM": 0.7244,
+        "affinity_kd_uM": 3.712,
+        "affinity_pkd": 5.43,
+        "prob_binder": 0.5168
+      },
+      {
+        "id": "Z795991852_analog_0095",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8541,
+        "ipTM": 0.7586,
+        "affinity_kd_uM": 4.713,
+        "affinity_pkd": 5.327,
+        "prob_binder": 0.4295
+      },
+      {
+        "id": "Z795991852_analog_0086",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8455,
+        "ipTM": 0.8331,
+        "affinity_kd_uM": 1.639,
+        "affinity_pkd": 5.785,
+        "prob_binder": 0.5319
+      },
+      {
+        "id": "Z795991852_analog_0064",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NCc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8483,
+        "ipTM": 0.8055,
+        "affinity_kd_uM": 5.234,
+        "affinity_pkd": 5.281,
+        "prob_binder": 0.5371
+      },
+      {
+        "id": "Z795991852_analog_0088",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(OCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8207,
+        "ipTM": 0.7082,
+        "affinity_kd_uM": 3.813,
+        "affinity_pkd": 5.419,
+        "prob_binder": 0.5462
+      },
+      {
+        "id": "Z795991852_analog_0089",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(OCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8927,
+        "ipTM": 0.7525,
+        "affinity_kd_uM": 3.004,
+        "affinity_pkd": 5.522,
+        "prob_binder": 0.5077
+      },
+      {
+        "id": "Z795991852_analog_0053",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(CNC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8565,
+        "ipTM": 0.7584,
+        "affinity_kd_uM": 2.916,
+        "affinity_pkd": 5.535,
+        "prob_binder": 0.4963
+      },
+      {
+        "id": "Z795991852_analog_0054",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(CNC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8547,
+        "ipTM": 0.8228,
+        "affinity_kd_uM": 3.782,
+        "affinity_pkd": 5.422,
+        "prob_binder": 0.559
+      },
+      {
+        "id": "Z795991852_analog_0094",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(COCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8411,
+        "ipTM": 0.7288,
+        "affinity_kd_uM": 5.215,
+        "affinity_pkd": 5.283,
+        "prob_binder": 0.5437
+      },
+      {
+        "id": "Z795991852_analog_0063",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NCC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8647,
+        "ipTM": 0.8023,
+        "affinity_kd_uM": 6.905,
+        "affinity_pkd": 5.161,
+        "prob_binder": 0.4815
+      },
+      {
+        "id": "Z795991852_analog_0090",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OCC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8712,
+        "ipTM": 0.7475,
+        "affinity_kd_uM": 9.013,
+        "affinity_pkd": 5.045,
+        "prob_binder": 0.4536
+      },
+      {
+        "id": "Z795991852_analog_0096",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8783,
+        "ipTM": 0.7059,
+        "affinity_kd_uM": 8.097,
+        "affinity_pkd": 5.092,
+        "prob_binder": 0.525
+      },
+      {
+        "id": "Z795991852_analog_0079",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.845,
+        "ipTM": 0.7721,
+        "affinity_kd_uM": 2.375,
+        "affinity_pkd": 5.624,
+        "prob_binder": 0.4373
+      },
+      {
+        "id": "Z795991852_analog_0081",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8541,
+        "ipTM": 0.7731,
+        "affinity_kd_uM": 1.861,
+        "affinity_pkd": 5.73,
+        "prob_binder": 0.4743
+      },
+      {
+        "id": "Z795991852_analog_0030",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)NCc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.852,
+        "ipTM": 0.7838,
+        "affinity_kd_uM": 0.438,
+        "affinity_pkd": 6.358,
+        "prob_binder": 0.572
+      },
+      {
+        "id": "Z795991852_analog_0065",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NCc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8473,
+        "ipTM": 0.7282,
+        "affinity_kd_uM": 3.993,
+        "affinity_pkd": 5.399,
+        "prob_binder": 0.5361
+      },
+      {
+        "id": "Z795991852_analog_0051",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8586,
+        "ipTM": 0.8302,
+        "affinity_kd_uM": 5.285,
+        "affinity_pkd": 5.277,
+        "prob_binder": 0.5651
+      },
+      {
+        "id": "Z795991852_analog_0091",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OCc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8654,
+        "ipTM": 0.7542,
+        "affinity_kd_uM": 7.82,
+        "affinity_pkd": 5.107,
+        "prob_binder": 0.4644
+      },
+      {
+        "id": "Z795991852_analog_0085",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(COC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8226,
+        "ipTM": 0.7965,
+        "affinity_kd_uM": 3.2,
+        "affinity_pkd": 5.495,
+        "prob_binder": 0.5689
+      },
+      {
+        "id": "Z795991852_analog_0029",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)NCC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8604,
+        "ipTM": 0.7785,
+        "affinity_kd_uM": 1.821,
+        "affinity_pkd": 5.74,
+        "prob_binder": 0.4347
+      },
+      {
+        "id": "Z795991852_analog_0046",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Oc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8456,
+        "ipTM": 0.755,
+        "affinity_kd_uM": 1.535,
+        "affinity_pkd": 5.814,
+        "prob_binder": 0.5506
+      },
+      {
+        "id": "Z795991852_analog_0055",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(CNC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8544,
+        "ipTM": 0.7902,
+        "affinity_kd_uM": 5.269,
+        "affinity_pkd": 5.278,
+        "prob_binder": 0.6144
+      },
+      {
+        "id": "Z795991852_analog_0058",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NCc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8489,
+        "ipTM": 0.8266,
+        "affinity_kd_uM": 5.147,
+        "affinity_pkd": 5.288,
+        "prob_binder": 0.5047
+      },
+      {
+        "id": "Z795991852_analog_0080",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OCc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.829,
+        "ipTM": 0.8205,
+        "affinity_kd_uM": 3.119,
+        "affinity_pkd": 5.506,
+        "prob_binder": 0.529
+      },
+      {
+        "id": "Z795991852_analog_0025",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)NC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8518,
+        "ipTM": 0.7917,
+        "affinity_kd_uM": 6.531,
+        "affinity_pkd": 5.185,
+        "prob_binder": 0.5147
+      },
+      {
+        "id": "Z795991852_analog_0066",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8725,
+        "ipTM": 0.8002,
+        "affinity_kd_uM": 2.073,
+        "affinity_pkd": 5.683,
+        "prob_binder": 0.5618
+      },
+      {
+        "id": "Z795991852_analog_0068",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(OCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8423,
+        "ipTM": 0.7488,
+        "affinity_kd_uM": 3.081,
+        "affinity_pkd": 5.511,
+        "prob_binder": 0.6129
+      },
+      {
+        "id": "Z795991852_analog_0070",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(NCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8486,
+        "ipTM": 0.8004,
+        "affinity_kd_uM": 4.414,
+        "affinity_pkd": 5.355,
+        "prob_binder": 0.5836
+      },
+      {
+        "id": "Z795991852_analog_0072",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(NCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.831,
+        "ipTM": 0.7003,
+        "affinity_kd_uM": 3.282,
+        "affinity_pkd": 5.484,
+        "prob_binder": 0.5681
+      },
+      {
+        "id": "Z795991852_analog_0074",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(NCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8533,
+        "ipTM": 0.7815,
+        "affinity_kd_uM": 3.573,
+        "affinity_pkd": 5.447,
+        "prob_binder": 0.5267
+      },
+      {
+        "id": "Z795991852_analog_0078",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8851,
+        "ipTM": 0.8074,
+        "affinity_kd_uM": 8.567,
+        "affinity_pkd": 5.067,
+        "prob_binder": 0.5193
+      },
+      {
+        "id": "Z795991852_analog_0084",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(COC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8595,
+        "ipTM": 0.6771,
+        "affinity_kd_uM": 5.777,
+        "affinity_pkd": 5.238,
+        "prob_binder": 0.457
+      },
+      {
+        "id": "Z795991852_analog_0021",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)NC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.826,
+        "ipTM": 0.7726,
+        "affinity_kd_uM": 0.478,
+        "affinity_pkd": 6.321,
+        "prob_binder": 0.6368
+      },
+      {
+        "id": "Z795991852_analog_0056",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8514,
+        "ipTM": 0.852,
+        "affinity_kd_uM": 6.483,
+        "affinity_pkd": 5.188,
+        "prob_binder": 0.4969
+      },
+      {
+        "id": "Z795991852_analog_0059",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8543,
+        "ipTM": 0.736,
+        "affinity_kd_uM": 4.644,
+        "affinity_pkd": 5.333,
+        "prob_binder": 0.5454
+      },
+      {
+        "id": "Z795991852_analog_0061",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8926,
+        "ipTM": 0.7244,
+        "affinity_kd_uM": 3.648,
+        "affinity_pkd": 5.438,
+        "prob_binder": 0.5348
+      },
+      {
+        "id": "Z795991852_analog_0034",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)NCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8387,
+        "ipTM": 0.7064,
+        "affinity_kd_uM": 2.401,
+        "affinity_pkd": 5.62,
+        "prob_binder": 0.6054
+      },
+      {
+        "id": "Z795991852_analog_0047",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Oc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8555,
+        "ipTM": 0.7285,
+        "affinity_kd_uM": 0.954,
+        "affinity_pkd": 6.021,
+        "prob_binder": 0.6061
+      },
+      {
+        "id": "Z795991852_analog_0076",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNCc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8664,
+        "ipTM": 0.8033,
+        "affinity_kd_uM": 2.902,
+        "affinity_pkd": 5.537,
+        "prob_binder": 0.4097
+      },
+      {
+        "id": "Z795991852_analog_0032",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(C(=O)NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8353,
+        "ipTM": 0.7782,
+        "affinity_kd_uM": 4.251,
+        "affinity_pkd": 5.371,
+        "prob_binder": 0.6253
+      },
+      {
+        "id": "Z795991852_analog_0031",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8419,
+        "ipTM": 0.8098,
+        "affinity_kd_uM": 1.746,
+        "affinity_pkd": 5.758,
+        "prob_binder": 0.5566
+      },
+      {
+        "id": "Z795991852_analog_0067",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8497,
+        "ipTM": 0.7587,
+        "affinity_kd_uM": 3.535,
+        "affinity_pkd": 5.452,
+        "prob_binder": 0.5168
+      },
+      {
+        "id": "Z795991852_analog_0075",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNCC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8632,
+        "ipTM": 0.8249,
+        "affinity_kd_uM": 5.756,
+        "affinity_pkd": 5.24,
+        "prob_binder": 0.4095
+      },
+      {
+        "id": "Z795991852_analog_0014",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(OC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8645,
+        "ipTM": 0.7163,
+        "affinity_kd_uM": 1.599,
+        "affinity_pkd": 5.796,
+        "prob_binder": 0.5292
+      },
+      {
+        "id": "Z795991852_analog_0016",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(OC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8431,
+        "ipTM": 0.697,
+        "affinity_kd_uM": 1.605,
+        "affinity_pkd": 5.794,
+        "prob_binder": 0.5398
+      },
+      {
+        "id": "Z795991852_analog_0022",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8385,
+        "ipTM": 0.7188,
+        "affinity_kd_uM": 0.857,
+        "affinity_pkd": 6.067,
+        "prob_binder": 0.6317
+      },
+      {
+        "id": "Z795991852_analog_0057",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OCc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8512,
+        "ipTM": 0.8431,
+        "affinity_kd_uM": 4.326,
+        "affinity_pkd": 5.364,
+        "prob_binder": 0.5388
+      },
+      {
+        "id": "Z795991852_analog_0049",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)OCC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8847,
+        "ipTM": 0.7718,
+        "affinity_kd_uM": 3.097,
+        "affinity_pkd": 5.509,
+        "prob_binder": 0.4744
+      },
+      {
+        "id": "Z795991852_analog_0045",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)OC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8587,
+        "ipTM": 0.7556,
+        "affinity_kd_uM": 6.049,
+        "affinity_pkd": 5.218,
+        "prob_binder": 0.5147
+      },
+      {
+        "id": "Z795991852_analog_0048",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Oc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8775,
+        "ipTM": 0.6974,
+        "affinity_kd_uM": 0.643,
+        "affinity_pkd": 6.192,
+        "prob_binder": 0.6349
+      },
+      {
+        "id": "Z795991852_analog_0069",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(COC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8478,
+        "ipTM": 0.7836,
+        "affinity_kd_uM": 2.471,
+        "affinity_pkd": 5.607,
+        "prob_binder": 0.5948
+      },
+      {
+        "id": "Z795991852_analog_0039",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)OC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8145,
+        "ipTM": 0.7108,
+        "affinity_kd_uM": 0.335,
+        "affinity_pkd": 6.475,
+        "prob_binder": 0.7343
+      },
+      {
+        "id": "Z795991852_analog_0052",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8621,
+        "ipTM": 0.7299,
+        "affinity_kd_uM": 8.727,
+        "affinity_pkd": 5.059,
+        "prob_binder": 0.4566
+      },
+      {
+        "id": "Z795991852_analog_0023",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC(=O)c3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8331,
+        "ipTM": 0.8376,
+        "affinity_kd_uM": 0.584,
+        "affinity_pkd": 6.233,
+        "prob_binder": 0.652
+      },
+      {
+        "id": "Z795991852_analog_0050",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)OCc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8291,
+        "ipTM": 0.8369,
+        "affinity_kd_uM": 1.699,
+        "affinity_pkd": 5.77,
+        "prob_binder": 0.5244
+      },
+      {
+        "id": "Z795991852_analog_0026",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Nc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8602,
+        "ipTM": 0.8154,
+        "affinity_kd_uM": 1.516,
+        "affinity_pkd": 5.819,
+        "prob_binder": 0.5295
+      },
+      {
+        "id": "Z795991852_analog_0038",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8425,
+        "ipTM": 0.743,
+        "affinity_kd_uM": 1.498,
+        "affinity_pkd": 5.825,
+        "prob_binder": 0.5998
+      },
+      {
+        "id": "Z795991852_analog_0093",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COCc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8314,
+        "ipTM": 0.8048,
+        "affinity_kd_uM": 1.425,
+        "affinity_pkd": 5.846,
+        "prob_binder": 0.5619
+      },
+      {
+        "id": "Z795991852_analog_0013",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OC(=O)C3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8496,
+        "ipTM": 0.7777,
+        "affinity_kd_uM": 8.509,
+        "affinity_pkd": 5.07,
+        "prob_binder": 0.4662
+      },
+      {
+        "id": "Z795991852_analog_0041",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OC(=O)c3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8454,
+        "ipTM": 0.7913,
+        "affinity_kd_uM": 1.426,
+        "affinity_pkd": 5.846,
+        "prob_binder": 0.613
+      },
+      {
+        "id": "Z795991852_analog_0042",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(C(=O)OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.814,
+        "ipTM": 0.7702,
+        "affinity_kd_uM": 1.732,
+        "affinity_pkd": 5.761,
+        "prob_binder": 0.6101
+      },
+      {
+        "id": "Z795991852_analog_0028",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Nc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8232,
+        "ipTM": 0.6996,
+        "affinity_kd_uM": 1.671,
+        "affinity_pkd": 5.777,
+        "prob_binder": 0.5817
+      },
+      {
+        "id": "Z795991852_analog_0073",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8492,
+        "ipTM": 0.8075,
+        "affinity_kd_uM": 6.916,
+        "affinity_pkd": 5.16,
+        "prob_binder": 0.4972
+      },
+      {
+        "id": "Z795991852_analog_0087",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COc3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8878,
+        "ipTM": 0.7317,
+        "affinity_kd_uM": 1.807,
+        "affinity_pkd": 5.743,
+        "prob_binder": 0.519
+      },
+      {
+        "id": "Z795991852_analog_0017",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)OC(=O)C3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8831,
+        "ipTM": 0.7185,
+        "affinity_kd_uM": 2.927,
+        "affinity_pkd": 5.534,
+        "prob_binder": 0.6005
+      },
+      {
+        "id": "Z795991852_analog_0033",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(C(=O)NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8508,
+        "ipTM": 0.7991,
+        "affinity_kd_uM": 2.653,
+        "affinity_pkd": 5.576,
+        "prob_binder": 0.6477
+      },
+      {
+        "id": "Z795991852_analog_0062",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8444,
+        "ipTM": 0.8541,
+        "affinity_kd_uM": 6.067,
+        "affinity_pkd": 5.217,
+        "prob_binder": 0.4846
+      },
+      {
+        "id": "Z795991852_analog_0092",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COCC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8514,
+        "ipTM": 0.7551,
+        "affinity_kd_uM": 2.981,
+        "affinity_pkd": 5.526,
+        "prob_binder": 0.4873
+      },
+      {
+        "id": "Z795991852_analog_0015",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(OC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8472,
+        "ipTM": 0.7342,
+        "affinity_kd_uM": 2.242,
+        "affinity_pkd": 5.649,
+        "prob_binder": 0.5861
+      },
+      {
+        "id": "Z795991852_analog_0020",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(COC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.826,
+        "ipTM": 0.6995,
+        "affinity_kd_uM": 5.177,
+        "affinity_pkd": 5.286,
+        "prob_binder": 0.5382
+      },
+      {
+        "id": "Z795991852_analog_0027",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)Nc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8664,
+        "ipTM": 0.8072,
+        "affinity_kd_uM": 1.601,
+        "affinity_pkd": 5.796,
+        "prob_binder": 0.5941
+      },
+      {
+        "id": "Z795991852_analog_0035",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8381,
+        "ipTM": 0.7596,
+        "affinity_kd_uM": 0.5,
+        "affinity_pkd": 6.301,
+        "prob_binder": 0.6
+      },
+      {
+        "id": "Z795991852_analog_0036",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8547,
+        "ipTM": 0.7089,
+        "affinity_kd_uM": 1.998,
+        "affinity_pkd": 5.699,
+        "prob_binder": 0.5883
+      },
+      {
+        "id": "Z795991852_analog_0012",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(CNC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8398,
+        "ipTM": 0.7966,
+        "affinity_kd_uM": 3.13,
+        "affinity_pkd": 5.504,
+        "prob_binder": 0.535
+      },
+      {
+        "id": "Z795991852_analog_0071",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8215,
+        "ipTM": 0.6999,
+        "affinity_kd_uM": 5.627,
+        "affinity_pkd": 5.25,
+        "prob_binder": 0.4663
+      },
+      {
+        "id": "Z795991852_analog_0082",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COc3cccc(OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8588,
+        "ipTM": 0.7515,
+        "affinity_kd_uM": 2.265,
+        "affinity_pkd": 5.645,
+        "prob_binder": 0.5499
+      },
+      {
+        "id": "Z795991852_analog_0009",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(C(=O)NC(=O)C3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.863,
+        "ipTM": 0.7067,
+        "affinity_kd_uM": 2.148,
+        "affinity_pkd": 5.668,
+        "prob_binder": 0.5814
+      },
+      {
+        "id": "Z795991852_analog_0024",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC(=O)c3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.853,
+        "ipTM": 0.8475,
+        "affinity_kd_uM": 0.532,
+        "affinity_pkd": 6.274,
+        "prob_binder": 0.6473
+      },
+      {
+        "id": "Z795991852_analog_0037",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)OCC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8346,
+        "ipTM": 0.7199,
+        "affinity_kd_uM": 3.071,
+        "affinity_pkd": 5.513,
+        "prob_binder": 0.6501
+      },
+      {
+        "id": "Z795991852_analog_0010",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)NC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8297,
+        "ipTM": 0.8374,
+        "affinity_kd_uM": 1.19,
+        "affinity_pkd": 5.925,
+        "prob_binder": 0.6522
+      },
+      {
+        "id": "Z795991852_analog_0018",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(C(=O)OC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8469,
+        "ipTM": 0.7226,
+        "affinity_kd_uM": 1.638,
+        "affinity_pkd": 5.786,
+        "prob_binder": 0.6643
+      },
+      {
+        "id": "Z795991852_analog_0060",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COc3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8328,
+        "ipTM": 0.8197,
+        "affinity_kd_uM": 3.703,
+        "affinity_pkd": 5.431,
+        "prob_binder": 0.5527
+      },
+      {
+        "id": "Z795991852_analog_0083",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COC3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8638,
+        "ipTM": 0.7508,
+        "affinity_kd_uM": 10.443,
+        "affinity_pkd": 4.981,
+        "prob_binder": 0.4122
+      },
+      {
+        "id": "Z795991852_analog_0043",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(C(=O)OC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8438,
+        "ipTM": 0.7429,
+        "affinity_kd_uM": 2.03,
+        "affinity_pkd": 5.692,
+        "prob_binder": 0.6285
+      },
+      {
+        "id": "Z795991852_analog_0044",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(OC(=O)c3cccc(NC4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8275,
+        "ipTM": 0.8186,
+        "affinity_kd_uM": 0.927,
+        "affinity_pkd": 6.033,
+        "prob_binder": 0.6151
+      },
+      {
+        "id": "Z795991852_analog_0001",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(NC(=O)C3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8483,
+        "ipTM": 0.8399,
+        "affinity_kd_uM": 3.54,
+        "affinity_pkd": 5.451,
+        "prob_binder": 0.5148
+      },
+      {
+        "id": "Z795991852_analog_0011",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(CNC(=O)C3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8655,
+        "ipTM": 0.7958,
+        "affinity_kd_uM": 6.26,
+        "affinity_pkd": 5.203,
+        "prob_binder": 0.355
+      },
+      {
+        "id": "Z795991852_analog_0005",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Oc3cccc(NC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8338,
+        "ipTM": 0.7572,
+        "affinity_kd_uM": 1.898,
+        "affinity_pkd": 5.722,
+        "prob_binder": 0.5632
+      },
+      {
+        "id": "Z795991852_analog_0003",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(-c3cccc(NC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8441,
+        "ipTM": 0.7443,
+        "affinity_kd_uM": 1.141,
+        "affinity_pkd": 5.943,
+        "prob_binder": 0.5543
+      },
+      {
+        "id": "Z795991852_analog_0006",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(Nc3cccc(NC(=O)C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8285,
+        "ipTM": 0.7851,
+        "affinity_kd_uM": 2.339,
+        "affinity_pkd": 5.631,
+        "prob_binder": 0.6263
+      },
+      {
+        "id": "Z795991852_analog_0019",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COC(=O)C3Cc4ccccc4O3)nnc12",
+        "pLDDT": 0.8522,
+        "ipTM": 0.7885,
+        "affinity_kd_uM": 11.019,
+        "affinity_pkd": 4.958,
+        "prob_binder": 0.4264
+      },
+      {
+        "id": "Z795991852_analog_0040",
+        "smiles": "Cn1c(=O)c2ccccc2n2c(COC(=O)c3cccc(C4Cc5ccccc5O4)c3)nnc12",
+        "pLDDT": 0.8453,
+        "ipTM": 0.7445,
+        "affinity_kd_uM": 1.508,
+        "affinity_pkd": 5.822,
+        "prob_binder": 0.5744
+      },
+      {
+        "id": "FM001580_analog_0033",
+        "smiles": "O=C(O)c1c(OC(F)(F)F)cccc1C1CCNCC1",
+        "pLDDT": 0.9175,
+        "ipTM": 0.7514,
+        "affinity_kd_uM": 101.144,
+        "affinity_pkd": 3.995,
+        "prob_binder": 0.3335
+      },
+      {
+        "id": "FM001580_analog_0118",
+        "smiles": "O=C(O)c1cccc(C2CCNCC2)c1OC(F)(F)F",
+        "pLDDT": 0.9216,
+        "ipTM": 0.8131,
+        "affinity_kd_uM": 37.093,
+        "affinity_pkd": 4.431,
+        "prob_binder": 0.301
+      },
+      {
+        "id": "FM001580_analog_0032",
+        "smiles": "O=C(O)c1c(OC(F)(F)F)cccc1C1CCCCC1",
+        "pLDDT": 0.874,
+        "ipTM": 0.699,
+        "affinity_kd_uM": 27.366,
+        "affinity_pkd": 4.563,
+        "prob_binder": 0.2677
+      },
+      {
+        "id": "FM001580_analog_0034",
+        "smiles": "O=C(O)c1c(OC(F)(F)F)cccc1C1CCOCC1",
+        "pLDDT": 0.8835,
+        "ipTM": 0.7174,
+        "affinity_kd_uM": 53.221,
+        "affinity_pkd": 4.274,
+        "prob_binder": 0.291
+      },
+      {
+        "id": "FM001580_analog_0016",
+        "smiles": "CN(C)Cc1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9269,
+        "ipTM": 0.7675,
+        "affinity_kd_uM": 100.88,
+        "affinity_pkd": 3.996,
+        "prob_binder": 0.2908
+      },
+      {
+        "id": "FM001580_analog_0101",
+        "smiles": "CN(C)Cc1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.9372,
+        "ipTM": 0.8443,
+        "affinity_kd_uM": 62.93,
+        "affinity_pkd": 4.201,
+        "prob_binder": 0.2698
+      },
+      {
+        "id": "FM001580_analog_0119",
+        "smiles": "O=C(O)c1cccc(C2CCOCC2)c1OC(F)(F)F",
+        "pLDDT": 0.8753,
+        "ipTM": 0.7408,
+        "affinity_kd_uM": 19.103,
+        "affinity_pkd": 4.719,
+        "prob_binder": 0.3617
+      },
+      {
+        "id": "FM001580_analog_0024",
+        "smiles": "CCCc1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9101,
+        "ipTM": 0.7504,
+        "affinity_kd_uM": 120.437,
+        "affinity_pkd": 3.919,
+        "prob_binder": 0.2343
+      },
+      {
+        "id": "FM001580_analog_0109",
+        "smiles": "CCCc1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.9085,
+        "ipTM": 0.814,
+        "affinity_kd_uM": 101.469,
+        "affinity_pkd": 3.994,
+        "prob_binder": 0.232
+      },
+      {
+        "id": "FM001580_analog_0014",
+        "smiles": "NS(=O)(=O)c1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.8938,
+        "ipTM": 0.7931,
+        "affinity_kd_uM": 53.081,
+        "affinity_pkd": 4.275,
+        "prob_binder": 0.2528
+      },
+      {
+        "id": "FM001580_analog_0099",
+        "smiles": "NS(=O)(=O)c1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.8927,
+        "ipTM": 0.6657,
+        "affinity_kd_uM": 35.519,
+        "affinity_pkd": 4.45,
+        "prob_binder": 0.3484
+      },
+      {
+        "id": "FM001580_analog_0117",
+        "smiles": "O=C(O)c1cccc(C2CCCCC2)c1OC(F)(F)F",
+        "pLDDT": 0.8753,
+        "ipTM": 0.7955,
+        "affinity_kd_uM": 21.739,
+        "affinity_pkd": 4.663,
+        "prob_binder": 0.3722
+      },
+      {
+        "id": "FM001580_analog_0022",
+        "smiles": "O=C(O)c1c(CO)cccc1OC(F)(F)F",
+        "pLDDT": 0.9152,
+        "ipTM": 0.7226,
+        "affinity_kd_uM": 133.777,
+        "affinity_pkd": 3.874,
+        "prob_binder": 0.3136
+      },
+      {
+        "id": "FM001580_analog_0107",
+        "smiles": "O=C(O)c1cccc(CO)c1OC(F)(F)F",
+        "pLDDT": 0.8857,
+        "ipTM": 0.6156,
+        "affinity_kd_uM": 67.734,
+        "affinity_pkd": 4.169,
+        "prob_binder": 0.3317
+      },
+      {
+        "id": "FM001580_analog_0011",
+        "smiles": "CCOc1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9077,
+        "ipTM": 0.7306,
+        "affinity_kd_uM": 130.538,
+        "affinity_pkd": 3.884,
+        "prob_binder": 0.2947
+      },
+      {
+        "id": "FM001580_analog_0026",
+        "smiles": "NCc1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9286,
+        "ipTM": 0.75,
+        "affinity_kd_uM": 170.457,
+        "affinity_pkd": 3.768,
+        "prob_binder": 0.3751
+      },
+      {
+        "id": "FM001580_analog_0027",
+        "smiles": "CN(C)c1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.8887,
+        "ipTM": 0.7842,
+        "affinity_kd_uM": 121.674,
+        "affinity_pkd": 3.915,
+        "prob_binder": 0.3092
+      },
+      {
+        "id": "FM001580_analog_0110",
+        "smiles": "CC(C)c1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.9218,
+        "ipTM": 0.7803,
+        "affinity_kd_uM": 95.972,
+        "affinity_pkd": 4.018,
+        "prob_binder": 0.2337
+      },
+      {
+        "id": "FM001580_analog_0111",
+        "smiles": "NCc1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.9014,
+        "ipTM": 0.737,
+        "affinity_kd_uM": 230.384,
+        "affinity_pkd": 3.638,
+        "prob_binder": 0.3533
+      },
+      {
+        "id": "FM001580_analog_0112",
+        "smiles": "CN(C)c1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.8893,
+        "ipTM": 0.6794,
+        "affinity_kd_uM": 113.121,
+        "affinity_pkd": 3.946,
+        "prob_binder": 0.2841
+      },
+      {
+        "id": "FM001580_analog_0031",
+        "smiles": "O=C(O)c1c(OC(F)(F)F)cccc1-c1ccsc1",
+        "pLDDT": 0.8888,
+        "ipTM": 0.8189,
+        "affinity_kd_uM": 26.687,
+        "affinity_pkd": 4.574,
+        "prob_binder": 0.3184
+      },
+      {
+        "id": "FM001580_analog_0021",
+        "smiles": "O=C(O)c1c(OCCO)cccc1OC(F)(F)F",
+        "pLDDT": 0.8905,
+        "ipTM": 0.7511,
+        "affinity_kd_uM": 111.047,
+        "affinity_pkd": 3.954,
+        "prob_binder": 0.3362
+      },
+      {
+        "id": "FM001580_analog_0004",
+        "smiles": "CS(=O)(=O)NC(=O)c1ccccc1OC(F)(F)F",
+        "pLDDT": 0.883,
+        "ipTM": 0.7768,
+        "affinity_kd_uM": 29.462,
+        "affinity_pkd": 4.531,
+        "prob_binder": 0.2294
+      },
+      {
+        "id": "FM001580_analog_0023",
+        "smiles": "CCc1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.8991,
+        "ipTM": 0.687,
+        "affinity_kd_uM": 121.531,
+        "affinity_pkd": 3.915,
+        "prob_binder": 0.2491
+      },
+      {
+        "id": "FM001580_analog_0108",
+        "smiles": "CCc1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.8888,
+        "ipTM": 0.7287,
+        "affinity_kd_uM": 123.176,
+        "affinity_pkd": 3.909,
+        "prob_binder": 0.2249
+      },
+      {
+        "id": "FM001580_analog_0096",
+        "smiles": "CCOc1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.886,
+        "ipTM": 0.798,
+        "affinity_kd_uM": 100.607,
+        "affinity_pkd": 3.997,
+        "prob_binder": 0.2299
+      },
+      {
+        "id": "FM001580_analog_0003",
+        "smiles": "NS(=O)(=O)c1ccccc1OC(F)(F)F",
+        "pLDDT": 0.8954,
+        "ipTM": 0.7077,
+        "affinity_kd_uM": 17.244,
+        "affinity_pkd": 4.763,
+        "prob_binder": 0.1965
+      },
+      {
+        "id": "FM001580_analog_0012",
+        "smiles": "O=C(O)c1c(OC(F)(F)F)cccc1C(F)(F)F",
+        "pLDDT": 0.8838,
+        "ipTM": 0.6828,
+        "affinity_kd_uM": 121.391,
+        "affinity_pkd": 3.916,
+        "prob_binder": 0.2724
+      },
+      {
+        "id": "FM001580_analog_0097",
+        "smiles": "O=C(O)c1cccc(C(F)(F)F)c1OC(F)(F)F",
+        "pLDDT": 0.8918,
+        "ipTM": 0.7003,
+        "affinity_kd_uM": 103.125,
+        "affinity_pkd": 3.987,
+        "prob_binder": 0.2784
+      },
+      {
+        "id": "FM001580_analog_0025",
+        "smiles": "CC(C)c1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9082,
+        "ipTM": 0.7758,
+        "affinity_kd_uM": 83.635,
+        "affinity_pkd": 4.078,
+        "prob_binder": 0.2511
+      },
+      {
+        "id": "FM001580_analog_0005",
+        "smiles": "O=C(O)c1ccccc1C(F)(F)F",
+        "pLDDT": 0.9149,
+        "ipTM": 0.7531,
+        "affinity_kd_uM": 50.376,
+        "affinity_pkd": 4.298,
+        "prob_binder": 0.1773
+      },
+      {
+        "id": "FM001580_analog_0106",
+        "smiles": "O=C(O)c1cccc(OCCO)c1OC(F)(F)F",
+        "pLDDT": 0.8778,
+        "ipTM": 0.6391,
+        "affinity_kd_uM": 104.084,
+        "affinity_pkd": 3.983,
+        "prob_binder": 0.3364
+      },
+      {
+        "id": "FM001580_analog_0007",
+        "smiles": "O=C(O)c1c(F)cccc1OC(F)(F)F",
+        "pLDDT": 0.9013,
+        "ipTM": 0.6204,
+        "affinity_kd_uM": 51.95,
+        "affinity_pkd": 4.284,
+        "prob_binder": 0.1938
+      },
+      {
+        "id": "FM001580_analog_0092",
+        "smiles": "O=C(O)c1cccc(F)c1OC(F)(F)F",
+        "pLDDT": 0.9001,
+        "ipTM": 0.7266,
+        "affinity_kd_uM": 72.842,
+        "affinity_pkd": 4.138,
+        "prob_binder": 0.1885
+      },
+      {
+        "id": "FM001580_analog_0018",
+        "smiles": "Nc1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9006,
+        "ipTM": 0.6406,
+        "affinity_kd_uM": 77.202,
+        "affinity_pkd": 4.112,
+        "prob_binder": 0.3276
+      },
+      {
+        "id": "FM001580_analog_0093",
+        "smiles": "O=C(O)c1cccc(Cl)c1OC(F)(F)F",
+        "pLDDT": 0.925,
+        "ipTM": 0.7576,
+        "affinity_kd_uM": 73.947,
+        "affinity_pkd": 4.131,
+        "prob_binder": 0.1789
+      },
+      {
+        "id": "FM001580_analog_0100",
+        "smiles": "NC(=O)c1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.8828,
+        "ipTM": 0.7156,
+        "affinity_kd_uM": 99.722,
+        "affinity_pkd": 4.001,
+        "prob_binder": 0.3522
+      },
+      {
+        "id": "FM001580_analog_0103",
+        "smiles": "Nc1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.8894,
+        "ipTM": 0.6378,
+        "affinity_kd_uM": 59.589,
+        "affinity_pkd": 4.225,
+        "prob_binder": 0.3635
+      },
+      {
+        "id": "FM001580_analog_0035",
+        "smiles": "CN1CCC(c2cccc(OC(F)(F)F)c2C(=O)O)CC1",
+        "pLDDT": 0.9068,
+        "ipTM": 0.8068,
+        "affinity_kd_uM": 65.58,
+        "affinity_pkd": 4.183,
+        "prob_binder": 0.1852
+      },
+      {
+        "id": "FM001580_analog_0019",
+        "smiles": "CNC(=O)c1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9052,
+        "ipTM": 0.6732,
+        "affinity_kd_uM": 156.751,
+        "affinity_pkd": 3.805,
+        "prob_binder": 0.2609
+      },
+      {
+        "id": "FM001580_analog_0029",
+        "smiles": "O=C(O)c1c(OC(F)(F)F)cccc1-c1ccccn1",
+        "pLDDT": 0.8721,
+        "ipTM": 0.7698,
+        "affinity_kd_uM": 93.118,
+        "affinity_pkd": 4.031,
+        "prob_binder": 0.4179
+      },
+      {
+        "id": "FM001580_analog_0030",
+        "smiles": "O=C(O)c1c(OC(F)(F)F)cccc1-c1ccoc1",
+        "pLDDT": 0.8806,
+        "ipTM": 0.7818,
+        "affinity_kd_uM": 47.687,
+        "affinity_pkd": 4.322,
+        "prob_binder": 0.3236
+      },
+      {
+        "id": "FM001580_analog_0115",
+        "smiles": "O=C(O)c1cccc(-c2ccoc2)c1OC(F)(F)F",
+        "pLDDT": 0.89,
+        "ipTM": 0.7778,
+        "affinity_kd_uM": 31.24,
+        "affinity_pkd": 4.505,
+        "prob_binder": 0.387
+      },
+      {
+        "id": "FM001580_analog_0116",
+        "smiles": "O=C(O)c1cccc(-c2ccsc2)c1OC(F)(F)F",
+        "pLDDT": 0.8818,
+        "ipTM": 0.7575,
+        "affinity_kd_uM": 24.706,
+        "affinity_pkd": 4.607,
+        "prob_binder": 0.321
+      },
+      {
+        "id": "FM001580_analog_0015",
+        "smiles": "NC(=O)c1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.896,
+        "ipTM": 0.6167,
+        "affinity_kd_uM": 63.22,
+        "affinity_pkd": 4.199,
+        "prob_binder": 0.3042
+      },
+      {
+        "id": "FM001580_analog_0061",
+        "smiles": "O=C(O)c1cc(C2CCNCC2)ccc1OC(F)(F)F",
+        "pLDDT": 0.9266,
+        "ipTM": 0.7917,
+        "affinity_kd_uM": 57.512,
+        "affinity_pkd": 4.24,
+        "prob_binder": 0.3403
+      },
+      {
+        "id": "FM001580_analog_0062",
+        "smiles": "O=C(O)c1cc(C2CCOCC2)ccc1OC(F)(F)F",
+        "pLDDT": 0.8746,
+        "ipTM": 0.6862,
+        "affinity_kd_uM": 48.856,
+        "affinity_pkd": 4.311,
+        "prob_binder": 0.2777
+      },
+      {
+        "id": "FM001580_analog_0010",
+        "smiles": "COc1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9232,
+        "ipTM": 0.7177,
+        "affinity_kd_uM": 88.432,
+        "affinity_pkd": 4.053,
+        "prob_binder": 0.252
+      },
+      {
+        "id": "FM001580_analog_0095",
+        "smiles": "COc1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.8974,
+        "ipTM": 0.6075,
+        "affinity_kd_uM": 166.782,
+        "affinity_pkd": 3.778,
+        "prob_binder": 0.2559
+      },
+      {
+        "id": "FM001580_analog_0104",
+        "smiles": "CNC(=O)c1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.8843,
+        "ipTM": 0.754,
+        "affinity_kd_uM": 138.747,
+        "affinity_pkd": 3.858,
+        "prob_binder": 0.276
+      },
+      {
+        "id": "FM001580_analog_0002",
+        "smiles": "NC(=O)c1ccccc1OC(F)(F)F",
+        "pLDDT": 0.8927,
+        "ipTM": 0.7323,
+        "affinity_kd_uM": 39.424,
+        "affinity_pkd": 4.404,
+        "prob_binder": 0.2711
+      },
+      {
+        "id": "FM001580_analog_0001",
+        "smiles": "CN(C)C(=O)c1ccccc1OC(F)(F)F",
+        "pLDDT": 0.9004,
+        "ipTM": 0.6963,
+        "affinity_kd_uM": 176.93,
+        "affinity_pkd": 3.752,
+        "prob_binder": 0.1349
+      },
+      {
+        "id": "FM001580_analog_0120",
+        "smiles": "CN1CCC(c2cccc(C(=O)O)c2OC(F)(F)F)CC1",
+        "pLDDT": 0.8879,
+        "ipTM": 0.7129,
+        "affinity_kd_uM": 43.594,
+        "affinity_pkd": 4.361,
+        "prob_binder": 0.1996
+      },
+      {
+        "id": "FM001580_analog_0008",
+        "smiles": "O=C(O)c1c(Cl)cccc1OC(F)(F)F",
+        "pLDDT": 0.9115,
+        "ipTM": 0.7276,
+        "affinity_kd_uM": 67.324,
+        "affinity_pkd": 4.172,
+        "prob_binder": 0.2117
+      },
+      {
+        "id": "FM001580_analog_0060",
+        "smiles": "O=C(O)c1cc(C2CCCCC2)ccc1OC(F)(F)F",
+        "pLDDT": 0.8859,
+        "ipTM": 0.7924,
+        "affinity_kd_uM": 14.605,
+        "affinity_pkd": 4.835,
+        "prob_binder": 0.3277
+      },
+      {
+        "id": "FM001580_analog_0114",
+        "smiles": "O=C(O)c1cccc(-c2ccccn2)c1OC(F)(F)F",
+        "pLDDT": 0.8799,
+        "ipTM": 0.7583,
+        "affinity_kd_uM": 107.791,
+        "affinity_pkd": 3.967,
+        "prob_binder": 0.357
+      },
+      {
+        "id": "FM001580_analog_0094",
+        "smiles": "O=C(O)c1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.8843,
+        "ipTM": 0.7225,
+        "affinity_kd_uM": 42.964,
+        "affinity_pkd": 4.367,
+        "prob_binder": 0.3607
+      },
+      {
+        "id": "FM001580_analog_0013",
+        "smiles": "CS(=O)(=O)c1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.909,
+        "ipTM": 0.6989,
+        "affinity_kd_uM": 78.031,
+        "affinity_pkd": 4.108,
+        "prob_binder": 0.2468
+      },
+      {
+        "id": "FM001580_analog_0098",
+        "smiles": "CS(=O)(=O)c1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.9188,
+        "ipTM": 0.667,
+        "affinity_kd_uM": 67.022,
+        "affinity_pkd": 4.174,
+        "prob_binder": 0.2219
+      },
+      {
+        "id": "FM001580_analog_0089",
+        "smiles": "O=C(O)c1ccc(C2CCNCC2)cc1OC(F)(F)F",
+        "pLDDT": 0.9278,
+        "ipTM": 0.8467,
+        "affinity_kd_uM": 86.112,
+        "affinity_pkd": 4.065,
+        "prob_binder": 0.285
+      },
+      {
+        "id": "FM001580_analog_0090",
+        "smiles": "O=C(O)c1ccc(C2CCOCC2)cc1OC(F)(F)F",
+        "pLDDT": 0.8731,
+        "ipTM": 0.7972,
+        "affinity_kd_uM": 33.967,
+        "affinity_pkd": 4.469,
+        "prob_binder": 0.287
+      },
+      {
+        "id": "FM001580_analog_0043",
+        "smiles": "NS(=O)(=O)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.8923,
+        "ipTM": 0.7709,
+        "affinity_kd_uM": 34.761,
+        "affinity_pkd": 4.459,
+        "prob_binder": 0.2337
+      },
+      {
+        "id": "FM001580_analog_0009",
+        "smiles": "O=C(O)c1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.8965,
+        "ipTM": 0.6284,
+        "affinity_kd_uM": 72.417,
+        "affinity_pkd": 4.14,
+        "prob_binder": 0.2767
+      },
+      {
+        "id": "FM001580_analog_0045",
+        "smiles": "CN(C)Cc1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9228,
+        "ipTM": 0.8194,
+        "affinity_kd_uM": 85.546,
+        "affinity_pkd": 4.068,
+        "prob_binder": 0.2598
+      },
+      {
+        "id": "FM001580_analog_0050",
+        "smiles": "O=C(O)c1cc(OCCO)ccc1OC(F)(F)F",
+        "pLDDT": 0.8969,
+        "ipTM": 0.7369,
+        "affinity_kd_uM": 90.812,
+        "affinity_pkd": 4.042,
+        "prob_binder": 0.287
+      },
+      {
+        "id": "FM001580_analog_0049",
+        "smiles": "N#Cc1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9106,
+        "ipTM": 0.6555,
+        "affinity_kd_uM": 50.319,
+        "affinity_pkd": 4.298,
+        "prob_binder": 0.2743
+      },
+      {
+        "id": "FM001580_analog_0055",
+        "smiles": "NCc1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9203,
+        "ipTM": 0.76,
+        "affinity_kd_uM": 117.219,
+        "affinity_pkd": 3.931,
+        "prob_binder": 0.3436
+      },
+      {
+        "id": "FM001580_analog_0063",
+        "smiles": "CN1CCC(c2ccc(OC(F)(F)F)c(C(=O)O)c2)CC1",
+        "pLDDT": 0.9102,
+        "ipTM": 0.7966,
+        "affinity_kd_uM": 50.328,
+        "affinity_pkd": 4.298,
+        "prob_binder": 0.2201
+      },
+      {
+        "id": "FM001580_analog_0020",
+        "smiles": "N#Cc1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9023,
+        "ipTM": 0.7196,
+        "affinity_kd_uM": 58.784,
+        "affinity_pkd": 4.231,
+        "prob_binder": 0.2921
+      },
+      {
+        "id": "FM001580_analog_0105",
+        "smiles": "N#Cc1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.9039,
+        "ipTM": 0.6258,
+        "affinity_kd_uM": 28.614,
+        "affinity_pkd": 4.543,
+        "prob_binder": 0.3303
+      },
+      {
+        "id": "FM001580_analog_0040",
+        "smiles": "CCOc1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9004,
+        "ipTM": 0.7053,
+        "affinity_kd_uM": 114.918,
+        "affinity_pkd": 3.94,
+        "prob_binder": 0.3212
+      },
+      {
+        "id": "FM001580_analog_0053",
+        "smiles": "CCCc1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9143,
+        "ipTM": 0.7836,
+        "affinity_kd_uM": 64.073,
+        "affinity_pkd": 4.193,
+        "prob_binder": 0.2893
+      },
+      {
+        "id": "FM001580_analog_0028",
+        "smiles": "O=C(O)c1c(OC(F)(F)F)cccc1-c1ccncc1",
+        "pLDDT": 0.8945,
+        "ipTM": 0.7956,
+        "affinity_kd_uM": 52.923,
+        "affinity_pkd": 4.276,
+        "prob_binder": 0.4651
+      },
+      {
+        "id": "FM001580_analog_0113",
+        "smiles": "O=C(O)c1cccc(-c2ccncc2)c1OC(F)(F)F",
+        "pLDDT": 0.8752,
+        "ipTM": 0.7102,
+        "affinity_kd_uM": 94.112,
+        "affinity_pkd": 4.026,
+        "prob_binder": 0.3139
+      },
+      {
+        "id": "FM001580_analog_0051",
+        "smiles": "O=C(O)c1cc(CO)ccc1OC(F)(F)F",
+        "pLDDT": 0.8989,
+        "ipTM": 0.7057,
+        "affinity_kd_uM": 76.455,
+        "affinity_pkd": 4.117,
+        "prob_binder": 0.3459
+      },
+      {
+        "id": "FM001580_analog_0073",
+        "smiles": "CN(C)Cc1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.932,
+        "ipTM": 0.7786,
+        "affinity_kd_uM": 45.725,
+        "affinity_pkd": 4.34,
+        "prob_binder": 0.283
+      },
+      {
+        "id": "FM001580_analog_0017",
+        "smiles": "Cc1cccc(OC(F)(F)F)c1C(=O)O",
+        "pLDDT": 0.9248,
+        "ipTM": 0.6912,
+        "affinity_kd_uM": 112.252,
+        "affinity_pkd": 3.95,
+        "prob_binder": 0.2255
+      },
+      {
+        "id": "FM001580_analog_0102",
+        "smiles": "Cc1cccc(C(=O)O)c1OC(F)(F)F",
+        "pLDDT": 0.9049,
+        "ipTM": 0.6506,
+        "affinity_kd_uM": 169.424,
+        "affinity_pkd": 3.771,
+        "prob_binder": 0.2314
+      },
+      {
+        "id": "FM001580_analog_0006",
+        "smiles": "CCOc1ccccc1C(=O)O",
+        "pLDDT": 0.915,
+        "ipTM": 0.7683,
+        "affinity_kd_uM": 46.547,
+        "affinity_pkd": 4.332,
+        "prob_binder": 0.2049
+      },
+      {
+        "id": "FM001580_analog_0052",
+        "smiles": "CCc1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9052,
+        "ipTM": 0.7363,
+        "affinity_kd_uM": 111.708,
+        "affinity_pkd": 3.952,
+        "prob_binder": 0.2947
+      },
+      {
+        "id": "FM001580_analog_0054",
+        "smiles": "CC(C)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9107,
+        "ipTM": 0.799,
+        "affinity_kd_uM": 71.4,
+        "affinity_pkd": 4.146,
+        "prob_binder": 0.2686
+      },
+      {
+        "id": "FM001580_analog_0081",
+        "smiles": "CCCc1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.9051,
+        "ipTM": 0.7771,
+        "affinity_kd_uM": 27.477,
+        "affinity_pkd": 4.561,
+        "prob_binder": 0.2557
+      },
+      {
+        "id": "FM001580_analog_0037",
+        "smiles": "O=C(O)c1cc(Cl)ccc1OC(F)(F)F",
+        "pLDDT": 0.9186,
+        "ipTM": 0.7424,
+        "affinity_kd_uM": 62.518,
+        "affinity_pkd": 4.204,
+        "prob_binder": 0.198
+      },
+      {
+        "id": "FM001580_analog_0041",
+        "smiles": "O=C(O)c1cc(C(F)(F)F)ccc1OC(F)(F)F",
+        "pLDDT": 0.9155,
+        "ipTM": 0.7719,
+        "affinity_kd_uM": 36.358,
+        "affinity_pkd": 4.439,
+        "prob_binder": 0.2081
+      },
+      {
+        "id": "FM001580_analog_0088",
+        "smiles": "O=C(O)c1ccc(C2CCCCC2)cc1OC(F)(F)F",
+        "pLDDT": 0.8731,
+        "ipTM": 0.7938,
+        "affinity_kd_uM": 45.201,
+        "affinity_pkd": 4.345,
+        "prob_binder": 0.313
+      },
+      {
+        "id": "FM001580_analog_0071",
+        "smiles": "NS(=O)(=O)c1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.9032,
+        "ipTM": 0.754,
+        "affinity_kd_uM": 15.875,
+        "affinity_pkd": 4.799,
+        "prob_binder": 0.3159
+      },
+      {
+        "id": "FM001580_analog_0036",
+        "smiles": "O=C(O)c1cc(F)ccc1OC(F)(F)F",
+        "pLDDT": 0.908,
+        "ipTM": 0.747,
+        "affinity_kd_uM": 64.19,
+        "affinity_pkd": 4.193,
+        "prob_binder": 0.1805
+      },
+      {
+        "id": "FM001580_analog_0082",
+        "smiles": "CC(C)c1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.8892,
+        "ipTM": 0.7695,
+        "affinity_kd_uM": 41.183,
+        "affinity_pkd": 4.385,
+        "prob_binder": 0.244
+      },
+      {
+        "id": "FM001580_analog_0083",
+        "smiles": "NCc1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.8925,
+        "ipTM": 0.6972,
+        "affinity_kd_uM": 88.959,
+        "affinity_pkd": 4.051,
+        "prob_binder": 0.3408
+      },
+      {
+        "id": "FM001580_analog_0079",
+        "smiles": "O=C(O)c1ccc(CO)cc1OC(F)(F)F",
+        "pLDDT": 0.9038,
+        "ipTM": 0.7181,
+        "affinity_kd_uM": 49.702,
+        "affinity_pkd": 4.304,
+        "prob_binder": 0.3331
+      },
+      {
+        "id": "FM001580_analog_0078",
+        "smiles": "O=C(O)c1ccc(OCCO)cc1OC(F)(F)F",
+        "pLDDT": 0.8936,
+        "ipTM": 0.7036,
+        "affinity_kd_uM": 77.378,
+        "affinity_pkd": 4.111,
+        "prob_binder": 0.2783
+      },
+      {
+        "id": "FM001580_analog_0084",
+        "smiles": "CN(C)c1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.8832,
+        "ipTM": 0.6333,
+        "affinity_kd_uM": 45.4,
+        "affinity_pkd": 4.343,
+        "prob_binder": 0.3335
+      },
+      {
+        "id": "FM001580_analog_0077",
+        "smiles": "N#Cc1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.9198,
+        "ipTM": 0.6949,
+        "affinity_kd_uM": 13.756,
+        "affinity_pkd": 4.862,
+        "prob_binder": 0.3482
+      },
+      {
+        "id": "FM001580_analog_0080",
+        "smiles": "CCc1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.8937,
+        "ipTM": 0.7889,
+        "affinity_kd_uM": 83.22,
+        "affinity_pkd": 4.08,
+        "prob_binder": 0.2463
+      },
+      {
+        "id": "FM001580_analog_0048",
+        "smiles": "CNC(=O)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9064,
+        "ipTM": 0.679,
+        "affinity_kd_uM": 93.374,
+        "affinity_pkd": 4.03,
+        "prob_binder": 0.2617
+      },
+      {
+        "id": "FM001580_analog_0068",
+        "smiles": "CCOc1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.8868,
+        "ipTM": 0.7675,
+        "affinity_kd_uM": 52.473,
+        "affinity_pkd": 4.28,
+        "prob_binder": 0.2654
+      },
+      {
+        "id": "FM001580_analog_0044",
+        "smiles": "NC(=O)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.8917,
+        "ipTM": 0.7281,
+        "affinity_kd_uM": 65.827,
+        "affinity_pkd": 4.182,
+        "prob_binder": 0.3217
+      },
+      {
+        "id": "FM001580_analog_0076",
+        "smiles": "CNC(=O)c1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.898,
+        "ipTM": 0.7185,
+        "affinity_kd_uM": 53.027,
+        "affinity_pkd": 4.276,
+        "prob_binder": 0.2771
+      },
+      {
+        "id": "FM001580_analog_0058",
+        "smiles": "O=C(O)c1cc(-c2ccoc2)ccc1OC(F)(F)F",
+        "pLDDT": 0.8786,
+        "ipTM": 0.7558,
+        "affinity_kd_uM": 23.459,
+        "affinity_pkd": 4.63,
+        "prob_binder": 0.4034
+      },
+      {
+        "id": "FM001580_analog_0059",
+        "smiles": "O=C(O)c1cc(-c2ccsc2)ccc1OC(F)(F)F",
+        "pLDDT": 0.8845,
+        "ipTM": 0.7198,
+        "affinity_kd_uM": 17.057,
+        "affinity_pkd": 4.768,
+        "prob_binder": 0.4055
+      },
+      {
+        "id": "FM001580_analog_0065",
+        "smiles": "O=C(O)c1ccc(Cl)cc1OC(F)(F)F",
+        "pLDDT": 0.9307,
+        "ipTM": 0.7777,
+        "affinity_kd_uM": 39.237,
+        "affinity_pkd": 4.406,
+        "prob_binder": 0.1886
+      },
+      {
+        "id": "FM001580_analog_0069",
+        "smiles": "O=C(O)c1ccc(C(F)(F)F)cc1OC(F)(F)F",
+        "pLDDT": 0.9135,
+        "ipTM": 0.7762,
+        "affinity_kd_uM": 41.551,
+        "affinity_pkd": 4.381,
+        "prob_binder": 0.2998
+      },
+      {
+        "id": "FM001580_analog_0042",
+        "smiles": "CS(=O)(=O)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9052,
+        "ipTM": 0.679,
+        "affinity_kd_uM": 61.63,
+        "affinity_pkd": 4.21,
+        "prob_binder": 0.2331
+      },
+      {
+        "id": "FM001580_analog_0091",
+        "smiles": "CN1CCC(c2ccc(C(=O)O)c(OC(F)(F)F)c2)CC1",
+        "pLDDT": 0.9324,
+        "ipTM": 0.8414,
+        "affinity_kd_uM": 60.676,
+        "affinity_pkd": 4.217,
+        "prob_binder": 0.2143
+      },
+      {
+        "id": "FM001580_analog_0046",
+        "smiles": "Cc1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.922,
+        "ipTM": 0.6168,
+        "affinity_kd_uM": 75.065,
+        "affinity_pkd": 4.125,
+        "prob_binder": 0.2707
+      },
+      {
+        "id": "FM001580_analog_0047",
+        "smiles": "Nc1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.9081,
+        "ipTM": 0.6461,
+        "affinity_kd_uM": 50.092,
+        "affinity_pkd": 4.3,
+        "prob_binder": 0.3544
+      },
+      {
+        "id": "FM001580_analog_0064",
+        "smiles": "O=C(O)c1ccc(F)cc1OC(F)(F)F",
+        "pLDDT": 0.9015,
+        "ipTM": 0.7685,
+        "affinity_kd_uM": 48.446,
+        "affinity_pkd": 4.315,
+        "prob_binder": 0.1778
+      },
+      {
+        "id": "FM001580_analog_0039",
+        "smiles": "COc1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.906,
+        "ipTM": 0.7745,
+        "affinity_kd_uM": 60.014,
+        "affinity_pkd": 4.222,
+        "prob_binder": 0.3358
+      },
+      {
+        "id": "FM001580_analog_0072",
+        "smiles": "NC(=O)c1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.8911,
+        "ipTM": 0.7039,
+        "affinity_kd_uM": 24.267,
+        "affinity_pkd": 4.615,
+        "prob_binder": 0.341
+      },
+      {
+        "id": "FM001580_analog_0057",
+        "smiles": "O=C(O)c1cc(-c2ccccn2)ccc1OC(F)(F)F",
+        "pLDDT": 0.873,
+        "ipTM": 0.8055,
+        "affinity_kd_uM": 51.021,
+        "affinity_pkd": 4.292,
+        "prob_binder": 0.4325
+      },
+      {
+        "id": "FM001580_analog_0086",
+        "smiles": "O=C(O)c1ccc(-c2ccoc2)cc1OC(F)(F)F",
+        "pLDDT": 0.8821,
+        "ipTM": 0.801,
+        "affinity_kd_uM": 18.749,
+        "affinity_pkd": 4.727,
+        "prob_binder": 0.4485
+      },
+      {
+        "id": "FM001580_analog_0087",
+        "smiles": "O=C(O)c1ccc(-c2ccsc2)cc1OC(F)(F)F",
+        "pLDDT": 0.8826,
+        "ipTM": 0.8446,
+        "affinity_kd_uM": 15.873,
+        "affinity_pkd": 4.799,
+        "prob_binder": 0.5128
+      },
+      {
+        "id": "FM001580_analog_0085",
+        "smiles": "O=C(O)c1ccc(-c2ccccn2)cc1OC(F)(F)F",
+        "pLDDT": 0.8761,
+        "ipTM": 0.7763,
+        "affinity_kd_uM": 55.624,
+        "affinity_pkd": 4.255,
+        "prob_binder": 0.3159
+      },
+      {
+        "id": "FM001580_analog_0038",
+        "smiles": "O=C(O)c1ccc(OC(F)(F)F)c(C(=O)O)c1",
+        "pLDDT": 0.89,
+        "ipTM": 0.7242,
+        "affinity_kd_uM": 49.048,
+        "affinity_pkd": 4.309,
+        "prob_binder": 0.2642
+      },
+      {
+        "id": "FM001580_analog_0070",
+        "smiles": "CS(=O)(=O)c1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.9291,
+        "ipTM": 0.7984,
+        "affinity_kd_uM": 34.667,
+        "affinity_pkd": 4.46,
+        "prob_binder": 0.2275
+      },
+      {
+        "id": "FM001580_analog_0066",
+        "smiles": "O=C(O)c1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.8763,
+        "ipTM": 0.6849,
+        "affinity_kd_uM": 21.653,
+        "affinity_pkd": 4.664,
+        "prob_binder": 0.2825
+      },
+      {
+        "id": "FM001580_analog_0074",
+        "smiles": "Cc1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.9134,
+        "ipTM": 0.6979,
+        "affinity_kd_uM": 73.311,
+        "affinity_pkd": 4.135,
+        "prob_binder": 0.2861
+      },
+      {
+        "id": "FM001580_analog_0075",
+        "smiles": "Nc1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.9035,
+        "ipTM": 0.6539,
+        "affinity_kd_uM": 17.167,
+        "affinity_pkd": 4.765,
+        "prob_binder": 0.4388
+      },
+      {
+        "id": "FM001580_analog_0067",
+        "smiles": "COc1ccc(C(=O)O)c(OC(F)(F)F)c1",
+        "pLDDT": 0.907,
+        "ipTM": 0.7254,
+        "affinity_kd_uM": 65.295,
+        "affinity_pkd": 4.185,
+        "prob_binder": 0.306
+      },
+      {
+        "id": "FM001580_analog_0056",
+        "smiles": "O=C(O)c1cc(-c2ccncc2)ccc1OC(F)(F)F",
+        "pLDDT": 0.865,
+        "ipTM": 0.7128,
+        "affinity_kd_uM": 47.404,
+        "affinity_pkd": 4.324,
+        "prob_binder": 0.3902
+      },
+      {
+        "id": "FM001452_analog_0092",
+        "smiles": "Nc1ccc(C2CCOCC2)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8868,
+        "ipTM": 0.83,
+        "affinity_kd_uM": 15.651,
+        "affinity_pkd": 4.805,
+        "prob_binder": 0.2285
+      },
+      {
+        "id": "FM001452_analog_0088",
+        "smiles": "Nc1ccc(-c2ccoc2)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8785,
+        "ipTM": 0.822,
+        "affinity_kd_uM": 30.694,
+        "affinity_pkd": 4.513,
+        "prob_binder": 0.5726
+      },
+      {
+        "id": "FM001452_analog_0089",
+        "smiles": "Nc1ccc(-c2ccsc2)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8852,
+        "ipTM": 0.7697,
+        "affinity_kd_uM": 42.353,
+        "affinity_pkd": 4.373,
+        "prob_binder": 0.4829
+      },
+      {
+        "id": "FM001452_analog_0093",
+        "smiles": "CN1CCC(c2ccc(N)cc2OCc2ccccc2)CC1",
+        "pLDDT": 0.8902,
+        "ipTM": 0.7945,
+        "affinity_kd_uM": 2.78,
+        "affinity_pkd": 5.556,
+        "prob_binder": 0.1915
+      },
+      {
+        "id": "FM001452_analog_0090",
+        "smiles": "Nc1ccc(C2CCCCC2)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8815,
+        "ipTM": 0.7252,
+        "affinity_kd_uM": 14.039,
+        "affinity_pkd": 4.853,
+        "prob_binder": 0.4267
+      },
+      {
+        "id": "FM001452_analog_0122",
+        "smiles": "CN1CCC(c2ccccc2COc2cccc(N)c2)CC1",
+        "pLDDT": 0.872,
+        "ipTM": 0.7364,
+        "affinity_kd_uM": 6.358,
+        "affinity_pkd": 5.197,
+        "prob_binder": 0.1892
+      },
+      {
+        "id": "FM001452_analog_0086",
+        "smiles": "Nc1ccc(-c2ccncc2)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8856,
+        "ipTM": 0.8152,
+        "affinity_kd_uM": 19.118,
+        "affinity_pkd": 4.719,
+        "prob_binder": 0.4288
+      },
+      {
+        "id": "FM001452_analog_0087",
+        "smiles": "Nc1ccc(-c2ccccn2)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8942,
+        "ipTM": 0.8975,
+        "affinity_kd_uM": 14.518,
+        "affinity_pkd": 4.838,
+        "prob_binder": 0.3835
+      },
+      {
+        "id": "FM001452_analog_0065",
+        "smiles": "CN1CCC(c2cc(N)cc(OCc3ccccc3)c2)CC1",
+        "pLDDT": 0.8842,
+        "ipTM": 0.7757,
+        "affinity_kd_uM": 16.537,
+        "affinity_pkd": 4.782,
+        "prob_binder": 0.2559
+      },
+      {
+        "id": "FM001452_analog_0091",
+        "smiles": "Nc1ccc(C2CCNCC2)c(OCc2ccccc2)c1",
+        "pLDDT": 0.9001,
+        "ipTM": 0.8035,
+        "affinity_kd_uM": 6.127,
+        "affinity_pkd": 5.213,
+        "prob_binder": 0.2396
+      },
+      {
+        "id": "FM001452_analog_0106",
+        "smiles": "CNC(=O)c1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8887,
+        "ipTM": 0.7932,
+        "affinity_kd_uM": 19.153,
+        "affinity_pkd": 4.718,
+        "prob_binder": 0.2776
+      },
+      {
+        "id": "FM001452_analog_0117",
+        "smiles": "Nc1cccc(OCc2ccccc2-c2ccoc2)c1",
+        "pLDDT": 0.8756,
+        "ipTM": 0.498,
+        "affinity_kd_uM": 12.054,
+        "affinity_pkd": 4.919,
+        "prob_binder": 0.3761
+      },
+      {
+        "id": "FM001452_analog_0121",
+        "smiles": "Nc1cccc(OCc2ccccc2C2CCOCC2)c1",
+        "pLDDT": 0.9198,
+        "ipTM": 0.8423,
+        "affinity_kd_uM": 11.746,
+        "affinity_pkd": 4.93,
+        "prob_binder": 0.2636
+      },
+      {
+        "id": "FM001452_analog_0178",
+        "smiles": "CN1CCC(c2ccc(COc3cccc(N)c3)cc2)CC1",
+        "pLDDT": 0.8888,
+        "ipTM": 0.6117,
+        "affinity_kd_uM": 7.073,
+        "affinity_pkd": 5.15,
+        "prob_binder": 0.3881
+      },
+      {
+        "id": "FM001452_analog_0073",
+        "smiles": "Nc1ccc(S(N)(=O)=O)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8901,
+        "ipTM": 0.8807,
+        "affinity_kd_uM": 2.804,
+        "affinity_pkd": 5.552,
+        "prob_binder": 0.3877
+      },
+      {
+        "id": "FM001452_analog_0199",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1-c1ccccn1",
+        "pLDDT": 0.8903,
+        "ipTM": 0.7996,
+        "affinity_kd_uM": 40.726,
+        "affinity_pkd": 4.39,
+        "prob_binder": 0.4699
+      },
+      {
+        "id": "FM001452_analog_0177",
+        "smiles": "Nc1cccc(OCc2ccc(C3CCOCC3)cc2)c1",
+        "pLDDT": 0.8756,
+        "ipTM": 0.6532,
+        "affinity_kd_uM": 23.545,
+        "affinity_pkd": 4.628,
+        "prob_binder": 0.5491
+      },
+      {
+        "id": "FM001452_analog_0063",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(C2CCNCC2)c1",
+        "pLDDT": 0.8629,
+        "ipTM": 0.7579,
+        "affinity_kd_uM": 20.676,
+        "affinity_pkd": 4.685,
+        "prob_binder": 0.2991
+      },
+      {
+        "id": "FM001452_analog_0064",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(C2CCOCC2)c1",
+        "pLDDT": 0.878,
+        "ipTM": 0.7418,
+        "affinity_kd_uM": 22.964,
+        "affinity_pkd": 4.639,
+        "prob_binder": 0.2888
+      },
+      {
+        "id": "FM001452_analog_0079",
+        "smiles": "N#Cc1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.9042,
+        "ipTM": 0.8586,
+        "affinity_kd_uM": 11.145,
+        "affinity_pkd": 4.953,
+        "prob_binder": 0.5073
+      },
+      {
+        "id": "FM001452_analog_0186",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1S(N)(=O)=O",
+        "pLDDT": 0.8807,
+        "ipTM": 0.7385,
+        "affinity_kd_uM": 5.616,
+        "affinity_pkd": 5.251,
+        "prob_binder": 0.3909
+      },
+      {
+        "id": "FM001452_analog_0187",
+        "smiles": "NC(=O)c1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8903,
+        "ipTM": 0.8085,
+        "affinity_kd_uM": 7.559,
+        "affinity_pkd": 5.122,
+        "prob_binder": 0.5896
+      },
+      {
+        "id": "FM001452_analog_0119",
+        "smiles": "Nc1cccc(OCc2ccccc2C2CCCCC2)c1",
+        "pLDDT": 0.8729,
+        "ipTM": 0.8062,
+        "affinity_kd_uM": 18.838,
+        "affinity_pkd": 4.725,
+        "prob_binder": 0.5153
+      },
+      {
+        "id": "FM001452_analog_0003",
+        "smiles": "Nc1cccc(SCc2ccccc2)c1",
+        "pLDDT": 0.9117,
+        "ipTM": 0.7302,
+        "affinity_kd_uM": 15.304,
+        "affinity_pkd": 4.815,
+        "prob_binder": 0.3988
+      },
+      {
+        "id": "FM001452_analog_0173",
+        "smiles": "Nc1cccc(OCc2ccc(-c3ccoc3)cc2)c1",
+        "pLDDT": 0.8763,
+        "ipTM": 0.6819,
+        "affinity_kd_uM": 32.647,
+        "affinity_pkd": 4.486,
+        "prob_binder": 0.4733
+      },
+      {
+        "id": "FM001452_analog_0175",
+        "smiles": "Nc1cccc(OCc2ccc(C3CCCCC3)cc2)c1",
+        "pLDDT": 0.8926,
+        "ipTM": 0.7656,
+        "affinity_kd_uM": 16.71,
+        "affinity_pkd": 4.777,
+        "prob_binder": 0.6785
+      },
+      {
+        "id": "FM001452_analog_0081",
+        "smiles": "Nc1ccc(CO)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8957,
+        "ipTM": 0.743,
+        "affinity_kd_uM": 6.927,
+        "affinity_pkd": 5.159,
+        "prob_binder": 0.3861
+      },
+      {
+        "id": "FM001452_analog_0184",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1C(F)(F)F",
+        "pLDDT": 0.8985,
+        "ipTM": 0.7095,
+        "affinity_kd_uM": 74.645,
+        "affinity_pkd": 4.127,
+        "prob_binder": 0.3272
+      },
+      {
+        "id": "FM001452_analog_0191",
+        "smiles": "N#Cc1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8961,
+        "ipTM": 0.7714,
+        "affinity_kd_uM": 12.762,
+        "affinity_pkd": 4.894,
+        "prob_binder": 0.5404
+      },
+      {
+        "id": "FM001452_analog_0060",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(-c2ccoc2)c1",
+        "pLDDT": 0.8739,
+        "ipTM": 0.7824,
+        "affinity_kd_uM": 11.475,
+        "affinity_pkd": 4.94,
+        "prob_binder": 0.4695
+      },
+      {
+        "id": "FM001452_analog_0061",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(-c2ccsc2)c1",
+        "pLDDT": 0.872,
+        "ipTM": 0.701,
+        "affinity_kd_uM": 23.168,
+        "affinity_pkd": 4.635,
+        "prob_binder": 0.4582
+      },
+      {
+        "id": "FM001452_analog_0062",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(C2CCCCC2)c1",
+        "pLDDT": 0.8773,
+        "ipTM": 0.6636,
+        "affinity_kd_uM": 41.657,
+        "affinity_pkd": 4.38,
+        "prob_binder": 0.5539
+      },
+      {
+        "id": "FM001452_analog_0075",
+        "smiles": "CN(C)Cc1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.874,
+        "ipTM": 0.7359,
+        "affinity_kd_uM": 14.179,
+        "affinity_pkd": 4.848,
+        "prob_binder": 0.2316
+      },
+      {
+        "id": "FM001452_analog_0078",
+        "smiles": "CNC(=O)c1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.9029,
+        "ipTM": 0.8981,
+        "affinity_kd_uM": 7.645,
+        "affinity_pkd": 5.117,
+        "prob_binder": 0.3893
+      },
+      {
+        "id": "FM001452_analog_0163",
+        "smiles": "CNC(=O)c1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.8943,
+        "ipTM": 0.7207,
+        "affinity_kd_uM": 10.432,
+        "affinity_pkd": 4.982,
+        "prob_binder": 0.4214
+      },
+      {
+        "id": "FM001452_analog_0085",
+        "smiles": "NCc1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.8928,
+        "ipTM": 0.7421,
+        "affinity_kd_uM": 13.024,
+        "affinity_pkd": 4.885,
+        "prob_binder": 0.2732
+      },
+      {
+        "id": "FM001452_analog_0071",
+        "smiles": "Nc1ccc(C(F)(F)F)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8986,
+        "ipTM": 0.7586,
+        "affinity_kd_uM": 53.747,
+        "affinity_pkd": 4.27,
+        "prob_binder": 0.3943
+      },
+      {
+        "id": "FM001452_analog_0074",
+        "smiles": "NC(=O)c1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.8956,
+        "ipTM": 0.8203,
+        "affinity_kd_uM": 9.359,
+        "affinity_pkd": 5.029,
+        "prob_binder": 0.4935
+      },
+      {
+        "id": "FM001452_analog_0193",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1CO",
+        "pLDDT": 0.9027,
+        "ipTM": 0.8385,
+        "affinity_kd_uM": 8.433,
+        "affinity_pkd": 5.074,
+        "prob_binder": 0.5204
+      },
+      {
+        "id": "FM001452_analog_0101",
+        "smiles": "Nc1cccc(OCc2ccccc2S(N)(=O)=O)c1",
+        "pLDDT": 0.8815,
+        "ipTM": 0.7856,
+        "affinity_kd_uM": 3.922,
+        "affinity_pkd": 5.406,
+        "prob_binder": 0.2634
+      },
+      {
+        "id": "FM001452_analog_0102",
+        "smiles": "NC(=O)c1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8866,
+        "ipTM": 0.7891,
+        "affinity_kd_uM": 18.25,
+        "affinity_pkd": 4.739,
+        "prob_binder": 0.3654
+      },
+      {
+        "id": "FM001452_analog_0059",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(-c2ccccn2)c1",
+        "pLDDT": 0.8831,
+        "ipTM": 0.7797,
+        "affinity_kd_uM": 7.598,
+        "affinity_pkd": 5.119,
+        "prob_binder": 0.5075
+      },
+      {
+        "id": "FM001452_analog_0080",
+        "smiles": "Nc1ccc(OCCO)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8843,
+        "ipTM": 0.8032,
+        "affinity_kd_uM": 4.364,
+        "affinity_pkd": 5.36,
+        "prob_binder": 0.3752
+      },
+      {
+        "id": "FM001452_analog_0083",
+        "smiles": "CCCc1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.884,
+        "ipTM": 0.7897,
+        "affinity_kd_uM": 39.893,
+        "affinity_pkd": 4.399,
+        "prob_binder": 0.4794
+      },
+      {
+        "id": "FM001452_analog_0188",
+        "smiles": "CN(C)Cc1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8825,
+        "ipTM": 0.7656,
+        "affinity_kd_uM": 30.585,
+        "affinity_pkd": 4.514,
+        "prob_binder": 0.3145
+      },
+      {
+        "id": "FM001452_analog_0192",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1OCCO",
+        "pLDDT": 0.8825,
+        "ipTM": 0.7708,
+        "affinity_kd_uM": 6.169,
+        "affinity_pkd": 5.21,
+        "prob_binder": 0.479
+      },
+      {
+        "id": "FM001452_analog_0150",
+        "smiles": "Nc1cccc(OCc2cccc(C3CCOCC3)c2)c1",
+        "pLDDT": 0.8949,
+        "ipTM": 0.7787,
+        "affinity_kd_uM": 16.057,
+        "affinity_pkd": 4.794,
+        "prob_binder": 0.4049
+      },
+      {
+        "id": "FM001452_analog_0066",
+        "smiles": "Nc1ccc(F)c(OCc2ccccc2)c1",
+        "pLDDT": 0.9147,
+        "ipTM": 0.7636,
+        "affinity_kd_uM": 27.159,
+        "affinity_pkd": 4.566,
+        "prob_binder": 0.4352
+      },
+      {
+        "id": "FM001452_analog_0067",
+        "smiles": "Nc1ccc(Cl)c(OCc2ccccc2)c1",
+        "pLDDT": 0.9131,
+        "ipTM": 0.7338,
+        "affinity_kd_uM": 35.336,
+        "affinity_pkd": 4.452,
+        "prob_binder": 0.4969
+      },
+      {
+        "id": "FM001452_analog_0197",
+        "smiles": "NCc1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8949,
+        "ipTM": 0.8309,
+        "affinity_kd_uM": 22.163,
+        "affinity_pkd": 4.654,
+        "prob_binder": 0.3925
+      },
+      {
+        "id": "FM001452_analog_0160",
+        "smiles": "NC(=O)c1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.886,
+        "ipTM": 0.695,
+        "affinity_kd_uM": 6.06,
+        "affinity_pkd": 5.218,
+        "prob_binder": 0.435
+      },
+      {
+        "id": "FM001452_analog_0099",
+        "smiles": "Nc1cccc(OCc2ccccc2C(F)(F)F)c1",
+        "pLDDT": 0.889,
+        "ipTM": 0.7245,
+        "affinity_kd_uM": 19.011,
+        "affinity_pkd": 4.721,
+        "prob_binder": 0.3282
+      },
+      {
+        "id": "FM001452_analog_0112",
+        "smiles": "CC(C)c1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8891,
+        "ipTM": 0.8112,
+        "affinity_kd_uM": 4.717,
+        "affinity_pkd": 5.326,
+        "prob_binder": 0.5519
+      },
+      {
+        "id": "FM001452_analog_0058",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(-c2ccncc2)c1",
+        "pLDDT": 0.9033,
+        "ipTM": 0.8849,
+        "affinity_kd_uM": 11.252,
+        "affinity_pkd": 4.949,
+        "prob_binder": 0.4595
+      },
+      {
+        "id": "FM001452_analog_0084",
+        "smiles": "CC(C)c1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.8882,
+        "ipTM": 0.7698,
+        "affinity_kd_uM": 13.993,
+        "affinity_pkd": 4.854,
+        "prob_binder": 0.4766
+      },
+      {
+        "id": "FM001452_analog_0195",
+        "smiles": "CCCc1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8896,
+        "ipTM": 0.7777,
+        "affinity_kd_uM": 19.077,
+        "affinity_pkd": 4.719,
+        "prob_binder": 0.4529
+      },
+      {
+        "id": "FM001452_analog_0103",
+        "smiles": "CN(C)Cc1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.9069,
+        "ipTM": 0.7737,
+        "affinity_kd_uM": 13.051,
+        "affinity_pkd": 4.884,
+        "prob_binder": 0.2293
+      },
+      {
+        "id": "FM001452_analog_0114",
+        "smiles": "CN(C)c1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8943,
+        "ipTM": 0.7468,
+        "affinity_kd_uM": 6.069,
+        "affinity_pkd": 5.217,
+        "prob_binder": 0.2495
+      },
+      {
+        "id": "FM001452_analog_0172",
+        "smiles": "Nc1cccc(OCc2ccc(-c3ccccn3)cc2)c1",
+        "pLDDT": 0.8772,
+        "ipTM": 0.7253,
+        "affinity_kd_uM": 11.683,
+        "affinity_pkd": 4.932,
+        "prob_binder": 0.5259
+      },
+      {
+        "id": "FM001452_analog_0151",
+        "smiles": "CN1CCC(c2cccc(COc3cccc(N)c3)c2)CC1",
+        "pLDDT": 0.8782,
+        "ipTM": 0.7199,
+        "affinity_kd_uM": 6.592,
+        "affinity_pkd": 5.181,
+        "prob_binder": 0.2461
+      },
+      {
+        "id": "FM001452_analog_0116",
+        "smiles": "Nc1cccc(OCc2ccccc2-c2ccccn2)c1",
+        "pLDDT": 0.8864,
+        "ipTM": 0.7552,
+        "affinity_kd_uM": 16.767,
+        "affinity_pkd": 4.776,
+        "prob_binder": 0.2991
+      },
+      {
+        "id": "FM001452_analog_0149",
+        "smiles": "Nc1cccc(OCc2cccc(C3CCNCC3)c2)c1",
+        "pLDDT": 0.9062,
+        "ipTM": 0.7015,
+        "affinity_kd_uM": 9.166,
+        "affinity_pkd": 5.038,
+        "prob_binder": 0.4179
+      },
+      {
+        "id": "FM001452_analog_0120",
+        "smiles": "Nc1cccc(OCc2ccccc2C2CCNCC2)c1",
+        "pLDDT": 0.9329,
+        "ipTM": 0.8778,
+        "affinity_kd_uM": 10.072,
+        "affinity_pkd": 4.997,
+        "prob_binder": 0.2706
+      },
+      {
+        "id": "FM001452_analog_0179",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1F",
+        "pLDDT": 0.9073,
+        "ipTM": 0.7547,
+        "affinity_kd_uM": 21.144,
+        "affinity_pkd": 4.675,
+        "prob_binder": 0.3476
+      },
+      {
+        "id": "FM001452_analog_0180",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1Cl",
+        "pLDDT": 0.9069,
+        "ipTM": 0.7702,
+        "affinity_kd_uM": 16.255,
+        "affinity_pkd": 4.789,
+        "prob_binder": 0.3685
+      },
+      {
+        "id": "FM001452_analog_0181",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1C(=O)O",
+        "pLDDT": 0.8892,
+        "ipTM": 0.8517,
+        "affinity_kd_uM": 28.184,
+        "affinity_pkd": 4.55,
+        "prob_binder": 0.5562
+      },
+      {
+        "id": "FM001452_analog_0157",
+        "smiles": "Nc1cccc(OCc2ccc(C(F)(F)F)cc2)c1",
+        "pLDDT": 0.8966,
+        "ipTM": 0.8145,
+        "affinity_kd_uM": 18.904,
+        "affinity_pkd": 4.723,
+        "prob_binder": 0.4799
+      },
+      {
+        "id": "FM001452_analog_0097",
+        "smiles": "COc1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8943,
+        "ipTM": 0.7005,
+        "affinity_kd_uM": 12.743,
+        "affinity_pkd": 4.895,
+        "prob_binder": 0.3695
+      },
+      {
+        "id": "FM001452_analog_0046",
+        "smiles": "CN(C)Cc1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8784,
+        "ipTM": 0.7398,
+        "affinity_kd_uM": 33.581,
+        "affinity_pkd": 4.474,
+        "prob_binder": 0.2378
+      },
+      {
+        "id": "FM001452_analog_0082",
+        "smiles": "CCc1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.8963,
+        "ipTM": 0.7437,
+        "affinity_kd_uM": 27.341,
+        "affinity_pkd": 4.563,
+        "prob_binder": 0.4601
+      },
+      {
+        "id": "FM001452_analog_0196",
+        "smiles": "CC(C)c1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8953,
+        "ipTM": 0.7997,
+        "affinity_kd_uM": 16.776,
+        "affinity_pkd": 4.775,
+        "prob_binder": 0.5531
+      },
+      {
+        "id": "FM001452_analog_0198",
+        "smiles": "CN(C)c1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8916,
+        "ipTM": 0.7989,
+        "affinity_kd_uM": 16.416,
+        "affinity_pkd": 4.785,
+        "prob_binder": 0.2922
+      },
+      {
+        "id": "FM001452_analog_0108",
+        "smiles": "Nc1cccc(OCc2ccccc2OCCO)c1",
+        "pLDDT": 0.8894,
+        "ipTM": 0.8271,
+        "affinity_kd_uM": 10.719,
+        "affinity_pkd": 4.97,
+        "prob_binder": 0.3263
+      },
+      {
+        "id": "FM001452_analog_0049",
+        "smiles": "CNC(=O)c1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8906,
+        "ipTM": 0.7474,
+        "affinity_kd_uM": 11.43,
+        "affinity_pkd": 4.942,
+        "prob_binder": 0.3583
+      },
+      {
+        "id": "FM001452_analog_0146",
+        "smiles": "Nc1cccc(OCc2cccc(-c3ccoc3)c2)c1",
+        "pLDDT": 0.8855,
+        "ipTM": 0.7602,
+        "affinity_kd_uM": 18.28,
+        "affinity_pkd": 4.738,
+        "prob_binder": 0.5172
+      },
+      {
+        "id": "FM001452_analog_0148",
+        "smiles": "Nc1cccc(OCc2cccc(C3CCCCC3)c2)c1",
+        "pLDDT": 0.872,
+        "ipTM": 0.7402,
+        "affinity_kd_uM": 16.098,
+        "affinity_pkd": 4.793,
+        "prob_binder": 0.5928
+      },
+      {
+        "id": "FM001452_analog_0100",
+        "smiles": "CS(=O)(=O)c1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8876,
+        "ipTM": 0.751,
+        "affinity_kd_uM": 6.333,
+        "affinity_pkd": 5.198,
+        "prob_binder": 0.3412
+      },
+      {
+        "id": "FM001452_analog_0176",
+        "smiles": "Nc1cccc(OCc2ccc(C3CCNCC3)cc2)c1",
+        "pLDDT": 0.9022,
+        "ipTM": 0.6698,
+        "affinity_kd_uM": 10.801,
+        "affinity_pkd": 4.967,
+        "prob_binder": 0.5305
+      },
+      {
+        "id": "FM001452_analog_0042",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(C(F)(F)F)c1",
+        "pLDDT": 0.8954,
+        "ipTM": 0.8272,
+        "affinity_kd_uM": 19.339,
+        "affinity_pkd": 4.714,
+        "prob_binder": 0.5192
+      },
+      {
+        "id": "FM001452_analog_0050",
+        "smiles": "N#Cc1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.9038,
+        "ipTM": 0.7572,
+        "affinity_kd_uM": 6.601,
+        "affinity_pkd": 5.18,
+        "prob_binder": 0.4293
+      },
+      {
+        "id": "FM001452_analog_0055",
+        "smiles": "CC(C)c1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8907,
+        "ipTM": 0.7593,
+        "affinity_kd_uM": 14.086,
+        "affinity_pkd": 4.851,
+        "prob_binder": 0.514
+      },
+      {
+        "id": "FM001452_analog_0057",
+        "smiles": "CN(C)c1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.892,
+        "ipTM": 0.746,
+        "affinity_kd_uM": 6.358,
+        "affinity_pkd": 5.197,
+        "prob_binder": 0.4392
+      },
+      {
+        "id": "FM001452_analog_0194",
+        "smiles": "CCc1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8919,
+        "ipTM": 0.8192,
+        "affinity_kd_uM": 23.126,
+        "affinity_pkd": 4.636,
+        "prob_binder": 0.4079
+      },
+      {
+        "id": "FM001452_analog_0096",
+        "smiles": "Nc1cccc(OCc2ccccc2C(=O)O)c1",
+        "pLDDT": 0.8828,
+        "ipTM": 0.8205,
+        "affinity_kd_uM": 28.892,
+        "affinity_pkd": 4.539,
+        "prob_binder": 0.4063
+      },
+      {
+        "id": "FM001452_analog_0145",
+        "smiles": "Nc1cccc(OCc2cccc(-c3ccccn3)c2)c1",
+        "pLDDT": 0.8793,
+        "ipTM": 0.7414,
+        "affinity_kd_uM": 5.834,
+        "affinity_pkd": 5.234,
+        "prob_binder": 0.5428
+      },
+      {
+        "id": "FM001452_analog_0072",
+        "smiles": "CS(=O)(=O)c1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.8987,
+        "ipTM": 0.7271,
+        "affinity_kd_uM": 5.431,
+        "affinity_pkd": 5.265,
+        "prob_binder": 0.4133
+      },
+      {
+        "id": "FM001452_analog_0115",
+        "smiles": "Nc1cccc(OCc2ccccc2-c2ccncc2)c1",
+        "pLDDT": 0.8798,
+        "ipTM": 0.7505,
+        "affinity_kd_uM": 30.567,
+        "affinity_pkd": 4.515,
+        "prob_binder": 0.3217
+      },
+      {
+        "id": "FM001452_analog_0094",
+        "smiles": "Nc1cccc(OCc2ccccc2F)c1",
+        "pLDDT": 0.9004,
+        "ipTM": 0.7392,
+        "affinity_kd_uM": 30.087,
+        "affinity_pkd": 4.522,
+        "prob_binder": 0.2985
+      },
+      {
+        "id": "FM001452_analog_0095",
+        "smiles": "Nc1cccc(OCc2ccccc2Cl)c1",
+        "pLDDT": 0.916,
+        "ipTM": 0.7447,
+        "affinity_kd_uM": 26.689,
+        "affinity_pkd": 4.574,
+        "prob_binder": 0.3372
+      },
+      {
+        "id": "FM001452_analog_0104",
+        "smiles": "Cc1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8979,
+        "ipTM": 0.7359,
+        "affinity_kd_uM": 4.973,
+        "affinity_pkd": 5.303,
+        "prob_binder": 0.4082
+      },
+      {
+        "id": "FM001452_analog_0109",
+        "smiles": "Nc1cccc(OCc2ccccc2CO)c1",
+        "pLDDT": 0.8984,
+        "ipTM": 0.7982,
+        "affinity_kd_uM": 15.463,
+        "affinity_pkd": 4.811,
+        "prob_binder": 0.2894
+      },
+      {
+        "id": "FM001452_analog_0110",
+        "smiles": "CCc1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.896,
+        "ipTM": 0.7167,
+        "affinity_kd_uM": 6.846,
+        "affinity_pkd": 5.165,
+        "prob_binder": 0.5053
+      },
+      {
+        "id": "FM001452_analog_0051",
+        "smiles": "Nc1cc(OCCO)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8807,
+        "ipTM": 0.7858,
+        "affinity_kd_uM": 5.408,
+        "affinity_pkd": 5.267,
+        "prob_binder": 0.2508
+      },
+      {
+        "id": "FM001452_analog_0068",
+        "smiles": "Nc1ccc(C(=O)O)c(OCc2ccccc2)c1",
+        "pLDDT": 0.9009,
+        "ipTM": 0.7628,
+        "affinity_kd_uM": 10.79,
+        "affinity_pkd": 4.967,
+        "prob_binder": 0.5593
+      },
+      {
+        "id": "FM001452_analog_0161",
+        "smiles": "CN(C)Cc1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.888,
+        "ipTM": 0.8057,
+        "affinity_kd_uM": 7.528,
+        "affinity_pkd": 5.123,
+        "prob_binder": 0.3219
+      },
+      {
+        "id": "FM001452_analog_0164",
+        "smiles": "N#Cc1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.9087,
+        "ipTM": 0.7431,
+        "affinity_kd_uM": 9.808,
+        "affinity_pkd": 5.008,
+        "prob_binder": 0.4046
+      },
+      {
+        "id": "FM001452_analog_0169",
+        "smiles": "CC(C)c1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.8927,
+        "ipTM": 0.7388,
+        "affinity_kd_uM": 8.102,
+        "affinity_pkd": 5.091,
+        "prob_binder": 0.6547
+      },
+      {
+        "id": "FM001452_analog_0159",
+        "smiles": "Nc1cccc(OCc2ccc(S(N)(=O)=O)cc2)c1",
+        "pLDDT": 0.8785,
+        "ipTM": 0.7696,
+        "affinity_kd_uM": 2.295,
+        "affinity_pkd": 5.639,
+        "prob_binder": 0.3133
+      },
+      {
+        "id": "FM001452_analog_0054",
+        "smiles": "CCCc1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8914,
+        "ipTM": 0.8186,
+        "affinity_kd_uM": 13.484,
+        "affinity_pkd": 4.87,
+        "prob_binder": 0.4715
+      },
+      {
+        "id": "FM001452_analog_0185",
+        "smiles": "CS(=O)(=O)c1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8852,
+        "ipTM": 0.7925,
+        "affinity_kd_uM": 9.384,
+        "affinity_pkd": 5.028,
+        "prob_binder": 0.3341
+      },
+      {
+        "id": "FM001452_analog_0135",
+        "smiles": "CNC(=O)c1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.8932,
+        "ipTM": 0.7366,
+        "affinity_kd_uM": 7.733,
+        "affinity_pkd": 5.112,
+        "prob_binder": 0.3682
+      },
+      {
+        "id": "FM001452_analog_0118",
+        "smiles": "Nc1cccc(OCc2ccccc2-c2ccsc2)c1",
+        "pLDDT": 0.8828,
+        "ipTM": 0.76,
+        "affinity_kd_uM": 16.639,
+        "affinity_pkd": 4.779,
+        "prob_binder": 0.3428
+      },
+      {
+        "id": "FM001452_analog_0009",
+        "smiles": "CNC(=O)Nc1cccc(OCc2ccccc2)c1",
+        "pLDDT": 0.8906,
+        "ipTM": 0.7498,
+        "affinity_kd_uM": 7.723,
+        "affinity_pkd": 5.112,
+        "prob_binder": 0.295
+      },
+      {
+        "id": "FM001452_analog_0005",
+        "smiles": "CCC(=O)Nc1cccc(OCc2ccccc2)c1",
+        "pLDDT": 0.8918,
+        "ipTM": 0.7429,
+        "affinity_kd_uM": 8.079,
+        "affinity_pkd": 5.093,
+        "prob_binder": 0.3318
+      },
+      {
+        "id": "FM001452_analog_0153",
+        "smiles": "Nc1cccc(OCc2ccc(Cl)cc2)c1",
+        "pLDDT": 0.9366,
+        "ipTM": 0.8351,
+        "affinity_kd_uM": 31.197,
+        "affinity_pkd": 4.506,
+        "prob_binder": 0.4806
+      },
+      {
+        "id": "FM001452_analog_0166",
+        "smiles": "Nc1cccc(OCc2ccc(CO)cc2)c1",
+        "pLDDT": 0.8974,
+        "ipTM": 0.7643,
+        "affinity_kd_uM": 3.526,
+        "affinity_pkd": 5.453,
+        "prob_binder": 0.3787
+      },
+      {
+        "id": "FM001452_analog_0002",
+        "smiles": "Nc1cccc(OCc2cccnc2)c1",
+        "pLDDT": 0.912,
+        "ipTM": 0.7063,
+        "affinity_kd_uM": 12.812,
+        "affinity_pkd": 4.892,
+        "prob_binder": 0.3339
+      },
+      {
+        "id": "FM001452_analog_0131",
+        "smiles": "NC(=O)c1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.8886,
+        "ipTM": 0.6859,
+        "affinity_kd_uM": 3.929,
+        "affinity_pkd": 5.406,
+        "prob_binder": 0.4332
+      },
+      {
+        "id": "FM001452_analog_0113",
+        "smiles": "NCc1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8822,
+        "ipTM": 0.7898,
+        "affinity_kd_uM": 16.406,
+        "affinity_pkd": 4.785,
+        "prob_binder": 0.2182
+      },
+      {
+        "id": "FM001452_analog_0052",
+        "smiles": "Nc1cc(CO)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.898,
+        "ipTM": 0.7588,
+        "affinity_kd_uM": 6.484,
+        "affinity_pkd": 5.188,
+        "prob_binder": 0.356
+      },
+      {
+        "id": "FM001452_analog_0147",
+        "smiles": "Nc1cccc(OCc2cccc(-c3ccsc3)c2)c1",
+        "pLDDT": 0.8734,
+        "ipTM": 0.741,
+        "affinity_kd_uM": 21.523,
+        "affinity_pkd": 4.667,
+        "prob_binder": 0.4625
+      },
+      {
+        "id": "FM001452_analog_0111",
+        "smiles": "CCCc1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8929,
+        "ipTM": 0.7015,
+        "affinity_kd_uM": 11.495,
+        "affinity_pkd": 4.939,
+        "prob_binder": 0.523
+      },
+      {
+        "id": "FM001452_analog_0070",
+        "smiles": "CCOc1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.8898,
+        "ipTM": 0.772,
+        "affinity_kd_uM": 16.437,
+        "affinity_pkd": 4.784,
+        "prob_binder": 0.3928
+      },
+      {
+        "id": "FM001452_analog_0183",
+        "smiles": "CCOc1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8894,
+        "ipTM": 0.7974,
+        "affinity_kd_uM": 18.022,
+        "affinity_pkd": 4.744,
+        "prob_binder": 0.3363
+      },
+      {
+        "id": "FM001452_analog_0107",
+        "smiles": "N#Cc1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.9009,
+        "ipTM": 0.7193,
+        "affinity_kd_uM": 12.426,
+        "affinity_pkd": 4.906,
+        "prob_binder": 0.3419
+      },
+      {
+        "id": "FM001452_analog_0174",
+        "smiles": "Nc1cccc(OCc2ccc(-c3ccsc3)cc2)c1",
+        "pLDDT": 0.8929,
+        "ipTM": 0.7736,
+        "affinity_kd_uM": 23.036,
+        "affinity_pkd": 4.638,
+        "prob_binder": 0.6135
+      },
+      {
+        "id": "FM001452_analog_0125",
+        "smiles": "Nc1cccc(OCc2cccc(C(=O)O)c2)c1",
+        "pLDDT": 0.9004,
+        "ipTM": 0.789,
+        "affinity_kd_uM": 6.23,
+        "affinity_pkd": 5.205,
+        "prob_binder": 0.4461
+      },
+      {
+        "id": "FM001452_analog_0128",
+        "smiles": "Nc1cccc(OCc2cccc(C(F)(F)F)c2)c1",
+        "pLDDT": 0.8972,
+        "ipTM": 0.7823,
+        "affinity_kd_uM": 16.429,
+        "affinity_pkd": 4.784,
+        "prob_binder": 0.2745
+      },
+      {
+        "id": "FM001452_analog_0130",
+        "smiles": "Nc1cccc(OCc2cccc(S(N)(=O)=O)c2)c1",
+        "pLDDT": 0.8778,
+        "ipTM": 0.7873,
+        "affinity_kd_uM": 1.049,
+        "affinity_pkd": 5.979,
+        "prob_binder": 0.3031
+      },
+      {
+        "id": "FM001452_analog_0098",
+        "smiles": "CCOc1ccccc1COc1cccc(N)c1",
+        "pLDDT": 0.8825,
+        "ipTM": 0.7378,
+        "affinity_kd_uM": 17.184,
+        "affinity_pkd": 4.765,
+        "prob_binder": 0.2756
+      },
+      {
+        "id": "FM001452_analog_0201",
+        "smiles": "NC(=O)Nc1cccc(OCc2ccccc2)c1",
+        "pLDDT": 0.8874,
+        "ipTM": 0.8163,
+        "affinity_kd_uM": 8.761,
+        "affinity_pkd": 5.057,
+        "prob_binder": 0.3599
+      },
+      {
+        "id": "FM001452_analog_0004",
+        "smiles": "CC(=O)Nc1cccc(OCc2ccccc2)c1",
+        "pLDDT": 0.8864,
+        "ipTM": 0.7027,
+        "affinity_kd_uM": 6.994,
+        "affinity_pkd": 5.155,
+        "prob_binder": 0.2709
+      },
+      {
+        "id": "FM001452_analog_0053",
+        "smiles": "CCc1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8944,
+        "ipTM": 0.8257,
+        "affinity_kd_uM": 7.089,
+        "affinity_pkd": 5.149,
+        "prob_binder": 0.3755
+      },
+      {
+        "id": "FM001452_analog_0045",
+        "smiles": "NC(=O)c1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8781,
+        "ipTM": 0.8294,
+        "affinity_kd_uM": 15.045,
+        "affinity_pkd": 4.823,
+        "prob_binder": 0.4089
+      },
+      {
+        "id": "FM001452_analog_0069",
+        "smiles": "COc1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.8853,
+        "ipTM": 0.849,
+        "affinity_kd_uM": 12.706,
+        "affinity_pkd": 4.896,
+        "prob_binder": 0.4549
+      },
+      {
+        "id": "FM001452_analog_0182",
+        "smiles": "COc1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.8924,
+        "ipTM": 0.775,
+        "affinity_kd_uM": 15.23,
+        "affinity_pkd": 4.817,
+        "prob_binder": 0.5298
+      },
+      {
+        "id": "FM001452_analog_0105",
+        "smiles": "Nc1cccc(OCc2ccccc2N)c1",
+        "pLDDT": 0.8976,
+        "ipTM": 0.7401,
+        "affinity_kd_uM": 5.922,
+        "affinity_pkd": 5.228,
+        "prob_binder": 0.3884
+      },
+      {
+        "id": "FM001452_analog_0037",
+        "smiles": "Nc1cc(F)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.9035,
+        "ipTM": 0.7818,
+        "affinity_kd_uM": 33.355,
+        "affinity_pkd": 4.477,
+        "prob_binder": 0.4884
+      },
+      {
+        "id": "FM001452_analog_0038",
+        "smiles": "Nc1cc(Cl)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.9212,
+        "ipTM": 0.7824,
+        "affinity_kd_uM": 33.333,
+        "affinity_pkd": 4.477,
+        "prob_binder": 0.5081
+      },
+      {
+        "id": "FM001452_analog_0040",
+        "smiles": "COc1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8919,
+        "ipTM": 0.7343,
+        "affinity_kd_uM": 5.651,
+        "affinity_pkd": 5.248,
+        "prob_binder": 0.3178
+      },
+      {
+        "id": "FM001452_analog_0047",
+        "smiles": "Cc1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.892,
+        "ipTM": 0.7791,
+        "affinity_kd_uM": 5.53,
+        "affinity_pkd": 5.257,
+        "prob_binder": 0.5192
+      },
+      {
+        "id": "FM001452_analog_0056",
+        "smiles": "NCc1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.9011,
+        "ipTM": 0.8437,
+        "affinity_kd_uM": 23.489,
+        "affinity_pkd": 4.629,
+        "prob_binder": 0.2914
+      },
+      {
+        "id": "FM001452_analog_0036",
+        "smiles": "CN1CCC(c2ccc(OCc3ccccc3)cc2N)CC1",
+        "pLDDT": 0.8704,
+        "ipTM": 0.7718,
+        "affinity_kd_uM": 4.876,
+        "affinity_pkd": 5.312,
+        "prob_binder": 0.3047
+      },
+      {
+        "id": "FM001452_analog_0044",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(S(N)(=O)=O)c1",
+        "pLDDT": 0.8761,
+        "ipTM": 0.8559,
+        "affinity_kd_uM": 3.521,
+        "affinity_pkd": 5.453,
+        "prob_binder": 0.3282
+      },
+      {
+        "id": "FM001452_analog_0165",
+        "smiles": "Nc1cccc(OCc2ccc(OCCO)cc2)c1",
+        "pLDDT": 0.893,
+        "ipTM": 0.7788,
+        "affinity_kd_uM": 4.471,
+        "affinity_pkd": 5.35,
+        "prob_binder": 0.4202
+      },
+      {
+        "id": "FM001452_analog_0162",
+        "smiles": "Cc1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.9049,
+        "ipTM": 0.7244,
+        "affinity_kd_uM": 8.771,
+        "affinity_pkd": 5.057,
+        "prob_binder": 0.5388
+      },
+      {
+        "id": "FM001452_analog_0170",
+        "smiles": "NCc1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.8925,
+        "ipTM": 0.6682,
+        "affinity_kd_uM": 4.636,
+        "affinity_pkd": 5.334,
+        "prob_binder": 0.3172
+      },
+      {
+        "id": "FM001452_analog_0171",
+        "smiles": "Nc1cccc(OCc2ccc(-c3ccncc3)cc2)c1",
+        "pLDDT": 0.871,
+        "ipTM": 0.6492,
+        "affinity_kd_uM": 8.171,
+        "affinity_pkd": 5.088,
+        "prob_binder": 0.458
+      },
+      {
+        "id": "FM001452_analog_0190",
+        "smiles": "Nc1cccc(OCc2ccccc2)c1N",
+        "pLDDT": 0.9021,
+        "ipTM": 0.7616,
+        "affinity_kd_uM": 12.026,
+        "affinity_pkd": 4.92,
+        "prob_binder": 0.6037
+      },
+      {
+        "id": "FM001452_analog_0001",
+        "smiles": "Nc1cccc(OCc2ccncc2)c1",
+        "pLDDT": 0.9126,
+        "ipTM": 0.7006,
+        "affinity_kd_uM": 9.906,
+        "affinity_pkd": 5.004,
+        "prob_binder": 0.4284
+      },
+      {
+        "id": "FM001452_analog_0200",
+        "smiles": "O=C(Nc1cccc(OCc2ccccc2)c1)c1ccccc1",
+        "pLDDT": 0.8717,
+        "ipTM": 0.8129,
+        "affinity_kd_uM": 11.553,
+        "affinity_pkd": 4.937,
+        "prob_binder": 0.4031
+      },
+      {
+        "id": "FM001452_analog_0006",
+        "smiles": "CNc1cccc(OCc2ccccc2)c1",
+        "pLDDT": 0.8993,
+        "ipTM": 0.7475,
+        "affinity_kd_uM": 12.024,
+        "affinity_pkd": 4.92,
+        "prob_binder": 0.444
+      },
+      {
+        "id": "FM001452_analog_0007",
+        "smiles": "CN(C)c1cccc(OCc2ccccc2)c1",
+        "pLDDT": 0.8952,
+        "ipTM": 0.7434,
+        "affinity_kd_uM": 41.488,
+        "affinity_pkd": 4.382,
+        "prob_binder": 0.4377
+      },
+      {
+        "id": "FM001452_analog_0152",
+        "smiles": "Nc1cccc(OCc2ccc(F)cc2)c1",
+        "pLDDT": 0.8998,
+        "ipTM": 0.7698,
+        "affinity_kd_uM": 36.87,
+        "affinity_pkd": 4.433,
+        "prob_binder": 0.4197
+      },
+      {
+        "id": "FM001452_analog_0077",
+        "smiles": "Nc1ccc(N)c(OCc2ccccc2)c1",
+        "pLDDT": 0.8995,
+        "ipTM": 0.7843,
+        "affinity_kd_uM": 4.842,
+        "affinity_pkd": 5.315,
+        "prob_binder": 0.5466
+      },
+      {
+        "id": "FM001452_analog_0034",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1C1CCNCC1",
+        "pLDDT": 0.8941,
+        "ipTM": 0.7851,
+        "affinity_kd_uM": 10.711,
+        "affinity_pkd": 4.97,
+        "prob_binder": 0.4747
+      },
+      {
+        "id": "FM001452_analog_0035",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1C1CCOCC1",
+        "pLDDT": 0.8817,
+        "ipTM": 0.7983,
+        "affinity_kd_uM": 14.931,
+        "affinity_pkd": 4.826,
+        "prob_binder": 0.3933
+      },
+      {
+        "id": "FM001452_analog_0132",
+        "smiles": "CN(C)Cc1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.879,
+        "ipTM": 0.7919,
+        "affinity_kd_uM": 16.12,
+        "affinity_pkd": 4.793,
+        "prob_binder": 0.2314
+      },
+      {
+        "id": "FM001452_analog_0136",
+        "smiles": "N#Cc1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.8964,
+        "ipTM": 0.7493,
+        "affinity_kd_uM": 5.546,
+        "affinity_pkd": 5.256,
+        "prob_binder": 0.4028
+      },
+      {
+        "id": "FM001452_analog_0141",
+        "smiles": "CC(C)c1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.912,
+        "ipTM": 0.644,
+        "affinity_kd_uM": 7.308,
+        "affinity_pkd": 5.136,
+        "prob_binder": 0.5782
+      },
+      {
+        "id": "FM001452_analog_0143",
+        "smiles": "CN(C)c1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.8874,
+        "ipTM": 0.7331,
+        "affinity_kd_uM": 4.976,
+        "affinity_pkd": 5.303,
+        "prob_binder": 0.4243
+      },
+      {
+        "id": "FM001452_analog_0123",
+        "smiles": "Nc1cccc(OCc2cccc(F)c2)c1",
+        "pLDDT": 0.9043,
+        "ipTM": 0.7519,
+        "affinity_kd_uM": 22.031,
+        "affinity_pkd": 4.657,
+        "prob_binder": 0.3148
+      },
+      {
+        "id": "FM001452_analog_0124",
+        "smiles": "Nc1cccc(OCc2cccc(Cl)c2)c1",
+        "pLDDT": 0.9279,
+        "ipTM": 0.8119,
+        "affinity_kd_uM": 22.122,
+        "affinity_pkd": 4.655,
+        "prob_binder": 0.4058
+      },
+      {
+        "id": "FM001452_analog_0138",
+        "smiles": "Nc1cccc(OCc2cccc(CO)c2)c1",
+        "pLDDT": 0.8989,
+        "ipTM": 0.7567,
+        "affinity_kd_uM": 7.03,
+        "affinity_pkd": 5.153,
+        "prob_binder": 0.3038
+      },
+      {
+        "id": "FM001452_analog_0155",
+        "smiles": "COc1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.8987,
+        "ipTM": 0.8267,
+        "affinity_kd_uM": 8.447,
+        "affinity_pkd": 5.073,
+        "prob_binder": 0.5051
+      },
+      {
+        "id": "FM001452_analog_0168",
+        "smiles": "CCCc1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.8964,
+        "ipTM": 0.7184,
+        "affinity_kd_uM": 7.354,
+        "affinity_pkd": 5.133,
+        "prob_binder": 0.6192
+      },
+      {
+        "id": "FM001452_analog_0021",
+        "smiles": "CNC(=O)c1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.8823,
+        "ipTM": 0.7974,
+        "affinity_kd_uM": 4.053,
+        "affinity_pkd": 5.392,
+        "prob_binder": 0.397
+      },
+      {
+        "id": "FM001452_analog_0031",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1-c1ccoc1",
+        "pLDDT": 0.8902,
+        "ipTM": 0.8226,
+        "affinity_kd_uM": 11.269,
+        "affinity_pkd": 4.948,
+        "prob_binder": 0.4026
+      },
+      {
+        "id": "FM001452_analog_0032",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1-c1ccsc1",
+        "pLDDT": 0.8828,
+        "ipTM": 0.7298,
+        "affinity_kd_uM": 6.475,
+        "affinity_pkd": 5.189,
+        "prob_binder": 0.4363
+      },
+      {
+        "id": "FM001452_analog_0142",
+        "smiles": "NCc1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.8976,
+        "ipTM": 0.7124,
+        "affinity_kd_uM": 11.914,
+        "affinity_pkd": 4.924,
+        "prob_binder": 0.216
+      },
+      {
+        "id": "FM001452_analog_0167",
+        "smiles": "CCc1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.8935,
+        "ipTM": 0.7228,
+        "affinity_kd_uM": 7.342,
+        "affinity_pkd": 5.134,
+        "prob_binder": 0.5469
+      },
+      {
+        "id": "FM001452_analog_0033",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1C1CCCCC1",
+        "pLDDT": 0.8825,
+        "ipTM": 0.7588,
+        "affinity_kd_uM": 14.399,
+        "affinity_pkd": 4.842,
+        "prob_binder": 0.5324
+      },
+      {
+        "id": "FM001452_analog_0137",
+        "smiles": "Nc1cccc(OCc2cccc(OCCO)c2)c1",
+        "pLDDT": 0.8859,
+        "ipTM": 0.8318,
+        "affinity_kd_uM": 3.812,
+        "affinity_pkd": 5.419,
+        "prob_binder": 0.4053
+      },
+      {
+        "id": "FM001452_analog_0144",
+        "smiles": "Nc1cccc(OCc2cccc(-c3ccncc3)c2)c1",
+        "pLDDT": 0.877,
+        "ipTM": 0.7597,
+        "affinity_kd_uM": 12.487,
+        "affinity_pkd": 4.904,
+        "prob_binder": 0.4266
+      },
+      {
+        "id": "FM001452_analog_0029",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1-c1ccncc1",
+        "pLDDT": 0.9018,
+        "ipTM": 0.8333,
+        "affinity_kd_uM": 7.527,
+        "affinity_pkd": 5.123,
+        "prob_binder": 0.4941
+      },
+      {
+        "id": "FM001452_analog_0030",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1-c1ccccn1",
+        "pLDDT": 0.8782,
+        "ipTM": 0.7224,
+        "affinity_kd_uM": 5.862,
+        "affinity_pkd": 5.232,
+        "prob_binder": 0.4521
+      },
+      {
+        "id": "FM001452_analog_0048",
+        "smiles": "Nc1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8982,
+        "ipTM": 0.7518,
+        "affinity_kd_uM": 8.02,
+        "affinity_pkd": 5.096,
+        "prob_binder": 0.4184
+      },
+      {
+        "id": "FM001452_analog_0126",
+        "smiles": "COc1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.8922,
+        "ipTM": 0.767,
+        "affinity_kd_uM": 6.281,
+        "affinity_pkd": 5.202,
+        "prob_binder": 0.386
+      },
+      {
+        "id": "FM001452_analog_0133",
+        "smiles": "Cc1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.897,
+        "ipTM": 0.7266,
+        "affinity_kd_uM": 11.26,
+        "affinity_pkd": 4.948,
+        "prob_binder": 0.3446
+      },
+      {
+        "id": "FM001452_analog_0154",
+        "smiles": "Nc1cccc(OCc2ccc(C(=O)O)cc2)c1",
+        "pLDDT": 0.9312,
+        "ipTM": 0.8932,
+        "affinity_kd_uM": 10.444,
+        "affinity_pkd": 4.981,
+        "prob_binder": 0.4409
+      },
+      {
+        "id": "FM001452_analog_0140",
+        "smiles": "CCCc1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.8981,
+        "ipTM": 0.7268,
+        "affinity_kd_uM": 15.879,
+        "affinity_pkd": 4.799,
+        "prob_binder": 0.5011
+      },
+      {
+        "id": "FM001452_analog_0016",
+        "smiles": "CS(=O)(=O)c1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.8824,
+        "ipTM": 0.8274,
+        "affinity_kd_uM": 13.386,
+        "affinity_pkd": 4.873,
+        "prob_binder": 0.4272
+      },
+      {
+        "id": "FM001452_analog_0019",
+        "smiles": "CN(C)Cc1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.8848,
+        "ipTM": 0.8118,
+        "affinity_kd_uM": 11.156,
+        "affinity_pkd": 4.953,
+        "prob_binder": 0.4672
+      },
+      {
+        "id": "FM001452_analog_0023",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1OCCO",
+        "pLDDT": 0.8952,
+        "ipTM": 0.8236,
+        "affinity_kd_uM": 5.364,
+        "affinity_pkd": 5.27,
+        "prob_binder": 0.3789
+      },
+      {
+        "id": "FM001452_analog_0041",
+        "smiles": "CCOc1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8839,
+        "ipTM": 0.794,
+        "affinity_kd_uM": 6.36,
+        "affinity_pkd": 5.197,
+        "prob_binder": 0.3218
+      },
+      {
+        "id": "FM001452_analog_0039",
+        "smiles": "Nc1cc(OCc2ccccc2)cc(C(=O)O)c1",
+        "pLDDT": 0.8887,
+        "ipTM": 0.8564,
+        "affinity_kd_uM": 9.096,
+        "affinity_pkd": 5.041,
+        "prob_binder": 0.4355
+      },
+      {
+        "id": "FM001452_analog_0076",
+        "smiles": "Cc1ccc(N)cc1OCc1ccccc1",
+        "pLDDT": 0.8988,
+        "ipTM": 0.765,
+        "affinity_kd_uM": 17.089,
+        "affinity_pkd": 4.767,
+        "prob_binder": 0.4645
+      },
+      {
+        "id": "FM001452_analog_0017",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1S(N)(=O)=O",
+        "pLDDT": 0.8736,
+        "ipTM": 0.8145,
+        "affinity_kd_uM": 5.865,
+        "affinity_pkd": 5.232,
+        "prob_binder": 0.3779
+      },
+      {
+        "id": "FM001452_analog_0018",
+        "smiles": "NC(=O)c1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.889,
+        "ipTM": 0.7496,
+        "affinity_kd_uM": 10.022,
+        "affinity_pkd": 4.999,
+        "prob_binder": 0.5239
+      },
+      {
+        "id": "FM001452_analog_0026",
+        "smiles": "CCCc1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.8848,
+        "ipTM": 0.8169,
+        "affinity_kd_uM": 4.605,
+        "affinity_pkd": 5.337,
+        "prob_binder": 0.527
+      },
+      {
+        "id": "FM001452_analog_0158",
+        "smiles": "CS(=O)(=O)c1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.8967,
+        "ipTM": 0.7372,
+        "affinity_kd_uM": 11.437,
+        "affinity_pkd": 4.942,
+        "prob_binder": 0.4327
+      },
+      {
+        "id": "FM001452_analog_0008",
+        "smiles": "CS(=O)(=O)Nc1cccc(OCc2ccccc2)c1",
+        "pLDDT": 0.89,
+        "ipTM": 0.7726,
+        "affinity_kd_uM": 6.991,
+        "affinity_pkd": 5.155,
+        "prob_binder": 0.2486
+      },
+      {
+        "id": "FM001452_analog_0189",
+        "smiles": "Cc1c(N)cccc1OCc1ccccc1",
+        "pLDDT": 0.9032,
+        "ipTM": 0.7549,
+        "affinity_kd_uM": 12.155,
+        "affinity_pkd": 4.915,
+        "prob_binder": 0.6106
+      },
+      {
+        "id": "FM001452_analog_0139",
+        "smiles": "CCc1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.8974,
+        "ipTM": 0.6873,
+        "affinity_kd_uM": 6.399,
+        "affinity_pkd": 5.194,
+        "prob_binder": 0.405
+      },
+      {
+        "id": "FM001452_analog_0012",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1C(=O)O",
+        "pLDDT": 0.8893,
+        "ipTM": 0.7462,
+        "affinity_kd_uM": 11.369,
+        "affinity_pkd": 4.944,
+        "prob_binder": 0.4306
+      },
+      {
+        "id": "FM001452_analog_0014",
+        "smiles": "CCOc1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.8952,
+        "ipTM": 0.7992,
+        "affinity_kd_uM": 5.617,
+        "affinity_pkd": 5.251,
+        "prob_binder": 0.3401
+      },
+      {
+        "id": "FM001452_analog_0015",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1C(F)(F)F",
+        "pLDDT": 0.8932,
+        "ipTM": 0.7394,
+        "affinity_kd_uM": 11.556,
+        "affinity_pkd": 4.937,
+        "prob_binder": 0.4782
+      },
+      {
+        "id": "FM001452_analog_0022",
+        "smiles": "N#Cc1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.9058,
+        "ipTM": 0.768,
+        "affinity_kd_uM": 6.941,
+        "affinity_pkd": 5.159,
+        "prob_binder": 0.522
+      },
+      {
+        "id": "FM001452_analog_0027",
+        "smiles": "CC(C)c1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.8888,
+        "ipTM": 0.7618,
+        "affinity_kd_uM": 5.107,
+        "affinity_pkd": 5.292,
+        "prob_binder": 0.5596
+      },
+      {
+        "id": "FM001452_analog_0013",
+        "smiles": "COc1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.8973,
+        "ipTM": 0.8511,
+        "affinity_kd_uM": 3.952,
+        "affinity_pkd": 5.403,
+        "prob_binder": 0.5335
+      },
+      {
+        "id": "FM001452_analog_0024",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1CO",
+        "pLDDT": 0.9004,
+        "ipTM": 0.725,
+        "affinity_kd_uM": 4.629,
+        "affinity_pkd": 5.334,
+        "prob_binder": 0.3717
+      },
+      {
+        "id": "FM001452_analog_0043",
+        "smiles": "CS(=O)(=O)c1cc(N)cc(OCc2ccccc2)c1",
+        "pLDDT": 0.8964,
+        "ipTM": 0.8646,
+        "affinity_kd_uM": 10.117,
+        "affinity_pkd": 4.995,
+        "prob_binder": 0.3456
+      },
+      {
+        "id": "FM001452_analog_0025",
+        "smiles": "CCc1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.8958,
+        "ipTM": 0.7562,
+        "affinity_kd_uM": 4.88,
+        "affinity_pkd": 5.312,
+        "prob_binder": 0.5266
+      },
+      {
+        "id": "FM001452_analog_0028",
+        "smiles": "NCc1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.9072,
+        "ipTM": 0.8727,
+        "affinity_kd_uM": 18.032,
+        "affinity_pkd": 4.744,
+        "prob_binder": 0.343
+      },
+      {
+        "id": "FM001452_analog_0134",
+        "smiles": "Nc1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.9023,
+        "ipTM": 0.7592,
+        "affinity_kd_uM": 6.865,
+        "affinity_pkd": 5.163,
+        "prob_binder": 0.4094
+      },
+      {
+        "id": "FM001452_analog_0129",
+        "smiles": "CS(=O)(=O)c1cccc(COc2cccc(N)c2)c1",
+        "pLDDT": 0.8932,
+        "ipTM": 0.7465,
+        "affinity_kd_uM": 3.162,
+        "affinity_pkd": 5.5,
+        "prob_binder": 0.3111
+      },
+      {
+        "id": "FM001452_analog_0010",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1F",
+        "pLDDT": 0.9087,
+        "ipTM": 0.748,
+        "affinity_kd_uM": 17.501,
+        "affinity_pkd": 4.757,
+        "prob_binder": 0.5275
+      },
+      {
+        "id": "FM001452_analog_0011",
+        "smiles": "Nc1cc(OCc2ccccc2)ccc1Cl",
+        "pLDDT": 0.9084,
+        "ipTM": 0.624,
+        "affinity_kd_uM": 10.045,
+        "affinity_pkd": 4.998,
+        "prob_binder": 0.5154
+      },
+      {
+        "id": "FM001452_analog_0020",
+        "smiles": "Cc1ccc(OCc2ccccc2)cc1N",
+        "pLDDT": 0.9056,
+        "ipTM": 0.7314,
+        "affinity_kd_uM": 7.286,
+        "affinity_pkd": 5.138,
+        "prob_binder": 0.5133
+      },
+      {
+        "id": "FM001452_analog_0156",
+        "smiles": "CCOc1ccc(COc2cccc(N)c2)cc1",
+        "pLDDT": 0.9037,
+        "ipTM": 0.678,
+        "affinity_kd_uM": 5.674,
+        "affinity_pkd": 5.246,
+        "prob_binder": 0.4469
+      },
+      {
+        "id": "FM002150_analog_0029",
+        "smiles": "O=C(O)COCc1ccccc1C1CCNCC1",
+        "pLDDT": 0.9,
+        "ipTM": 0.7874,
+        "affinity_kd_uM": 32.152,
+        "affinity_pkd": 4.493,
+        "prob_binder": 0.2547
+      },
+      {
+        "id": "FM002150_analog_0026",
+        "smiles": "O=C(O)COCc1ccccc1-c1ccoc1",
+        "pLDDT": 0.8926,
+        "ipTM": 0.7365,
+        "affinity_kd_uM": 14.61,
+        "affinity_pkd": 4.835,
+        "prob_binder": 0.2719
+      },
+      {
+        "id": "FM002150_analog_0028",
+        "smiles": "O=C(O)COCc1ccccc1C1CCCCC1",
+        "pLDDT": 0.8943,
+        "ipTM": 0.8119,
+        "affinity_kd_uM": 8.375,
+        "affinity_pkd": 5.077,
+        "prob_binder": 0.181
+      },
+      {
+        "id": "FM002150_analog_0024",
+        "smiles": "O=C(O)COCc1ccccc1-c1ccncc1",
+        "pLDDT": 0.8853,
+        "ipTM": 0.7626,
+        "affinity_kd_uM": 21.149,
+        "affinity_pkd": 4.675,
+        "prob_binder": 0.3818
+      },
+      {
+        "id": "FM002150_analog_0055",
+        "smiles": "O=C(O)COCc1cccc(-c2ccoc2)c1",
+        "pLDDT": 0.9001,
+        "ipTM": 0.7849,
+        "affinity_kd_uM": 11.487,
+        "affinity_pkd": 4.94,
+        "prob_binder": 0.3676
+      },
+      {
+        "id": "FM002150_analog_0082",
+        "smiles": "O=C(O)COCc1ccc(-c2ccoc2)cc1",
+        "pLDDT": 0.8813,
+        "ipTM": 0.8229,
+        "affinity_kd_uM": 4.662,
+        "affinity_pkd": 5.331,
+        "prob_binder": 0.3836
+      },
+      {
+        "id": "FM002150_analog_0030",
+        "smiles": "O=C(O)COCc1ccccc1C1CCOCC1",
+        "pLDDT": 0.91,
+        "ipTM": 0.719,
+        "affinity_kd_uM": 23.025,
+        "affinity_pkd": 4.638,
+        "prob_binder": 0.1901
+      },
+      {
+        "id": "FM002150_analog_0058",
+        "smiles": "O=C(O)COCc1cccc(C2CCNCC2)c1",
+        "pLDDT": 0.8928,
+        "ipTM": 0.7237,
+        "affinity_kd_uM": 56.723,
+        "affinity_pkd": 4.246,
+        "prob_binder": 0.2465
+      },
+      {
+        "id": "FM002150_analog_0059",
+        "smiles": "O=C(O)COCc1cccc(C2CCOCC2)c1",
+        "pLDDT": 0.9034,
+        "ipTM": 0.7686,
+        "affinity_kd_uM": 11.667,
+        "affinity_pkd": 4.933,
+        "prob_binder": 0.1839
+      },
+      {
+        "id": "FM002150_analog_0031",
+        "smiles": "CN1CCC(c2ccccc2COCC(=O)O)CC1",
+        "pLDDT": 0.9102,
+        "ipTM": 0.8289,
+        "affinity_kd_uM": 57.595,
+        "affinity_pkd": 4.24,
+        "prob_binder": 0.191
+      },
+      {
+        "id": "FM002150_analog_0009",
+        "smiles": "CS(=O)(=O)c1ccccc1COCC(=O)O",
+        "pLDDT": 0.8961,
+        "ipTM": 0.8162,
+        "affinity_kd_uM": 12.167,
+        "affinity_pkd": 4.915,
+        "prob_binder": 0.2415
+      },
+      {
+        "id": "FM002150_analog_0010",
+        "smiles": "NS(=O)(=O)c1ccccc1COCC(=O)O",
+        "pLDDT": 0.8977,
+        "ipTM": 0.7022,
+        "affinity_kd_uM": 4.828,
+        "affinity_pkd": 5.316,
+        "prob_binder": 0.2823
+      },
+      {
+        "id": "FM002150_analog_0085",
+        "smiles": "O=C(O)COCc1ccc(C2CCNCC2)cc1",
+        "pLDDT": 0.8835,
+        "ipTM": 0.7055,
+        "affinity_kd_uM": 20.522,
+        "affinity_pkd": 4.688,
+        "prob_binder": 0.2522
+      },
+      {
+        "id": "FM002150_analog_0086",
+        "smiles": "O=C(O)COCc1ccc(C2CCOCC2)cc1",
+        "pLDDT": 0.9113,
+        "ipTM": 0.7385,
+        "affinity_kd_uM": 11.138,
+        "affinity_pkd": 4.953,
+        "prob_binder": 0.2338
+      },
+      {
+        "id": "FM002150_analog_0025",
+        "smiles": "O=C(O)COCc1ccccc1-c1ccccn1",
+        "pLDDT": 0.8765,
+        "ipTM": 0.7463,
+        "affinity_kd_uM": 46.113,
+        "affinity_pkd": 4.336,
+        "prob_binder": 0.2802
+      },
+      {
+        "id": "FM002150_analog_0008",
+        "smiles": "O=C(O)COCc1ccccc1C(F)(F)F",
+        "pLDDT": 0.9017,
+        "ipTM": 0.6731,
+        "affinity_kd_uM": 70.266,
+        "affinity_pkd": 4.153,
+        "prob_binder": 0.1596
+      },
+      {
+        "id": "FM002150_analog_0012",
+        "smiles": "CN(C)Cc1ccccc1COCC(=O)O",
+        "pLDDT": 0.9235,
+        "ipTM": 0.8075,
+        "affinity_kd_uM": 122.158,
+        "affinity_pkd": 3.913,
+        "prob_binder": 0.2274
+      },
+      {
+        "id": "FM002150_analog_0021",
+        "smiles": "CC(C)c1ccccc1COCC(=O)O",
+        "pLDDT": 0.9063,
+        "ipTM": 0.813,
+        "affinity_kd_uM": 17.117,
+        "affinity_pkd": 4.767,
+        "prob_binder": 0.1943
+      },
+      {
+        "id": "FM002150_analog_0023",
+        "smiles": "CN(C)c1ccccc1COCC(=O)O",
+        "pLDDT": 0.8902,
+        "ipTM": 0.7583,
+        "affinity_kd_uM": 29.889,
+        "affinity_pkd": 4.524,
+        "prob_binder": 0.255
+      },
+      {
+        "id": "FM002150_analog_0057",
+        "smiles": "O=C(O)COCc1cccc(C2CCCCC2)c1",
+        "pLDDT": 0.9128,
+        "ipTM": 0.8142,
+        "affinity_kd_uM": 3.757,
+        "affinity_pkd": 5.425,
+        "prob_binder": 0.2092
+      },
+      {
+        "id": "FM002150_analog_0084",
+        "smiles": "O=C(O)COCc1ccc(C2CCCCC2)cc1",
+        "pLDDT": 0.9074,
+        "ipTM": 0.8081,
+        "affinity_kd_uM": 4.355,
+        "affinity_pkd": 5.361,
+        "prob_binder": 0.3523
+      },
+      {
+        "id": "FM002150_analog_0027",
+        "smiles": "O=C(O)COCc1ccccc1-c1ccsc1",
+        "pLDDT": 0.8958,
+        "ipTM": 0.8531,
+        "affinity_kd_uM": 9.307,
+        "affinity_pkd": 5.031,
+        "prob_binder": 0.2218
+      },
+      {
+        "id": "FM002150_analog_0039",
+        "smiles": "NS(=O)(=O)c1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.9091,
+        "ipTM": 0.837,
+        "affinity_kd_uM": 6.316,
+        "affinity_pkd": 5.2,
+        "prob_binder": 0.2617
+      },
+      {
+        "id": "FM002150_analog_0068",
+        "smiles": "NS(=O)(=O)c1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.9156,
+        "ipTM": 0.862,
+        "affinity_kd_uM": 2.948,
+        "affinity_pkd": 5.53,
+        "prob_binder": 0.257
+      },
+      {
+        "id": "FM002150_analog_0011",
+        "smiles": "NC(=O)c1ccccc1COCC(=O)O",
+        "pLDDT": 0.8941,
+        "ipTM": 0.7695,
+        "affinity_kd_uM": 18.969,
+        "affinity_pkd": 4.722,
+        "prob_binder": 0.3084
+      },
+      {
+        "id": "FM002150_analog_0020",
+        "smiles": "CCCc1ccccc1COCC(=O)O",
+        "pLDDT": 0.894,
+        "ipTM": 0.7197,
+        "affinity_kd_uM": 9.857,
+        "affinity_pkd": 5.006,
+        "prob_binder": 0.2086
+      },
+      {
+        "id": "FM002150_analog_0016",
+        "smiles": "N#Cc1ccccc1COCC(=O)O",
+        "pLDDT": 0.9089,
+        "ipTM": 0.8026,
+        "affinity_kd_uM": 28.27,
+        "affinity_pkd": 4.549,
+        "prob_binder": 0.3725
+      },
+      {
+        "id": "FM002150_analog_0037",
+        "smiles": "O=C(O)COCc1cccc(C(F)(F)F)c1",
+        "pLDDT": 0.9161,
+        "ipTM": 0.7925,
+        "affinity_kd_uM": 42.559,
+        "affinity_pkd": 4.371,
+        "prob_binder": 0.1702
+      },
+      {
+        "id": "FM002150_analog_0017",
+        "smiles": "O=C(O)COCc1ccccc1OCCO",
+        "pLDDT": 0.8891,
+        "ipTM": 0.7941,
+        "affinity_kd_uM": 27.472,
+        "affinity_pkd": 4.561,
+        "prob_binder": 0.2877
+      },
+      {
+        "id": "FM002150_analog_0066",
+        "smiles": "O=C(O)COCc1ccc(C(F)(F)F)cc1",
+        "pLDDT": 0.924,
+        "ipTM": 0.8078,
+        "affinity_kd_uM": 22.368,
+        "affinity_pkd": 4.65,
+        "prob_binder": 0.1935
+      },
+      {
+        "id": "FM002150_analog_0007",
+        "smiles": "CCOc1ccccc1COCC(=O)O",
+        "pLDDT": 0.8945,
+        "ipTM": 0.7705,
+        "affinity_kd_uM": 25.33,
+        "affinity_pkd": 4.596,
+        "prob_binder": 0.2098
+      },
+      {
+        "id": "FM002150_analog_0060",
+        "smiles": "CN1CCC(c2cccc(COCC(=O)O)c2)CC1",
+        "pLDDT": 0.8958,
+        "ipTM": 0.6866,
+        "affinity_kd_uM": 17.564,
+        "affinity_pkd": 4.755,
+        "prob_binder": 0.2823
+      },
+      {
+        "id": "FM002150_analog_0087",
+        "smiles": "CN1CCC(c2ccc(COCC(=O)O)cc2)CC1",
+        "pLDDT": 0.8957,
+        "ipTM": 0.8428,
+        "affinity_kd_uM": 11.436,
+        "affinity_pkd": 4.942,
+        "prob_binder": 0.3083
+      },
+      {
+        "id": "FM002150_analog_0003",
+        "smiles": "O=C(O)COCc1ccccc1F",
+        "pLDDT": 0.9209,
+        "ipTM": 0.7695,
+        "affinity_kd_uM": 31.882,
+        "affinity_pkd": 4.496,
+        "prob_binder": 0.1857
+      },
+      {
+        "id": "FM002150_analog_0004",
+        "smiles": "O=C(O)COCc1ccccc1Cl",
+        "pLDDT": 0.9023,
+        "ipTM": 0.5884,
+        "affinity_kd_uM": 45.02,
+        "affinity_pkd": 4.347,
+        "prob_binder": 0.1589
+      },
+      {
+        "id": "FM002150_analog_0005",
+        "smiles": "O=C(O)COCc1ccccc1C(=O)O",
+        "pLDDT": 0.9093,
+        "ipTM": 0.8203,
+        "affinity_kd_uM": 27.964,
+        "affinity_pkd": 4.553,
+        "prob_binder": 0.3206
+      },
+      {
+        "id": "FM002150_analog_0013",
+        "smiles": "Cc1ccccc1COCC(=O)O",
+        "pLDDT": 0.9075,
+        "ipTM": 0.6969,
+        "affinity_kd_uM": 45.517,
+        "affinity_pkd": 4.342,
+        "prob_binder": 0.2143
+      },
+      {
+        "id": "FM002150_analog_0014",
+        "smiles": "Nc1ccccc1COCC(=O)O",
+        "pLDDT": 0.9082,
+        "ipTM": 0.6747,
+        "affinity_kd_uM": 26.397,
+        "affinity_pkd": 4.578,
+        "prob_binder": 0.4051
+      },
+      {
+        "id": "FM002150_analog_0022",
+        "smiles": "NCc1ccccc1COCC(=O)O",
+        "pLDDT": 0.9123,
+        "ipTM": 0.8482,
+        "affinity_kd_uM": 32.527,
+        "affinity_pkd": 4.488,
+        "prob_binder": 0.3521
+      },
+      {
+        "id": "FM002150_analog_0067",
+        "smiles": "CS(=O)(=O)c1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.8986,
+        "ipTM": 0.8352,
+        "affinity_kd_uM": 13.721,
+        "affinity_pkd": 4.863,
+        "prob_binder": 0.2374
+      },
+      {
+        "id": "FM002150_analog_0053",
+        "smiles": "O=C(O)COCc1cccc(-c2ccncc2)c1",
+        "pLDDT": 0.8804,
+        "ipTM": 0.8167,
+        "affinity_kd_uM": 9.686,
+        "affinity_pkd": 5.014,
+        "prob_binder": 0.3501
+      },
+      {
+        "id": "FM002150_analog_0054",
+        "smiles": "O=C(O)COCc1cccc(-c2ccccn2)c1",
+        "pLDDT": 0.8863,
+        "ipTM": 0.7747,
+        "affinity_kd_uM": 12.253,
+        "affinity_pkd": 4.912,
+        "prob_binder": 0.3386
+      },
+      {
+        "id": "FM002150_analog_0041",
+        "smiles": "CN(C)Cc1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.9249,
+        "ipTM": 0.8348,
+        "affinity_kd_uM": 67.771,
+        "affinity_pkd": 4.169,
+        "prob_binder": 0.2094
+      },
+      {
+        "id": "FM002150_analog_0050",
+        "smiles": "CC(C)c1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.9158,
+        "ipTM": 0.8239,
+        "affinity_kd_uM": 6.98,
+        "affinity_pkd": 5.156,
+        "prob_binder": 0.1996
+      },
+      {
+        "id": "FM002150_analog_0052",
+        "smiles": "CN(C)c1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.8928,
+        "ipTM": 0.7383,
+        "affinity_kd_uM": 22.866,
+        "affinity_pkd": 4.641,
+        "prob_binder": 0.2671
+      },
+      {
+        "id": "FM002150_analog_0018",
+        "smiles": "O=C(O)COCc1ccccc1CO",
+        "pLDDT": 0.9118,
+        "ipTM": 0.8311,
+        "affinity_kd_uM": 21.335,
+        "affinity_pkd": 4.671,
+        "prob_binder": 0.3807
+      },
+      {
+        "id": "FM002150_analog_0019",
+        "smiles": "CCc1ccccc1COCC(=O)O",
+        "pLDDT": 0.901,
+        "ipTM": 0.757,
+        "affinity_kd_uM": 13.053,
+        "affinity_pkd": 4.884,
+        "prob_binder": 0.2094
+      },
+      {
+        "id": "FM002150_analog_0070",
+        "smiles": "CN(C)Cc1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.931,
+        "ipTM": 0.851,
+        "affinity_kd_uM": 42.536,
+        "affinity_pkd": 4.371,
+        "prob_binder": 0.2523
+      },
+      {
+        "id": "FM002150_analog_0078",
+        "smiles": "CC(C)c1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.901,
+        "ipTM": 0.808,
+        "affinity_kd_uM": 9.55,
+        "affinity_pkd": 5.02,
+        "prob_binder": 0.2464
+      },
+      {
+        "id": "FM002150_analog_0033",
+        "smiles": "O=C(O)COCc1cccc(Cl)c1",
+        "pLDDT": 0.9123,
+        "ipTM": 0.6384,
+        "affinity_kd_uM": 23.417,
+        "affinity_pkd": 4.63,
+        "prob_binder": 0.1894
+      },
+      {
+        "id": "FM002150_analog_0051",
+        "smiles": "NCc1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.9206,
+        "ipTM": 0.8336,
+        "affinity_kd_uM": 69.306,
+        "affinity_pkd": 4.159,
+        "prob_binder": 0.3055
+      },
+      {
+        "id": "FM002150_analog_0049",
+        "smiles": "CCCc1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.912,
+        "ipTM": 0.8139,
+        "affinity_kd_uM": 9.3,
+        "affinity_pkd": 5.031,
+        "prob_binder": 0.2301
+      },
+      {
+        "id": "FM002150_analog_0045",
+        "smiles": "N#Cc1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.9,
+        "ipTM": 0.7189,
+        "affinity_kd_uM": 17.705,
+        "affinity_pkd": 4.752,
+        "prob_binder": 0.2927
+      },
+      {
+        "id": "FM002150_analog_0001",
+        "smiles": "O=C(O)COCc1ccncc1",
+        "pLDDT": 0.9096,
+        "ipTM": 0.6454,
+        "affinity_kd_uM": 90.858,
+        "affinity_pkd": 4.042,
+        "prob_binder": 0.274
+      },
+      {
+        "id": "FM002150_analog_0061",
+        "smiles": "O=C(O)COCc1ccc(F)cc1",
+        "pLDDT": 0.9139,
+        "ipTM": 0.7239,
+        "affinity_kd_uM": 21.292,
+        "affinity_pkd": 4.672,
+        "prob_binder": 0.1894
+      },
+      {
+        "id": "FM002150_analog_0062",
+        "smiles": "O=C(O)COCc1ccc(Cl)cc1",
+        "pLDDT": 0.9253,
+        "ipTM": 0.7752,
+        "affinity_kd_uM": 13.373,
+        "affinity_pkd": 4.874,
+        "prob_binder": 0.2032
+      },
+      {
+        "id": "FM002150_analog_0079",
+        "smiles": "NCc1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.9258,
+        "ipTM": 0.8195,
+        "affinity_kd_uM": 34.345,
+        "affinity_pkd": 4.464,
+        "prob_binder": 0.2435
+      },
+      {
+        "id": "FM002150_analog_0069",
+        "smiles": "NC(=O)c1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.911,
+        "ipTM": 0.8053,
+        "affinity_kd_uM": 9.021,
+        "affinity_pkd": 5.045,
+        "prob_binder": 0.2994
+      },
+      {
+        "id": "FM002150_analog_0077",
+        "smiles": "CCCc1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.9155,
+        "ipTM": 0.7997,
+        "affinity_kd_uM": 9.063,
+        "affinity_pkd": 5.043,
+        "prob_binder": 0.2668
+      },
+      {
+        "id": "FM002150_analog_0006",
+        "smiles": "COc1ccccc1COCC(=O)O",
+        "pLDDT": 0.9063,
+        "ipTM": 0.7366,
+        "affinity_kd_uM": 16.793,
+        "affinity_pkd": 4.775,
+        "prob_binder": 0.3296
+      },
+      {
+        "id": "FM002150_analog_0047",
+        "smiles": "O=C(O)COCc1cccc(CO)c1",
+        "pLDDT": 0.8986,
+        "ipTM": 0.7193,
+        "affinity_kd_uM": 18.088,
+        "affinity_pkd": 4.743,
+        "prob_binder": 0.378
+      },
+      {
+        "id": "FM002150_analog_0073",
+        "smiles": "N#Cc1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.9081,
+        "ipTM": 0.7392,
+        "affinity_kd_uM": 12.611,
+        "affinity_pkd": 4.899,
+        "prob_binder": 0.2654
+      },
+      {
+        "id": "FM002150_analog_0075",
+        "smiles": "O=C(O)COCc1ccc(CO)cc1",
+        "pLDDT": 0.9117,
+        "ipTM": 0.7396,
+        "affinity_kd_uM": 15.811,
+        "affinity_pkd": 4.801,
+        "prob_binder": 0.2788
+      },
+      {
+        "id": "FM002150_analog_0032",
+        "smiles": "O=C(O)COCc1cccc(F)c1",
+        "pLDDT": 0.9192,
+        "ipTM": 0.7039,
+        "affinity_kd_uM": 31.362,
+        "affinity_pkd": 4.504,
+        "prob_binder": 0.191
+      },
+      {
+        "id": "FM002150_analog_0081",
+        "smiles": "O=C(O)COCc1ccc(-c2ccccn2)cc1",
+        "pLDDT": 0.8784,
+        "ipTM": 0.7879,
+        "affinity_kd_uM": 12.455,
+        "affinity_pkd": 4.905,
+        "prob_binder": 0.3438
+      },
+      {
+        "id": "FM002150_analog_0046",
+        "smiles": "O=C(O)COCc1cccc(OCCO)c1",
+        "pLDDT": 0.8884,
+        "ipTM": 0.7881,
+        "affinity_kd_uM": 33.932,
+        "affinity_pkd": 4.469,
+        "prob_binder": 0.2896
+      },
+      {
+        "id": "FM002150_analog_0002",
+        "smiles": "O=C(O)COCc1cccnc1",
+        "pLDDT": 0.9085,
+        "ipTM": 0.7259,
+        "affinity_kd_uM": 100.355,
+        "affinity_pkd": 3.998,
+        "prob_binder": 0.2396
+      },
+      {
+        "id": "FM002150_analog_0042",
+        "smiles": "Cc1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.907,
+        "ipTM": 0.7475,
+        "affinity_kd_uM": 22.149,
+        "affinity_pkd": 4.655,
+        "prob_binder": 0.2509
+      },
+      {
+        "id": "FM002150_analog_0071",
+        "smiles": "Cc1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.9031,
+        "ipTM": 0.7594,
+        "affinity_kd_uM": 34.491,
+        "affinity_pkd": 4.462,
+        "prob_binder": 0.2447
+      },
+      {
+        "id": "FM002150_analog_0083",
+        "smiles": "O=C(O)COCc1ccc(-c2ccsc2)cc1",
+        "pLDDT": 0.8942,
+        "ipTM": 0.8135,
+        "affinity_kd_uM": 3.256,
+        "affinity_pkd": 5.487,
+        "prob_binder": 0.2993
+      },
+      {
+        "id": "FM002150_analog_0036",
+        "smiles": "CCOc1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.8963,
+        "ipTM": 0.8077,
+        "affinity_kd_uM": 22.401,
+        "affinity_pkd": 4.65,
+        "prob_binder": 0.2285
+      },
+      {
+        "id": "FM002150_analog_0040",
+        "smiles": "NC(=O)c1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.9012,
+        "ipTM": 0.7979,
+        "affinity_kd_uM": 20.187,
+        "affinity_pkd": 4.695,
+        "prob_binder": 0.3258
+      },
+      {
+        "id": "FM002150_analog_0043",
+        "smiles": "Nc1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.9143,
+        "ipTM": 0.821,
+        "affinity_kd_uM": 22.968,
+        "affinity_pkd": 4.639,
+        "prob_binder": 0.3442
+      },
+      {
+        "id": "FM002150_analog_0035",
+        "smiles": "COc1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.914,
+        "ipTM": 0.7616,
+        "affinity_kd_uM": 33.507,
+        "affinity_pkd": 4.475,
+        "prob_binder": 0.3163
+      },
+      {
+        "id": "FM002150_analog_0072",
+        "smiles": "CNC(=O)c1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.9089,
+        "ipTM": 0.7877,
+        "affinity_kd_uM": 18.451,
+        "affinity_pkd": 4.734,
+        "prob_binder": 0.2637
+      },
+      {
+        "id": "FM002150_analog_0015",
+        "smiles": "CNC(=O)c1ccccc1COCC(=O)O",
+        "pLDDT": 0.8987,
+        "ipTM": 0.8,
+        "affinity_kd_uM": 20.175,
+        "affinity_pkd": 4.695,
+        "prob_binder": 0.2547
+      },
+      {
+        "id": "FM002150_analog_0034",
+        "smiles": "O=C(O)COCc1cccc(C(=O)O)c1",
+        "pLDDT": 0.8988,
+        "ipTM": 0.6483,
+        "affinity_kd_uM": 15.857,
+        "affinity_pkd": 4.8,
+        "prob_binder": 0.3585
+      },
+      {
+        "id": "FM002150_analog_0048",
+        "smiles": "CCc1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.8992,
+        "ipTM": 0.7702,
+        "affinity_kd_uM": 8.116,
+        "affinity_pkd": 5.091,
+        "prob_binder": 0.2079
+      },
+      {
+        "id": "FM002150_analog_0064",
+        "smiles": "COc1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.9176,
+        "ipTM": 0.8275,
+        "affinity_kd_uM": 19.331,
+        "affinity_pkd": 4.714,
+        "prob_binder": 0.2718
+      },
+      {
+        "id": "FM002150_analog_0076",
+        "smiles": "CCc1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.9143,
+        "ipTM": 0.7797,
+        "affinity_kd_uM": 12.734,
+        "affinity_pkd": 4.895,
+        "prob_binder": 0.2284
+      },
+      {
+        "id": "FM002150_analog_0044",
+        "smiles": "CNC(=O)c1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.909,
+        "ipTM": 0.8261,
+        "affinity_kd_uM": 21.659,
+        "affinity_pkd": 4.664,
+        "prob_binder": 0.2489
+      },
+      {
+        "id": "FM002150_analog_0080",
+        "smiles": "O=C(O)COCc1ccc(-c2ccncc2)cc1",
+        "pLDDT": 0.8819,
+        "ipTM": 0.8331,
+        "affinity_kd_uM": 7.529,
+        "affinity_pkd": 5.123,
+        "prob_binder": 0.3782
+      },
+      {
+        "id": "FM002150_analog_0063",
+        "smiles": "O=C(O)COCc1ccc(C(=O)O)cc1",
+        "pLDDT": 0.8932,
+        "ipTM": 0.6833,
+        "affinity_kd_uM": 19.935,
+        "affinity_pkd": 4.7,
+        "prob_binder": 0.2911
+      },
+      {
+        "id": "FM002150_analog_0074",
+        "smiles": "O=C(O)COCc1ccc(OCCO)cc1",
+        "pLDDT": 0.8837,
+        "ipTM": 0.7219,
+        "affinity_kd_uM": 15.914,
+        "affinity_pkd": 4.798,
+        "prob_binder": 0.263
+      },
+      {
+        "id": "FM002150_analog_0038",
+        "smiles": "CS(=O)(=O)c1cccc(COCC(=O)O)c1",
+        "pLDDT": 0.8991,
+        "ipTM": 0.7904,
+        "affinity_kd_uM": 14.624,
+        "affinity_pkd": 4.835,
+        "prob_binder": 0.2543
+      },
+      {
+        "id": "FM002150_analog_0056",
+        "smiles": "O=C(O)COCc1cccc(-c2ccsc2)c1",
+        "pLDDT": 0.8985,
+        "ipTM": 0.8155,
+        "affinity_kd_uM": 8.333,
+        "affinity_pkd": 5.079,
+        "prob_binder": 0.267
+      },
+      {
+        "id": "FM002150_analog_0065",
+        "smiles": "CCOc1ccc(COCC(=O)O)cc1",
+        "pLDDT": 0.919,
+        "ipTM": 0.8138,
+        "affinity_kd_uM": 13.923,
+        "affinity_pkd": 4.856,
+        "prob_binder": 0.2425
+      },
+      {
+        "id": "gen_0001",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3CCOC[C@]34CCOC4)c2cc1N",
+        "pLDDT": 0.848,
+        "ipTM": 0.7685,
+        "affinity_kd_uM": 1.336,
+        "affinity_pkd": 5.874,
+        "prob_binder": 0.5827
+      },
+      {
+        "id": "gen_0002",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(CN3C(=O)c4ccccc4C3=O)c2cc1N",
+        "pLDDT": 0.8361,
+        "ipTM": 0.7605,
+        "affinity_kd_uM": 3.183,
+        "affinity_pkd": 5.497,
+        "prob_binder": 0.6138
+      },
+      {
+        "id": "gen_0003",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3C(=O)c4ccccc4C3=O)c2cc1N",
+        "pLDDT": 0.8465,
+        "ipTM": 0.7115,
+        "affinity_kd_uM": 1.938,
+        "affinity_pkd": 5.713,
+        "prob_binder": 0.6396
+      },
+      {
+        "id": "gen_0004",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Cn3nc4ccccn4c3=O)c2cc1N",
+        "pLDDT": 0.8661,
+        "ipTM": 0.8577,
+        "affinity_kd_uM": 3.185,
+        "affinity_pkd": 5.497,
+        "prob_binder": 0.598
+      },
+      {
+        "id": "gen_0005",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3nnc4n3CCCCC4)c2cc1N",
+        "pLDDT": 0.864,
+        "ipTM": 0.853,
+        "affinity_kd_uM": 1.328,
+        "affinity_pkd": 5.877,
+        "prob_binder": 0.3984
+      },
+      {
+        "id": "gen_0006",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(NCc3ccc4c(c3)C(=O)NCC4)c2cc1N",
+        "pLDDT": 0.847,
+        "ipTM": 0.819,
+        "affinity_kd_uM": 0.994,
+        "affinity_pkd": 6.003,
+        "prob_binder": 0.62
+      },
+      {
+        "id": "gen_0007",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-n3nc4ccccn4c3=O)c2cc1N",
+        "pLDDT": 0.8473,
+        "ipTM": 0.6244,
+        "affinity_kd_uM": 2.465,
+        "affinity_pkd": 5.608,
+        "prob_binder": 0.5965
+      },
+      {
+        "id": "gen_0008",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3cnc4[nH]c(=O)n(C)c4c3)c2cc1N",
+        "pLDDT": 0.854,
+        "ipTM": 0.7436,
+        "affinity_kd_uM": 0.235,
+        "affinity_pkd": 6.628,
+        "prob_binder": 0.4032
+      },
+      {
+        "id": "gen_0009",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3C(=O)c4ccc(C)cc4C3=O)c2cc1N",
+        "pLDDT": 0.835,
+        "ipTM": 0.5698,
+        "affinity_kd_uM": 1.867,
+        "affinity_pkd": 5.729,
+        "prob_binder": 0.6277
+      },
+      {
+        "id": "gen_0010",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(NS(=O)(=O)N3CCNCC3)c2cc1N",
+        "pLDDT": 0.8333,
+        "ipTM": 0.6408,
+        "affinity_kd_uM": 5.483,
+        "affinity_pkd": 5.261,
+        "prob_binder": 0.5619
+      },
+      {
+        "id": "gen_0011",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(C(=O)c3ccc4c(c3)NC(=O)C(C)O4)c2cc1N",
+        "pLDDT": 0.8396,
+        "ipTM": 0.6632,
+        "affinity_kd_uM": 0.355,
+        "affinity_pkd": 6.45,
+        "prob_binder": 0.6109
+      },
+      {
+        "id": "gen_0012",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N(C)S(=O)(=O)N3CCO[C@H](C)C3)c2cc1N",
+        "pLDDT": 0.8455,
+        "ipTM": 0.6945,
+        "affinity_kd_uM": 3.073,
+        "affinity_pkd": 5.512,
+        "prob_binder": 0.5323
+      },
+      {
+        "id": "gen_0013",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Cn3nc(C)sc3=O)c2cc1N",
+        "pLDDT": 0.8633,
+        "ipTM": 0.72,
+        "affinity_kd_uM": 3.675,
+        "affinity_pkd": 5.435,
+        "prob_binder": 0.5819
+      },
+      {
+        "id": "gen_0014",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ccc4c(c3)NC(=O)C(C)O4)c2cc1N",
+        "pLDDT": 0.8461,
+        "ipTM": 0.6267,
+        "affinity_kd_uM": 1.103,
+        "affinity_pkd": 5.957,
+        "prob_binder": 0.6079
+      },
+      {
+        "id": "gen_0015",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3nc4cc(C)ccc4[nH]3)c2cc1N",
+        "pLDDT": 0.8313,
+        "ipTM": 0.8281,
+        "affinity_kd_uM": 2.999,
+        "affinity_pkd": 5.523,
+        "prob_binder": 0.6275
+      },
+      {
+        "id": "gen_0016",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3nccn4cnnc34)c2cc1N",
+        "pLDDT": 0.8658,
+        "ipTM": 0.7338,
+        "affinity_kd_uM": 3.286,
+        "affinity_pkd": 5.483,
+        "prob_binder": 0.6953
+      },
+      {
+        "id": "gen_0017",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3CCCC4(C3)OCc3ccccc34)c2cc1N",
+        "pLDDT": 0.8591,
+        "ipTM": 0.7825,
+        "affinity_kd_uM": 2.553,
+        "affinity_pkd": 5.593,
+        "prob_binder": 0.599
+      },
+      {
+        "id": "gen_0018",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N(C)c3ncccc3F)c2cc1N",
+        "pLDDT": 0.8576,
+        "ipTM": 0.8411,
+        "affinity_kd_uM": 7.256,
+        "affinity_pkd": 5.139,
+        "prob_binder": 0.4484
+      },
+      {
+        "id": "gen_0019",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3nc4cccc(C)c4o3)c2cc1N",
+        "pLDDT": 0.8769,
+        "ipTM": 0.8626,
+        "affinity_kd_uM": 2.857,
+        "affinity_pkd": 5.544,
+        "prob_binder": 0.5791
+      },
+      {
+        "id": "gen_0020",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ccc4c(c3)OCCO4)c2cc1N",
+        "pLDDT": 0.8568,
+        "ipTM": 0.8031,
+        "affinity_kd_uM": 2.124,
+        "affinity_pkd": 5.673,
+        "prob_binder": 0.5768
+      },
+      {
+        "id": "gen_0021",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3CCc4ccccc4C3)c2cc1N",
+        "pLDDT": 0.8592,
+        "ipTM": 0.6904,
+        "affinity_kd_uM": 5.595,
+        "affinity_pkd": 5.252,
+        "prob_binder": 0.5429
+      },
+      {
+        "id": "gen_0022",
+        "smiles": "CCN1CCC(Nc2nc(-c3cccc(N)c3)nc3cc(OC)c(N)cc23)CC1",
+        "pLDDT": 0.8542,
+        "ipTM": 0.7365,
+        "affinity_kd_uM": 0.531,
+        "affinity_pkd": 6.275,
+        "prob_binder": 0.5562
+      },
+      {
+        "id": "gen_0023",
+        "smiles": "CCn1cc(Nc2nc(-c3cccc(N)c3)nc3cc(OC)c(N)cc23)cn1",
+        "pLDDT": 0.8533,
+        "ipTM": 0.6977,
+        "affinity_kd_uM": 1.218,
+        "affinity_pkd": 5.914,
+        "prob_binder": 0.647
+      },
+      {
+        "id": "gen_0024",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(NCc3ccc(C)nc3)c2cc1N",
+        "pLDDT": 0.8494,
+        "ipTM": 0.8085,
+        "affinity_kd_uM": 3.74,
+        "affinity_pkd": 5.427,
+        "prob_binder": 0.6696
+      },
+      {
+        "id": "gen_0025",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(NS(=O)(=O)c3ccc(C)cc3)c2cc1N",
+        "pLDDT": 0.858,
+        "ipTM": 0.851,
+        "affinity_kd_uM": 5.054,
+        "affinity_pkd": 5.296,
+        "prob_binder": 0.6188
+      },
+      {
+        "id": "gen_0026",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3CCC(CO)CC3)c2cc1N",
+        "pLDDT": 0.8628,
+        "ipTM": 0.8294,
+        "affinity_kd_uM": 4.117,
+        "affinity_pkd": 5.385,
+        "prob_binder": 0.5351
+      },
+      {
+        "id": "gen_0027",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Cn3cnc4ccccc43)c2cc1N",
+        "pLDDT": 0.8676,
+        "ipTM": 0.8619,
+        "affinity_kd_uM": 5.536,
+        "affinity_pkd": 5.257,
+        "prob_binder": 0.7033
+      },
+      {
+        "id": "gen_0028",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Nc3cc(C)ccc3OC)c2cc1N",
+        "pLDDT": 0.8607,
+        "ipTM": 0.762,
+        "affinity_kd_uM": 4.408,
+        "affinity_pkd": 5.356,
+        "prob_binder": 0.6255
+      },
+      {
+        "id": "gen_0029",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ccc4nncn4n3)c2cc1N",
+        "pLDDT": 0.8823,
+        "ipTM": 0.8543,
+        "affinity_kd_uM": 3.045,
+        "affinity_pkd": 5.516,
+        "prob_binder": 0.6423
+      },
+      {
+        "id": "gen_0030",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Nc3ncc(Cl)cc3F)c2cc1N",
+        "pLDDT": 0.8811,
+        "ipTM": 0.784,
+        "affinity_kd_uM": 2.955,
+        "affinity_pkd": 5.529,
+        "prob_binder": 0.5438
+      },
+      {
+        "id": "gen_0031",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ccc4c(c3)CCC(=O)N4)c2cc1N",
+        "pLDDT": 0.8605,
+        "ipTM": 0.7038,
+        "affinity_kd_uM": 1.007,
+        "affinity_pkd": 5.997,
+        "prob_binder": 0.5496
+      },
+      {
+        "id": "gen_0032",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3cc4ccccc4cc3O)c2cc1N",
+        "pLDDT": 0.8411,
+        "ipTM": 0.6722,
+        "affinity_kd_uM": 2.996,
+        "affinity_pkd": 5.523,
+        "prob_binder": 0.6405
+      },
+      {
+        "id": "gen_0033",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(C3(C)COC(=O)N3)c2cc1N",
+        "pLDDT": 0.8503,
+        "ipTM": 0.57,
+        "affinity_kd_uM": 3.43,
+        "affinity_pkd": 5.465,
+        "prob_binder": 0.5063
+      },
+      {
+        "id": "gen_0034",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3C(=O)NC4(CCc5ccccc54)C3=O)c2cc1N",
+        "pLDDT": 0.8228,
+        "ipTM": 0.664,
+        "affinity_kd_uM": 0.964,
+        "affinity_pkd": 6.016,
+        "prob_binder": 0.5498
+      },
+      {
+        "id": "gen_0035",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Nc3nc(C)cs3)c2cc1N",
+        "pLDDT": 0.8455,
+        "ipTM": 0.6394,
+        "affinity_kd_uM": 2.882,
+        "affinity_pkd": 5.54,
+        "prob_binder": 0.6535
+      },
+      {
+        "id": "gen_0036",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Nc3ccc4c(c3)CCC(=O)N4)c2cc1N",
+        "pLDDT": 0.8515,
+        "ipTM": 0.781,
+        "affinity_kd_uM": 0.89,
+        "affinity_pkd": 6.051,
+        "prob_binder": 0.5661
+      },
+      {
+        "id": "gen_0037",
+        "smiles": "COc1ccc(Nc2nc(-c3cccc(N)c3)nc3cc(OC)c(N)cc23)cc1",
+        "pLDDT": 0.9012,
+        "ipTM": 0.8698,
+        "affinity_kd_uM": 4.884,
+        "affinity_pkd": 5.311,
+        "prob_binder": 0.6293
+      },
+      {
+        "id": "gen_0038",
+        "smiles": "Cc1ccc(C2=CC(c3ccccc3)n3nc(Nc4cccc(N)c4)nc3N2)cc1",
+        "pLDDT": 0.8503,
+        "ipTM": 0.7664,
+        "affinity_kd_uM": 6.687,
+        "affinity_pkd": 5.175,
+        "prob_binder": 0.5783
+      },
+      {
+        "id": "gen_0039",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(OCC3CCOC3)c2cc1N",
+        "pLDDT": 0.8538,
+        "ipTM": 0.7326,
+        "affinity_kd_uM": 4.128,
+        "affinity_pkd": 5.384,
+        "prob_binder": 0.4827
+      },
+      {
+        "id": "gen_0040",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Nc3cccnc3)c2cc1N",
+        "pLDDT": 0.8749,
+        "ipTM": 0.834,
+        "affinity_kd_uM": 1.855,
+        "affinity_pkd": 5.732,
+        "prob_binder": 0.6751
+      },
+      {
+        "id": "gen_0041",
+        "smiles": "COc1cc(-c2nc(-c3cccc(N)c3)nc3cc(OC)c(N)cc23)ccc1N",
+        "pLDDT": 0.8814,
+        "ipTM": 0.8556,
+        "affinity_kd_uM": 2.213,
+        "affinity_pkd": 5.655,
+        "prob_binder": 0.6476
+      },
+      {
+        "id": "gen_0042",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(NCc3cnn(C)c3)c2cc1N",
+        "pLDDT": 0.8675,
+        "ipTM": 0.8221,
+        "affinity_kd_uM": 2.265,
+        "affinity_pkd": 5.645,
+        "prob_binder": 0.647
+      },
+      {
+        "id": "gen_0043",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Oc3ncccn3)c2cc1N",
+        "pLDDT": 0.8691,
+        "ipTM": 0.821,
+        "affinity_kd_uM": 2.544,
+        "affinity_pkd": 5.595,
+        "prob_binder": 0.6219
+      },
+      {
+        "id": "gen_0044",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Cc3c(C)noc3C)c2cc1N",
+        "pLDDT": 0.8725,
+        "ipTM": 0.8096,
+        "affinity_kd_uM": 3.849,
+        "affinity_pkd": 5.415,
+        "prob_binder": 0.6776
+      },
+      {
+        "id": "gen_0045",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Oc3cccc(N)c3)c2cc1N",
+        "pLDDT": 0.8686,
+        "ipTM": 0.7934,
+        "affinity_kd_uM": 7.205,
+        "affinity_pkd": 5.142,
+        "prob_binder": 0.5422
+      },
+      {
+        "id": "gen_0046",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3nc4cc(Br)cnc4[nH]3)c2cc1N",
+        "pLDDT": 0.8732,
+        "ipTM": 0.7369,
+        "affinity_kd_uM": 1.591,
+        "affinity_pkd": 5.798,
+        "prob_binder": 0.6178
+      },
+      {
+        "id": "gen_0047",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ncco3)c2cc1N",
+        "pLDDT": 0.8716,
+        "ipTM": 0.8383,
+        "affinity_kd_uM": 5.804,
+        "affinity_pkd": 5.236,
+        "prob_binder": 0.6557
+      },
+      {
+        "id": "gen_0048",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-n3cnc(S(N)(=O)=O)c3)c2cc1N",
+        "pLDDT": 0.8554,
+        "ipTM": 0.7788,
+        "affinity_kd_uM": 2.077,
+        "affinity_pkd": 5.683,
+        "prob_binder": 0.5783
+      },
+      {
+        "id": "gen_0049",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Nc3ccncc3)c2cc1N",
+        "pLDDT": 0.8821,
+        "ipTM": 0.7633,
+        "affinity_kd_uM": 3.784,
+        "affinity_pkd": 5.422,
+        "prob_binder": 0.6724
+      },
+      {
+        "id": "gen_0050",
+        "smiles": "CNC(=O)COc1nc(-c2cccc(N)c2)nc2cc(OC)c(N)cc12",
+        "pLDDT": 0.8722,
+        "ipTM": 0.8201,
+        "affinity_kd_uM": 6.976,
+        "affinity_pkd": 5.156,
+        "prob_binder": 0.4783
+      },
+      {
+        "id": "gen_0051",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ccc4ccccc4c3)c2cc1N",
+        "pLDDT": 0.8489,
+        "ipTM": 0.6939,
+        "affinity_kd_uM": 2.189,
+        "affinity_pkd": 5.66,
+        "prob_binder": 0.5889
+      },
+      {
+        "id": "gen_0052",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3csc(N)n3)c2cc1N",
+        "pLDDT": 0.8534,
+        "ipTM": 0.7871,
+        "affinity_kd_uM": 4.053,
+        "affinity_pkd": 5.392,
+        "prob_binder": 0.6518
+      },
+      {
+        "id": "gen_0053",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ccc(=O)[nH]n3)c2cc1N",
+        "pLDDT": 0.9055,
+        "ipTM": 0.6489,
+        "affinity_kd_uM": 5.327,
+        "affinity_pkd": 5.274,
+        "prob_binder": 0.6667
+      },
+      {
+        "id": "gen_0054",
+        "smiles": "COC(=O)c1nc(-c2cccc(N)c2)nc2cc(OC)c(N)cc12",
+        "pLDDT": 0.8857,
+        "ipTM": 0.7986,
+        "affinity_kd_uM": 8.462,
+        "affinity_pkd": 5.073,
+        "prob_binder": 0.64
+      },
+      {
+        "id": "gen_0055",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3CCOCC3)c2cc1N",
+        "pLDDT": 0.8665,
+        "ipTM": 0.721,
+        "affinity_kd_uM": 6.075,
+        "affinity_pkd": 5.216,
+        "prob_binder": 0.5828
+      },
+      {
+        "id": "gen_0056",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N(C)c3cccnc3)c2cc1N",
+        "pLDDT": 0.8667,
+        "ipTM": 0.8511,
+        "affinity_kd_uM": 6.598,
+        "affinity_pkd": 5.181,
+        "prob_binder": 0.5772
+      },
+      {
+        "id": "gen_0057",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3c(C)noc3C)c2cc1N",
+        "pLDDT": 0.8709,
+        "ipTM": 0.7926,
+        "affinity_kd_uM": 2.495,
+        "affinity_pkd": 5.603,
+        "prob_binder": 0.573
+      },
+      {
+        "id": "gen_0058",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(N3CCC(O)CC3)c2cc1N",
+        "pLDDT": 0.8533,
+        "ipTM": 0.7281,
+        "affinity_kd_uM": 3.708,
+        "affinity_pkd": 5.431,
+        "prob_binder": 0.6261
+      },
+      {
+        "id": "gen_0059",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Cc3ccc4ccccc4c3)c2cc1N",
+        "pLDDT": 0.8764,
+        "ipTM": 0.8433,
+        "affinity_kd_uM": 4.655,
+        "affinity_pkd": 5.332,
+        "prob_binder": 0.6352
+      },
+      {
+        "id": "gen_0060",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-n3nc(C)sc3=O)c2cc1N",
+        "pLDDT": 0.8505,
+        "ipTM": 0.7786,
+        "affinity_kd_uM": 2.324,
+        "affinity_pkd": 5.634,
+        "prob_binder": 0.6345
+      },
+      {
+        "id": "gen_0061",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3csc(C)n3)c2cc1N",
+        "pLDDT": 0.8634,
+        "ipTM": 0.8772,
+        "affinity_kd_uM": 6.991,
+        "affinity_pkd": 5.155,
+        "prob_binder": 0.6395
+      },
+      {
+        "id": "gen_0062",
+        "smiles": "COCCNc1nc(-c2cccc(N)c2)nc2cc(OC)c(N)cc12",
+        "pLDDT": 0.8719,
+        "ipTM": 0.7231,
+        "affinity_kd_uM": 8.383,
+        "affinity_pkd": 5.077,
+        "prob_binder": 0.6272
+      },
+      {
+        "id": "gen_0063",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-c3ncccn3)c2cc1N",
+        "pLDDT": 0.8661,
+        "ipTM": 0.8081,
+        "affinity_kd_uM": 7.441,
+        "affinity_pkd": 5.128,
+        "prob_binder": 0.5721
+      },
+      {
+        "id": "gen_0064",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(OCC(=O)O)c2cc1N",
+        "pLDDT": 0.8731,
+        "ipTM": 0.7932,
+        "affinity_kd_uM": 6.655,
+        "affinity_pkd": 5.177,
+        "prob_binder": 0.5088
+      },
+      {
+        "id": "gen_0065",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(Cc3nn[nH]n3)c2cc1N",
+        "pLDDT": 0.9105,
+        "ipTM": 0.8527,
+        "affinity_kd_uM": 3.082,
+        "affinity_pkd": 5.511,
+        "prob_binder": 0.6056
+      },
+      {
+        "id": "gen_0066",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(NCCCN)c2cc1N",
+        "pLDDT": 0.9254,
+        "ipTM": 0.8784,
+        "affinity_kd_uM": 8.448,
+        "affinity_pkd": 5.073,
+        "prob_binder": 0.6157
+      },
+      {
+        "id": "gen_0067",
+        "smiles": "COc1cc2nc(-c3cccc(N)c3)nc(-n3cnc4ccccc43)c2cc1N",
+        "pLDDT": 0.8428,
+        "ipTM": 0.7796,
+        "affinity_kd_uM": 3.59,
+        "affinity_pkd": 5.445,
+        "prob_binder": 0.6177
+      }
+    ]
+  }
+}
