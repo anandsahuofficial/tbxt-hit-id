@@ -101,7 +101,7 @@ and ranking happens only over the surviving population.
 
 - **Rule:** maximum Tanimoto similarity against three reference
   sets is &lt; 0.85:
-  - Naar SPR-measured TBXT binders (650 compounds)
+  - Naar SPR-measured TBXT binders (653 compounds)
   - TEP-suggested fragment list (curated by hackathon TEPs)
   - `prior_art_canonical` - public TBXT/Brachyury inhibitor
     literature compounds, canonicalized via RDKit

@@ -10,7 +10,7 @@ factor and lineage-defining oncogenic driver.**
 
 A reproducible end-to-end pipeline that integrates docking (Vina,
 GNINA), generative co-folding (Boltz-2), free-energy refinement
-(MMGBSA), target-specific QSAR (RF + XGBoost on 650 measured Naar SPR
+(MMGBSA), target-specific QSAR (RF + XGBoost on 653 measured Naar SPR
 Kd), and T-box paralog selectivity into a strict 7-criterion filter
 chain - yielding 137 organizer-compliant hit candidates and a top-4
 ranked submission.
@@ -82,7 +82,7 @@ is in `results/all_candidates_tiered.csv`.
 |---|---|
 | **Vina ensemble** (6 receptor confs) | Geometric fit, receptor flexibility |
 | **GNINA CNN** pose + pKd | Vina-trap detection, ML affinity |
-| **TBXT-specific QSAR** (RF + XGBoost on 650 measured Naar SPR Kd) | Target-specific affinity |
+| **TBXT-specific QSAR** (RF + XGBoost on 653 measured Naar SPR Kd) | Target-specific affinity |
 | **Boltz-2 generative co-folding** (two independent backends) | Independent affinity + binder/non-binder classifier |
 | **MMGBSA implicit-solvent refinement** (top 30) | Free-energy refinement |
 | **T-box paralog selectivity** (16 paralogs) | Off-target risk |
@@ -171,7 +171,7 @@ Demo mode: **< 2 minutes**, no GPU. See
 path, and the container-internals reference.
 
 > **Data availability.** The bulk data bundle (570-compound pool,
-> Naar SPR Kd training set, 6-conf receptor ensemble, and optional
+> Naar SPR Kd training set, 6-conformer crystallographic ensemble, and optional
 > pre-computed scoring outputs) is hosted as a separate Hugging Face
 > dataset and downloaded by `setup/fetch_data.sh`. If the dataset is
 > not yet published, `fetch_data.sh` will print a clear error
@@ -301,7 +301,7 @@ A machine-readable [`CITATION.cff`](CITATION.cff) is included.
 
 ### Datasets
 
-- **Naar SPR Kd dataset** (650 measured TBXT-binding affinities) -
+- **Naar SPR Kd dataset** (653 measured TBXT-binding affinities) -
   TBXT Hackathon 2026
 - **PDB 6F59** chain A - TBXT G177D + DNA construct (matches the
   hackathon CF Labs SPR assay)

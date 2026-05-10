@@ -191,7 +191,7 @@ Why these methods, why this target, why these 137 candidates.
 |---|---|
 | Vina ensemble (6 receptor confs) | Geometric fit; receptor flexibility |
 | GNINA CNN pose + pKd | Vina-trap detection; ML affinity |
-| TBXT QSAR (RF + XGBoost on 650 Naar SPR Kd) | Target-specific affinity |
+| TBXT QSAR (RF + XGBoost on 653 Naar SPR Kd) | Target-specific affinity |
 | Boltz-2 co-folding (two independent runs) | Independent affinity + binder classifier |
 | MMGBSA single-snapshot (top 30) | Free-energy refinement |
 | T-box paralog selectivity (16 paralogs) | Off-target risk |

@@ -58,9 +58,12 @@ which becomes the substrate for every downstream signal.
 ### 1. Vina ensemble (geometric fit + receptor flexibility)
 
 - **Tool:** AutoDock Vina 1.2.x, exhaustiveness 32, num_modes 9.
-- **Receptor handling:** 6 receptor conformations sampled from a
-  short MD relaxation of `6F59:A` to capture pocket flexibility
-  (Y88 / L42 sidechain rotamers, D177 carboxylate orientation).
+- **Receptor handling:** 6-conformer crystallographic ensemble
+  spanning related TBXT structures (`5QS9_A`, `5QSA_A`, `5QSI_A` apo
+  + `6F58_A` WT + `6F59_A` and `6F59_B` G177D) to capture pocket
+  flexibility (Y88 / L42 sidechain rotamers, D177 carboxylate
+  orientation). Multi-crystal sampling gives broader pocket
+  diversity than short MD relaxation of a single starting structure.
 - **Per-compound score:** `min(vina_affinity)` across the 6
   conformations. The minimum (most favorable) is used so that one
   compatible receptor conformation is enough to qualify.
@@ -88,7 +91,7 @@ which becomes the substrate for every downstream signal.
 
 ### 3. TBXT-specific QSAR (the only on-target signal)
 
-- **Training data:** 650 measured Naar SPR Kd values against TBXT,
+- **Training data:** 653 measured Naar SPR Kd values against TBXT,
   released for the hackathon. The only target-specific affinity data
   available.
 - **Models:** Random Forest + XGBoost regression on Morgan-2 (radius 2,

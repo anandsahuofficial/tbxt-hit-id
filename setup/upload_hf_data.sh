@@ -5,10 +5,10 @@
 #
 # Required source paths:
 #   --src-pool      <file>    570-compound SMILES CSV
-#   --src-naar      <file>    650 Naar SPR Kd CSV
+#   --src-naar      <file>    653 Naar SPR Kd CSV
 #   --src-ensemble  <dir>     directory of relaxed receptor conformations
 #                              (every file inside is included; the dir is
-#                              packed to receptor/6F59_chainA_ensemble.tar.gz)
+#                              packed to receptor/tbxt_pocket_ensemble.tar.gz)
 #
 # Optional (with --include-poses):
 #   --src-boltz   <dir>       Boltz prediction outputs root
@@ -38,7 +38,7 @@
 # Example:
 #   bash setup/upload_hf_data.sh \
 #       --src-pool     ~/Hackathon/TBXT/data/pool/candidate_pool_570.csv \
-#       --src-naar     ~/Hackathon/TBXT/data/qsar/naar_spr_kd_650.csv \
+#       --src-naar     ~/Hackathon/TBXT/data/qsar/naar_spr_kd.csv \
 #       --src-ensemble ~/Hackathon/TBXT/data/receptor/6F59_relaxed_ensemble \
 #       --include-poses \
 #       --src-boltz  ~/Hackathon/TBXT/data/boltz/runs \
@@ -125,12 +125,12 @@ mkdir -p "$STAGING"/{pool,naar,receptor}
 log "staging dir: $STAGING"
 
 cp "$SRC_POOL" "$STAGING/pool/candidate_pool_570.csv"
-cp "$SRC_NAAR" "$STAGING/naar/naar_spr_kd_650.csv"
+cp "$SRC_NAAR" "$STAGING/naar/naar_spr_kd.csv"
 
-log "packing receptor ensemble -> receptor/6F59_chainA_ensemble.tar.gz"
+log "packing receptor ensemble -> receptor/tbxt_pocket_ensemble.tar.gz"
 ENS_PARENT=$(cd "$(dirname "$SRC_ENSEMBLE")" && pwd)
 ENS_NAME=$(basename "$SRC_ENSEMBLE")
-tar -czf "$STAGING/receptor/6F59_chainA_ensemble.tar.gz" -C "$ENS_PARENT" "$ENS_NAME"
+tar -czf "$STAGING/receptor/tbxt_pocket_ensemble.tar.gz" -C "$ENS_PARENT" "$ENS_NAME"
 
 if [ "$INCLUDE_POSES" = "true" ]; then
   for pair in "boltz_outputs:$SRC_BOLTZ" "gnina_outputs:$SRC_GNINA" "mmgbsa_outputs:$SRC_MMGBSA"; do

@@ -38,8 +38,8 @@ cd "$REPO_ROOT"
   || { echo "ERROR: data/receptor/6F59_chainA.pdb missing - run: bash setup/fetch_receptor.sh"; exit 1; }
 [ -f data/pool/candidate_pool_570.csv ] \
   || { echo "ERROR: data/pool/candidate_pool_570.csv missing - run: bash setup/fetch_data.sh"; exit 1; }
-[ -f data/naar/naar_spr_kd_650.csv ] \
-  || { echo "ERROR: data/naar/naar_spr_kd_650.csv missing - run: bash setup/fetch_data.sh"; exit 1; }
+[ -f data/naar/naar_spr_kd.csv ] \
+  || { echo "ERROR: data/naar/naar_spr_kd.csv missing - run: bash setup/fetch_data.sh"; exit 1; }
 
 mkdir -p data/scored results
 
@@ -80,7 +80,7 @@ else
                                           --out data/scored/gnina_multiseed.csv
 
   log "Stage 2d: TBXT QSAR (~2 min)"
-  python -m src.pipeline.train_qsar      --naar data/naar/naar_spr_kd_650.csv \
+  python -m src.pipeline.train_qsar      --naar data/naar/naar_spr_kd.csv \
                                           --predict data/pool/candidate_pool_570.csv \
                                           --out data/scored/qsar_scores.csv
 
@@ -114,7 +114,7 @@ python -m src.pipeline.consensus      --merged data/scored/all_signals_merged.cs
 # ─── Stage 4: 7-criterion strict gate ───────────────────────────
 log "Stage 4: 7-criterion strict gate"
 python -m src.filters.strict_gate     --input data/scored/consensus_scored.csv \
-                                       --naar  data/naar/naar_spr_kd_650.csv \
+                                       --naar  data/naar/naar_spr_kd.csv \
                                        --output data/scored/all_with_flags.csv
 
 # ─── Stage 5: tier classification + sort ────────────────────────

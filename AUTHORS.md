@@ -22,7 +22,7 @@ Specific responsibilities:
   orthogonal-failure-modes design principle, the strict gate +
   four-tier ranking methodology
 - 6-signal multi-method consensus design (Vina ensemble, GNINA CNN
-  pose + pKd, TBXT-specific QSAR on 650 measured Naar SPR Kd,
+  pose + pKd, TBXT-specific QSAR on 653 measured Naar SPR Kd,
   Boltz-2 co-folding, MMGBSA implicit-solvent refinement, and
   T-box paralog selectivity)
 - Ran the full simulation matrix across the pipeline (docking,

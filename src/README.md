@@ -35,7 +35,7 @@ these to enumerate one from a building-block library + reaction set.
 | Module | Role |
 |---|---|
 | [`pipeline/prep_receptor.py`](pipeline/prep_receptor.py) | Strip non-protein, add hydrogens, assign Gasteiger charges, write PDBQT |
-| [`pipeline/prep_ensemble.py`](pipeline/prep_ensemble.py) | Sample 6 receptor conformations from short MD relaxation |
+| [`pipeline/prep_ensemble.py`](pipeline/prep_ensemble.py) | Build a receptor ensemble for docking (multi-crystal or short-MD modes) |
 | [`pipeline/define_pockets.py`](pipeline/define_pockets.py) | Define site F + site A grid centroids and box dimensions |
 
 ## Stage 2 - six orthogonal scoring signals

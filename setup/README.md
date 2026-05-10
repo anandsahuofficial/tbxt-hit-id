@@ -73,8 +73,8 @@ The container ships **everything except the data**. Data lives in
 the companion HF dataset (default: `anandsahuofficial/tbxt-hit-id-data`):
 
 - `pool/candidate_pool_570.csv` - 570 SMILES
-- `naar/naar_spr_kd_650.csv` - 650 measured affinities
-- `receptor/6F59_chainA_ensemble.tar.gz` - 6 relaxed receptor conformations
+- `naar/naar_spr_kd.csv` - 653 measured affinities
+- `receptor/tbxt_pocket_ensemble.tar.gz` - 6-conformer crystallographic ensemble (5QS9 / 5QSA / 5QSI / 6F58 / 6F59 A / 6F59 B)
 - (optional) `scored/{boltz,gnina,mmgbsa}_outputs.tar.gz` - pre-computed signal CSVs
 
 This split is intentional: containers are versioned with the code;
@@ -116,8 +116,8 @@ pip install --force-reinstall --no-deps \
 ~/miniconda3/envs/tbxt-hit-id/    ← conda env (Path B only, ~3 GB)
 <repo>/data/receptor/             ← 6F59:A PDB + PDBQT  (~200 KB)
 <repo>/data/pool/                 ← 570-compound SMILES CSV  (~80 KB)
-<repo>/data/naar/                 ← 650 measured SPR Kd values  (~40 KB)
-<repo>/data/receptor/ensemble/    ← 6 relaxed receptor confs  (~3 MB)
+<repo>/data/naar/                 ← 653 measured SPR Kd values  (~40 KB)
+<repo>/data/receptor/ensemble/    ← 6-conformer crystallographic ensemble  (~3 MB)
 <repo>/data/scored/  (optional)   ← pre-computed Boltz/GNINA/MMGBSA  (~600 MB)
 ```
 
@@ -155,7 +155,7 @@ hf auth login
 # Dry-run: stage + checksum locally without uploading
 bash setup/upload_hf_data.sh \
     --src-pool     /path/to/candidate_pool_570.csv \
-    --src-naar     /path/to/naar_spr_kd_650.csv \
+    --src-naar     /path/to/naar_spr_kd.csv \
     --src-ensemble /path/to/relaxed_receptor_dir \
     --hf-repo      <user>/<repo> \
     --dry-run

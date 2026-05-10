@@ -2,7 +2,7 @@
 # Fetch the bulk data assets that are too large for git but required to
 # run the pipeline end-to-end:
 #   - 570-compound novelty-filtered candidate pool (SMILES CSV)
-#   - 650 measured Naar SPR Kd dataset (QSAR training data)
+#   - 653 measured Naar SPR Kd dataset (QSAR training data)
 #   - 6-conformation receptor ensemble (relaxed from 6F59:A via short MD)
 #   - (optional) pre-computed Boltz / GNINA / MMGBSA outputs for skipping
 #     expensive scoring steps
@@ -95,13 +95,13 @@ sha_for() {
 
 # ─── Required assets ────────────────────────────────────────────────
 hf_dl "pool/candidate_pool_570.csv"          "$DATA_DIR/pool/candidate_pool_570.csv"          "$(sha_for pool/candidate_pool_570.csv)"
-hf_dl "naar/naar_spr_kd_650.csv"             "$DATA_DIR/naar/naar_spr_kd_650.csv"             "$(sha_for naar/naar_spr_kd_650.csv)"
-hf_dl "receptor/6F59_chainA_ensemble.tar.gz" "$DATA_DIR/receptor/6F59_chainA_ensemble.tar.gz" "$(sha_for receptor/6F59_chainA_ensemble.tar.gz)"
+hf_dl "naar/naar_spr_kd.csv"             "$DATA_DIR/naar/naar_spr_kd.csv"             "$(sha_for naar/naar_spr_kd.csv)"
+hf_dl "receptor/tbxt_pocket_ensemble.tar.gz" "$DATA_DIR/receptor/tbxt_pocket_ensemble.tar.gz" "$(sha_for receptor/tbxt_pocket_ensemble.tar.gz)"
 
 # Unpack receptor ensemble in place
 if [ ! -d "$DATA_DIR/receptor/ensemble" ]; then
   log "Extracting receptor ensemble ..."
-  tar -xzf "$DATA_DIR/receptor/6F59_chainA_ensemble.tar.gz" -C "$DATA_DIR/receptor"
+  tar -xzf "$DATA_DIR/receptor/tbxt_pocket_ensemble.tar.gz" -C "$DATA_DIR/receptor"
 fi
 
 # ─── Optional: pre-computed pose / score outputs ─────────────────────
@@ -136,7 +136,7 @@ cat <<EOF
   ✅ Data fetch complete.
 
   Pool          : $(wc -l < "$DATA_DIR/pool/candidate_pool_570.csv") lines  (data/pool/candidate_pool_570.csv)
-  Naar SPR Kd   : $(wc -l < "$DATA_DIR/naar/naar_spr_kd_650.csv") lines  (data/naar/naar_spr_kd_650.csv)
+  Naar SPR Kd   : $(wc -l < "$DATA_DIR/naar/naar_spr_kd.csv") lines  (data/naar/naar_spr_kd.csv)
   Receptor ens. : $(ls "$DATA_DIR/receptor/ensemble" 2>/dev/null | wc -l) confs  (data/receptor/ensemble/)
 EOF
 

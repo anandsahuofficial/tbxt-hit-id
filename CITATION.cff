@@ -44,7 +44,7 @@ keywords:
   - hit-identification
 abstract: >
   Computational pipeline integrating six orthogonal signals (Vina ensemble,
-  GNINA CNN pose + pKd, TBXT-specific QSAR on 650 measured Naar SPR Kd,
+  GNINA CNN pose + pKd, TBXT-specific QSAR on 653 measured Naar SPR Kd,
   Boltz-2 generative co-folding, MMGBSA implicit-solvent refinement, and
   T-box paralog selectivity) gated by a 100%-onepot non-covalent + Chordoma
   chemistry filter chain. Developed by the project lead and team for the

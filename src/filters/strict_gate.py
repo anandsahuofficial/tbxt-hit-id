@@ -16,7 +16,7 @@ Usage::
     python -m src.ranking.strict_gate \\
         --input  data/scored/all_candidates_with_scores.csv \\
         --output data/scored/all_candidates_with_flags.csv \\
-        --naar   data/naar/naar_spr_kd_650.csv
+        --naar   data/naar/naar_spr_kd.csv
 """
 from __future__ import annotations
 
