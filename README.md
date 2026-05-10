@@ -132,24 +132,29 @@ Every pick is supported by multiple independent lines of evidence.
 
 ## Quickstart — reproduce the top 4 from a fresh clone
 
+The recommended path is **container-first** — one CUDA-enabled image
+shipped from GHCR carries every binary and Python dep, including
+GNINA (which is otherwise glibc-fragile on HPC). A native conda
+path is also available — see [`setup/README.md`](setup/README.md).
+
 ```bash
 # 1. Clone
 git clone https://github.com/anandsahuofficial/tbxt-hit-id
 cd tbxt-hit-id
 
-# 2. Create the environment (one command)
-conda env create -f environment.yml
-conda activate tbxt-hit-id
+# 2. Pull the all-batteries-included container (~6-12 GB; one-time)
+bash setup/pull_container.sh
+# → ./tbxt-hit-id.sif
 
 # 3. Fetch the receptor + bulk data assets
 bash setup/fetch_receptor.sh           # PDB 6F59:A from RCSB
 bash setup/fetch_data.sh               # candidate pool + Naar SPR Kd + receptor ensemble
 bash setup/fetch_data.sh --include-poses   # OPTIONAL: pre-computed scores (~600 MB, enables --demo)
 
-# 4. Run the pipeline end-to-end
-bash examples/reproduce_top4.sh        # full mode: ~6 h on an RTX 4090
+# 4. Run the pipeline end-to-end (the container has every binary + Python dep baked in)
+apptainer exec --nv --bind $PWD tbxt-hit-id.sif bash examples/reproduce_top4.sh
 # or:
-bash examples/reproduce_top4.sh --demo # demo mode: < 2 min, uses pre-scored data; no GPU needed
+apptainer exec --bind $PWD tbxt-hit-id.sif bash examples/reproduce_top4.sh --demo
 
 # 5. Inspect results
 cat results/top4.csv
@@ -158,8 +163,8 @@ cat results/top4.csv
 Total runtime — full mode: **~6 hours** on a single RTX 4090 (24 GB)
 for the 570-compound pool; ~12 hours for the full HPC variant matrix.
 Demo mode: **< 2 minutes**, no GPU. See
-[`setup/README.md`](setup/README.md) for HPC notes and Singularity
-recipes.
+[`setup/README.md`](setup/README.md) for HPC notes, the native conda
+path, and the container-internals reference.
 
 > **Data availability.** The bulk data bundle (570-compound pool,
 > Naar SPR Kd training set, 6-conf receptor ensemble, and optional
@@ -218,11 +223,16 @@ tbxt-hit-id/
 │   ├── enumeration/           ← one-pot reaction enumeration
 │   └── viz/                   ← render helpers (2D + 3D pose)
 │
-├── setup/                     ← env + cold-start data fetchers
+├── setup/                     ← container + env + cold-start data fetchers
+│   ├── Containerfile          ← CUDA + GNINA + conda env + src baked in (CI builds → GHCR)
+│   ├── pull_container.sh      ← apptainer/singularity pull from ghcr.io
 │   ├── fetch_receptor.sh      ← PDB 6F59:A from RCSB
 │   ├── fetch_data.sh          ← candidate pool + Naar Kd + receptor ensemble (HF)
 │   ├── HPC.md                 ← Singularity GNINA recipe + Boltz cache + SLURM
 │   └── README.md              ← quick-start + troubleshooting
+│
+├── .github/workflows/
+│   └── container.yml          ← builds + pushes container to ghcr.io on every push to main
 │
 ├── tools/
 │   └── render_slides.py       ← Markdown → HTML → Chromium PDF renderer

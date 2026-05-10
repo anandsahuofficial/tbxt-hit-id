@@ -1,0 +1,100 @@
+# tbxt-hit-id — all-batteries-included CUDA container.
+#
+# Build:
+#   docker build -f setup/Containerfile -t tbxt-hit-id:dev .
+# or, with Apptainer:
+#   apptainer build tbxt-hit-id.sif docker-daemon://tbxt-hit-id:dev
+# CI builds + pushes this to ghcr.io/anandsahuofficial/tbxt-hit-id:latest
+# via .github/workflows/container.yml on every push to main.
+#
+# Pull (typical user, with Apptainer):
+#   apptainer pull oras://ghcr.io/anandsahuofficial/tbxt-hit-id:latest
+# Pull (Docker):
+#   docker pull ghcr.io/anandsahuofficial/tbxt-hit-id:latest
+#
+# Run a pipeline reproduction:
+#   apptainer exec --nv --bind $PWD tbxt-hit-id.sif \
+#       bash /opt/tbxt-hit-id/examples/reproduce_top4.sh --demo
+
+ARG CUDA_TAG=12.8.0-cudnn-runtime-ubuntu22.04
+FROM nvidia/cuda:${CUDA_TAG}
+
+# OCI metadata (visible in `docker inspect` and ghcr UI)
+LABEL org.opencontainers.image.title="tbxt-hit-id"
+LABEL org.opencontainers.image.description="Multi-signal computational pipeline for TBXT G177D (Brachyury), chordoma's master regulator."
+LABEL org.opencontainers.image.source="https://github.com/anandsahuofficial/tbxt-hit-id"
+LABEL org.opencontainers.image.url="https://github.com/anandsahuofficial/tbxt-hit-id"
+LABEL org.opencontainers.image.documentation="https://github.com/anandsahuofficial/tbxt-hit-id#readme"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.vendor="Anand Sahu and contributors"
+
+# Avoid tzdata interactive prompt and locale weirdness
+ENV DEBIAN_FRONTEND=noninteractive \
+    LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    TERM=xterm \
+    PYTHONUNBUFFERED=1
+
+# ─── OS-level dependencies ──────────────────────────────────────────
+# - libboost-all-dev: runtime support for the GNINA binary
+# - libgomp1: OpenMP runtime (used by Vina, RDKit, XGBoost)
+# - libxrender1, libxext6, libsm6: needed by some matplotlib backends
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        wget curl git ca-certificates bzip2 tar xz-utils \
+        libboost-all-dev libgomp1 \
+        libxrender1 libxext6 libsm6 \
+        libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# ─── Miniconda ──────────────────────────────────────────────────────
+ENV CONDA_DIR=/opt/conda
+RUN wget -qO /tmp/miniconda.sh \
+        https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
+    && bash /tmp/miniconda.sh -b -p $CONDA_DIR \
+    && rm /tmp/miniconda.sh \
+    && $CONDA_DIR/bin/conda config --system --set channel_priority strict \
+    && $CONDA_DIR/bin/conda install -y -n base -c conda-forge mamba \
+    && $CONDA_DIR/bin/conda clean -afy
+ENV PATH=$CONDA_DIR/bin:$PATH
+
+# ─── Conda env from environment.yml ────────────────────────────────
+COPY environment.yml /tmp/environment.yml
+RUN mamba env create -f /tmp/environment.yml \
+    && mamba clean -afy \
+    && rm /tmp/environment.yml
+
+ENV ENV_NAME=tbxt-hit-id
+ENV ENV_DIR=$CONDA_DIR/envs/$ENV_NAME
+ENV PATH=$ENV_DIR/bin:$PATH
+
+# ─── Switch torch CPU -> CUDA 12.8 wheel ───────────────────────────
+RUN $ENV_DIR/bin/pip install --no-deps --force-reinstall \
+        "torch==2.8.0" "torchvision==0.23.0" \
+        --index-url https://download.pytorch.org/whl/cu128 \
+    && $ENV_DIR/bin/pip cache purge
+
+# ─── GNINA binary (Linux-only, glibc 2.35 from Ubuntu 22.04 base) ──
+# This is the single biggest reason to ship a container — no glibc
+# headaches on older HPC.
+RUN wget -qO /opt/gnina \
+        https://github.com/gnina/gnina/releases/download/v1.0/gnina \
+    && chmod +x /opt/gnina
+ENV PATH=/opt:$PATH
+
+# ─── Bake source tree (live src/ + tools/ + examples/ + setup/) ────
+WORKDIR /opt/tbxt-hit-id
+COPY src      ./src
+COPY tools    ./tools
+COPY examples ./examples
+COPY setup    ./setup
+COPY docs     ./docs
+COPY README.md AUTHORS.md CITATION.cff LICENSE ./
+
+# Help users find the env when running ad-hoc Python
+ENV CONDA_DEFAULT_ENV=$ENV_NAME
+
+# ─── Default behavior ──────────────────────────────────────────────
+# `apptainer run` or `docker run` drops into a bash shell with the
+# env activated and the source tree on the working directory.
+WORKDIR /opt/tbxt-hit-id
+CMD ["bash"]
