@@ -68,7 +68,26 @@ hf_dl() {
 
 # ─── Fetch CHECKSUMS first so we can verify all subsequent files ────
 log "Fetching from Hugging Face dataset: ${HF_USER}/${HF_REPO}"
-hf_dl "CHECKSUMS.sha256" "$DATA_DIR/CHECKSUMS.sha256"
+if ! hf_dl "CHECKSUMS.sha256" "$DATA_DIR/CHECKSUMS.sha256" 2>/dev/null; then
+  cat >&2 <<EOF
+
+[fetch_data] ERROR: could not download CHECKSUMS.sha256 from
+            https://huggingface.co/datasets/${HF_USER}/${HF_REPO}
+
+Most likely causes:
+  1. The dataset has not been published yet at that path. The bulk
+     data bundle (570-cmpd pool, Naar SPR Kd, receptor ensemble) is
+     uploaded separately. Until it is published you can still:
+       - inspect the curated post-pipeline outputs in results/
+       - read the methodology in docs/
+       - render the slide deck via tools/render_slides.py
+  2. The dataset is private and HF_TOKEN is not set:
+       HF_TOKEN=hf_xxx bash setup/fetch_data.sh
+  3. You are pointing at the wrong dataset. Override with:
+       HF_USER=<user> HF_REPO=<repo> bash setup/fetch_data.sh
+EOF
+  exit 1
+fi
 
 sha_for() {
   grep -E "[[:space:]]+${1}\$" "$DATA_DIR/CHECKSUMS.sha256" | awk '{print $1}'

@@ -141,19 +141,34 @@ cd tbxt-hit-id
 conda env create -f environment.yml
 conda activate tbxt-hit-id
 
-# 3. Fetch the receptor + pool data from HuggingFace
-bash setup/setup_hf.sh
+# 3. Fetch the receptor + bulk data assets
+bash setup/fetch_receptor.sh           # PDB 6F59:A from RCSB
+bash setup/fetch_data.sh               # candidate pool + Naar SPR Kd + receptor ensemble
+bash setup/fetch_data.sh --include-poses   # OPTIONAL: pre-computed scores (~600 MB, enables --demo)
 
 # 4. Run the pipeline end-to-end
-bash examples/reproduce_top4.sh
+bash examples/reproduce_top4.sh        # full mode: ~6 h on an RTX 4090
+# or:
+bash examples/reproduce_top4.sh --demo # demo mode: < 2 min, uses pre-scored data; no GPU needed
 
 # 5. Inspect results
 cat results/top4.csv
 ```
 
-Total runtime end-to-end: ~6 hours on a single GPU (RTX 4090) for the
-570-compound pool; ~12 hours for the full HPC variant matrix. See
-[`setup/README.md`](setup/README.md) for HPC notes.
+Total runtime — full mode: **~6 hours** on a single RTX 4090 (24 GB)
+for the 570-compound pool; ~12 hours for the full HPC variant matrix.
+Demo mode: **< 2 minutes**, no GPU. See
+[`setup/README.md`](setup/README.md) for HPC notes and Singularity
+recipes.
+
+> **Data availability.** The bulk data bundle (570-compound pool,
+> Naar SPR Kd training set, 6-conf receptor ensemble, and optional
+> pre-computed scoring outputs) is hosted as a separate Hugging Face
+> dataset and downloaded by `setup/fetch_data.sh`. If the dataset is
+> not yet published, `fetch_data.sh` will print a clear error
+> message; the curated **post-pipeline outputs** in
+> [`results/`](results/) are committed directly to this repo and can
+> be inspected without any data fetch.
 
 ---
 
@@ -189,25 +204,31 @@ tbxt-hit-id/
 │
 ├── slides/                    ← judges-facing deck
 │   ├── slide_judges.md  slide_judges.pdf
+│   ├── architecture.png       ← pipeline graphic (in deck)
+│   └── renders/               ← 2D + 3D pose PNGs (4 picks)
 │
-├── results/                   ← curated outputs
+├── results/                   ← curated post-pipeline outputs (committed)
 │   ├── top4.csv  top5to24.csv  all_candidates_tiered.csv
-│   ├── renders/               ← 2D + 3D pose PNGs (4 picks)
-│   └── selected/              ← ADMET, dock re-rank, cross-val JSONs
+│   └── selected/              ← cross-val summary, MD attempt log, variants
 │
-├── src/                       ← all pipeline code
-│   ├── pipeline/              ← vina, gnina, boltz, mmgbsa, qsar, paralog
-│   ├── filters/               ← 7-criterion strict gate
-│   ├── ranking/               ← tier classifier
-│   ├── enumeration/           ← one-pot generator
+├── src/                       ← pipeline source (33 Python modules)
+│   ├── pipeline/              ← vina, gnina, boltz, mmgbsa, qsar, paralog, consensus
+│   ├── filters/               ← 7-criterion strict gate (+ PAINS + onepot membership)
+│   ├── ranking/               ← 4-tier classifier
+│   ├── enumeration/           ← one-pot reaction enumeration
 │   └── viz/                   ← render helpers (2D + 3D pose)
 │
-├── setup/                     ← env + data fetcher
-│   ├── setup_hf.sh            ← HuggingFace receptor + pool download
-│   └── README.md              ← HPC + container notes
+├── setup/                     ← env + cold-start data fetchers
+│   ├── fetch_receptor.sh      ← PDB 6F59:A from RCSB
+│   ├── fetch_data.sh          ← candidate pool + Naar Kd + receptor ensemble (HF)
+│   ├── HPC.md                 ← Singularity GNINA recipe + Boltz cache + SLURM
+│   └── README.md              ← quick-start + troubleshooting
+│
+├── tools/
+│   └── render_slides.py       ← Markdown → HTML → Chromium PDF renderer
 │
 └── examples/
-    └── reproduce_top4.sh      ← one-command end-to-end
+    └── reproduce_top4.sh      ← one-command end-to-end (--full or --demo)
 ```
 
 ---
