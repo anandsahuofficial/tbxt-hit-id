@@ -87,13 +87,18 @@ done
 log() { printf "[upload_hf_data] %s\n" "$*"; }
 err() { printf "[upload_hf_data] ERROR: %s\n" "$*" >&2; exit 1; }
 
-# ─── Locate the HF CLI ─────────────────────────────────────────────
+# ─── Locate the HF CLI (only required for the real upload) ────────
 HF_CLI=""
 if command -v hf >/dev/null;                   then HF_CLI="hf"
 elif command -v huggingface-cli >/dev/null;    then HF_CLI="huggingface-cli"
-else err "neither 'hf' nor 'huggingface-cli' on PATH; install with: pip install -U huggingface_hub"
 fi
-log "using CLI: $HF_CLI"
+if [ -n "$HF_CLI" ]; then
+  log "using CLI: $HF_CLI"
+elif [ "$DRY_RUN" = "true" ]; then
+  log "no HF CLI on PATH (ok for --dry-run; install with 'pip install -U huggingface_hub' before real upload)"
+else
+  err "neither 'hf' nor 'huggingface-cli' on PATH; install with: pip install -U huggingface_hub"
+fi
 
 # Token: prefer env var, fall back to whatever 'hf auth login' cached.
 if [ -n "$HF_TOKEN" ]; then
