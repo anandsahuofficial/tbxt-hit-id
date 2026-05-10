@@ -138,6 +138,36 @@ HF_TOKEN=hf_xxx bash setup/fetch_data.sh    # for private datasets
 The bundle SHA-256 manifest is at `CHECKSUMS.sha256` in the dataset
 repo; the script verifies every download against it.
 
+### Publishing your own data bundle
+
+If you want to host the data bundle yourself (mirror, fork, private
+dataset, alternate target), there's a packager+uploader at
+[`upload_hf_data.sh`](upload_hf_data.sh). It takes paths to your
+local sources, repacks them in the layout `fetch_data.sh` expects,
+writes `CHECKSUMS.sha256`, and pushes everything to a HuggingFace
+dataset repo (creating the repo if it doesn't exist).
+
+```bash
+# One-time HF auth
+pip install -U huggingface_hub
+hf auth login
+
+# Dry-run: stage + checksum locally without uploading
+bash setup/upload_hf_data.sh \
+    --src-pool     /path/to/candidate_pool_570.csv \
+    --src-naar     /path/to/naar_spr_kd_650.csv \
+    --src-ensemble /path/to/relaxed_receptor_dir \
+    --hf-repo      <user>/<repo> \
+    --dry-run
+
+# Real upload (drop --dry-run, optionally --include-poses)
+bash setup/upload_hf_data.sh \
+    --src-pool     ... --src-naar ... --src-ensemble ... \
+    --include-poses --src-boltz ... --src-gnina ... --src-mmgbsa ...
+```
+
+See `bash setup/upload_hf_data.sh --help` for full flag reference.
+
 ---
 
 ## HPC
