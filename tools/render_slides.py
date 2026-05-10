@@ -10,8 +10,8 @@ This bypasses Marp CLI (which requires Node) by:
   6. Printing to PDF via Playwright/Chromium.
 
 Usage:
-  python tools/render_slides.py slides/slide_judges.md
-  # produces slides/slide_judges.pdf
+  python tools/render_slides.py slides/slides.md
+  # produces slides/slides.pdf
 
 Dependencies:
   pip install markdown playwright

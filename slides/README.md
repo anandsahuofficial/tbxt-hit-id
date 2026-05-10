@@ -5,8 +5,8 @@ Hackathon** (Pillar VC, Boston, 2026-05-09).
 
 | File | What it is |
 |---|---|
-| `slide_judges.pdf` | The rendered 19-slide deck (open this) |
-| `slide_judges.md` | Marp-style Markdown source |
+| `slides.pdf` | The rendered 19-slide deck (open this) |
+| `slides.md` | Marp-style Markdown source |
 | `architecture.png` | Pipeline overview graphic (referenced in slide 6) |
 | `renders/` | 2D structures + 3D pose images for the 4 picks |
 
@@ -31,14 +31,14 @@ Markdown to PDF via headless Chromium (no Node / Marp CLI needed):
 ```bash
 pip install markdown playwright
 playwright install chromium
-python tools/render_slides.py slides/slide_judges.md
-# → slides/slide_judges.pdf
+python tools/render_slides.py slides/slides.md
+# → slides/slides.pdf
 ```
 
 Alternatively, with the official Marp CLI:
 
 ```bash
-npx @marp-team/marp-cli slides/slide_judges.md -o slides/slide_judges.pdf
+npx @marp-team/marp-cli slides/slides.md -o slides/slides.pdf
 ```
 
 ## Underlying methodology

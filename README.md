@@ -203,7 +203,7 @@ tbxt-hit-id/
 │   └── architecture.png
 │
 ├── slides/                    ← judges-facing deck
-│   ├── slide_judges.md  slide_judges.pdf
+│   ├── slides.md  slides.pdf
 │   ├── architecture.png       ← pipeline graphic (in deck)
 │   └── renders/               ← 2D + 3D pose PNGs (4 picks)
 │

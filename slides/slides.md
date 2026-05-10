@@ -1,10 +1,10 @@
 <!--
-slide_judges.md — judges-facing deck delivered at the
+slides.md — judges-facing deck delivered at the
 TBXT Hit Identification Hackathon (Pillar VC, Boston, 2026-05-09).
 
 Render to PDF:
-  python ../tools/render_slides.py slides/slide_judges.md
-(or via Marp CLI:  marp slide_judges.md -o slide_judges.pdf)
+  python ../tools/render_slides.py slides/slides.md
+(or via Marp CLI:  marp slides.md -o slides.pdf)
 
 Structure: three judging axes drive the narrative.
   AXIS 1 — Scientific rationale (target, pipeline, filter chain)
