@@ -155,6 +155,7 @@ fi
 cat <<EOF
 
   Next:
+    bash setup/smoke_test.sh           # confirm setup is ready (recommended)
     bash examples/reproduce_top4.sh    # runs the full pipeline end-to-end
 ================================================================================
 EOF

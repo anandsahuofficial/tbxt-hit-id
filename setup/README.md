@@ -28,7 +28,10 @@ bash setup/fetch_data.sh
 # OPTIONAL: also pull pre-computed Boltz/GNINA/MMGBSA outputs (~600 MB)
 bash setup/fetch_data.sh --include-poses
 
-# 4. Run the pipeline
+# 4. Smoke test - confirms setup is ready before the multi-hour pipeline run
+apptainer exec --bind $PWD tbxt-hit-id.sif bash setup/smoke_test.sh
+
+# 5. Run the pipeline
 apptainer exec --nv --bind $PWD tbxt-hit-id.sif \
     bash examples/reproduce_top4.sh
 

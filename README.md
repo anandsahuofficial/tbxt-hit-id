@@ -155,12 +155,15 @@ bash setup/fetch_receptor.sh           # PDB 6F59:A from RCSB
 bash setup/fetch_data.sh               # candidate pool + Naar SPR Kd + receptor ensemble
 bash setup/fetch_data.sh --include-poses   # OPTIONAL: pre-computed scores (~600 MB, enables --demo)
 
-# 4. Run the pipeline end-to-end (the container has every binary + Python dep baked in)
+# 4. Confirm setup is ready (recommended before a multi-hour pipeline run)
+apptainer exec --bind $PWD tbxt-hit-id.sif bash setup/smoke_test.sh
+
+# 5. Run the pipeline end-to-end (the container has every binary + Python dep baked in)
 apptainer exec --nv --bind $PWD tbxt-hit-id.sif bash examples/reproduce_top4.sh
 # or:
 apptainer exec --bind $PWD tbxt-hit-id.sif bash examples/reproduce_top4.sh --demo
 
-# 5. Inspect results
+# 6. Inspect results
 cat results/top4.csv
 ```
 
