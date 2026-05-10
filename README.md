@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/social_preview.png" alt="tbxt-hit-id - multi-signal computational pipeline for TBXT G177D (Brachyury), chordoma's master regulator" width="100%">
+</p>
+
 # tbxt-hit-id
 
 **Multi-signal computational pipeline for identifying small-molecule
