@@ -18,13 +18,13 @@ DATA = Path(__file__).resolve().parents[1] / "data/selectivity"
 TBXT_DBD_START = 42  # 1-based, inclusive
 TBXT_DBD_END = 219   # 1-based, inclusive
 
-# Site residues — validated against canonical TBXT O15178 (WT, G177)
+# Site residues - validated against canonical TBXT O15178 (WT, G177)
 # Note: PDB 6F59 has G→D at 177 (the variant). Canonical UniProt is G.
 SITE_RESIDUES = {
     "F": {
         # primary anchors (TEP-defined)
-        42:  ("L", "anchor — hydrophobic"),
-        88:  ("Y", "anchor — H-bond"),
+        42:  ("L", "anchor - hydrophobic"),
+        88:  ("Y", "anchor - H-bond"),
         177: ("G", "VARIANT site (G177D = chordoma SNP, our assay protein has D)"),
         # surrounding contact residues from our docking pose analysis
         81:  ("G", "loop"),
@@ -36,7 +36,7 @@ SITE_RESIDUES = {
         183: ("T", "polar"),
     },
     "A": {
-        # site A pocket residues — verified against UniProt TBXT
+        # site A pocket residues - verified against UniProt TBXT
         89:  ("S", "anchor polar"),
         91:  ("L", "hydrophobic"),
         120: ("P", "rigid"),
@@ -112,7 +112,7 @@ def main():
     for name in FAMILY:
         seq = load_seq(name)
         if name == "TBXT":
-            # No need to align to self — direct positional lookup
+            # No need to align to self - direct positional lookup
             f_row = {"family": name, "_score": "-"}
             a_row = {"family": name, "_score": "-"}
             for pos in site_f_positions:
@@ -125,7 +125,7 @@ def main():
             try:
                 pos_map, score = map_tbxt_to_family(tbxt_dbd, seq, TBXT_DBD_START)
             except Exception as e:
-                print(f"  {name:6s}: FAIL — {e}")
+                print(f"  {name:6s}: FAIL - {e}")
                 continue
             f_row = {"family": name, "_score": f"{score:.0f}"}
             a_row = {"family": name, "_score": f"{score:.0f}"}

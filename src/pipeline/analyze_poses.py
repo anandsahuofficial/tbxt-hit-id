@@ -105,7 +105,7 @@ def main():
             cl = contacts(coords, rec_atoms)
             anchor_hit = sorted({x[0] for x in cl} & anchors)
             anchor_dists = {x[0]: x[2] for x in cl if x[0] in anchors}
-            anchor_str = ", ".join(f"{rn}({anchor_dists[rn]:.2f}Å)" for rn in anchor_hit) or "—"
+            anchor_str = ", ".join(f"{rn}({anchor_dists[rn]:.2f}Å)" for rn in anchor_hit) or "-"
             other_hit = [x for x in cl if x[0] not in anchors]
             print(f"\n  {cid:14s}  score={score} kcal/mol  | anchors hit: {anchor_str}")
             print(f"    {len(cl)} contact residues; {len(other_hit)} non-anchor")

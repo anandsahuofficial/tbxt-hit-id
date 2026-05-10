@@ -144,7 +144,7 @@ def main() -> int:
     for t in ("T1_GOLD", "T2_SILVER", "T3_BRONZE", "T4_RELAXED"):
         print(f"  {t:<11} {s[t]}")
     if s["T1_GOLD"] == 0:
-        print("  (T1_GOLD empty by design — no compound simultaneously hits "
+        print("  (T1_GOLD empty by design - no compound simultaneously hits "
               "Kd <= 5 uM AND low/low risk; surfaced honestly rather than "
               "by relaxing tier rules)")
     return 0

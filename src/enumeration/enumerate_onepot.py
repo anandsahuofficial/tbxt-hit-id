@@ -22,7 +22,7 @@ from rdkit import Chem
 from rdkit.Chem import AllChem
 
 
-# Forward reaction SMARTS — each maps two BB SMARTS to a single product.
+# Forward reaction SMARTS - each maps two BB SMARTS to a single product.
 REACTION_TEMPLATES = [
     # 1. Amide coupling
     ("amide_coupling",

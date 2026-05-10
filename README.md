@@ -1,14 +1,14 @@
 # tbxt-hit-id
 
 **Multi-signal computational pipeline for identifying small-molecule
-inhibitors of TBXT (Brachyury) — chordoma's master transcription
+inhibitors of TBXT (Brachyury) - chordoma's master transcription
 factor and lineage-defining oncogenic driver.**
 
 A reproducible end-to-end pipeline that integrates docking (Vina,
 GNINA), generative co-folding (Boltz-2), free-energy refinement
 (MMGBSA), target-specific QSAR (RF + XGBoost on 650 measured Naar SPR
 Kd), and T-box paralog selectivity into a strict 7-criterion filter
-chain — yielding 137 organizer-compliant hit candidates and a top-4
+chain - yielding 137 organizer-compliant hit candidates and a top-4
 ranked submission.
 
 > Built for the **TBXT Hit Identification Hackathon 2026**
@@ -26,14 +26,14 @@ Chordoma is a rare, locally aggressive cancer of the notochord remnant
 (skull base, mobile spine, sacrum). It has no FDA-approved targeted
 therapy and a 5-year survival around 70%. The transcription factor
 **TBXT (Brachyury)** is its master regulator and is required for
-tumor cell survival — silencing TBXT collapses chordoma cell viability.
+tumor cell survival - silencing TBXT collapses chordoma cell viability.
 This makes TBXT the most-validated drug target in chordoma, but it is
 also a long-considered "undruggable" transcription factor with a
 shallow DNA-binding domain pocket and high T-box paralog homology.
 
 The **G177D variant** (`rs2305089`, allele frequency ~0.42) is enriched
 in &gt; 90% of Western chordoma cases and creates a unique pocket
-(site F: Y88 / D177 / L42) that engages the variant residue directly —
+(site F: Y88 / D177 / L42) that engages the variant residue directly -
 a structural feature absent from the other 16 T-box paralogs and
 therefore intrinsically selective.
 
@@ -68,7 +68,7 @@ is in `results/all_candidates_tiered.csv`.
 
 ---
 
-## Approach — 6 orthogonal signals + 7-criterion strict gate
+## Approach - 6 orthogonal signals + 7-criterion strict gate
 
 ![Pipeline architecture](docs/architecture.png)
 
@@ -105,7 +105,7 @@ C7  ESOL log S > -5 (DMSO @ 10 mM + aqueous @ 50 µM)
 
 | Tier | Definition | Count |
 |---|---|---:|
-| **T1 GOLD** | All criteria + Kd ≤ 5 µM + low/low risk | **0** (empty by design — honest finding, not overclaimed) |
+| **T1 GOLD** | All criteria + Kd ≤ 5 µM + low/low risk | **0** (empty by design - honest finding, not overclaimed) |
 | **T2 SILVER** | All criteria + Kd ≤ 10 µM + soluble | 16 |
 | **T3 BRONZE** | All criteria + Kd ≤ 50 µM, borderline solubility | 89 |
 | **T4 RELAXED** | All criteria + Kd ≤ 100 µM | 32 |
@@ -130,12 +130,12 @@ Every pick is supported by multiple independent lines of evidence.
 
 ---
 
-## Quickstart — reproduce the top 4 from a fresh clone
+## Quickstart - reproduce the top 4 from a fresh clone
 
-The recommended path is **container-first** — one CUDA-enabled image
+The recommended path is **container-first** - one CUDA-enabled image
 shipped from GHCR carries every binary and Python dep, including
 GNINA (which is otherwise glibc-fragile on HPC). A native conda
-path is also available — see [`setup/README.md`](setup/README.md).
+path is also available - see [`setup/README.md`](setup/README.md).
 
 ```bash
 # 1. Clone
@@ -160,7 +160,7 @@ apptainer exec --bind $PWD tbxt-hit-id.sif bash examples/reproduce_top4.sh --dem
 cat results/top4.csv
 ```
 
-Total runtime — full mode: **~6 hours** on a single RTX 4090 (24 GB)
+Total runtime - full mode: **~6 hours** on a single RTX 4090 (24 GB)
 for the 570-compound pool; ~12 hours for the full HPC variant matrix.
 Demo mode: **< 2 minutes**, no GPU. See
 [`setup/README.md`](setup/README.md) for HPC notes, the native conda
@@ -177,7 +177,7 @@ path, and the container-internals reference.
 
 ---
 
-## Reuse — adapt for your own target
+## Reuse - adapt for your own target
 
 This pipeline is **target-agnostic**. To screen against a different
 protein:
@@ -267,9 +267,9 @@ A machine-readable [`CITATION.cff`](CITATION.cff) is included.
 - Public computational methods over-predict Kd by **6–25×** at the µM
   regime. Realistic SPR for these 4 picks: **18–200 µM range**.
 - The pipeline is designed for **hit identification**, not lead
-  optimization — none of the picks are expected to be sub-µM at SPR
+  optimization - none of the picks are expected to be sub-µM at SPR
   without follow-up SAR.
-- The **T1 GOLD tier is empty by design** — no compound in the pool
+- The **T1 GOLD tier is empty by design** - no compound in the pool
   simultaneously hits Kd ≤ 5 µM AND low/low chemistry/supplier risk.
   This is surfaced honestly rather than gamed by relaxing the gate.
 
@@ -277,7 +277,7 @@ A machine-readable [`CITATION.cff`](CITATION.cff) is included.
 
 ## Credits
 
-- **Project lead:** [Anand Sahu](https://github.com/anandsahuofficial) —
+- **Project lead:** [Anand Sahu](https://github.com/anandsahuofficial) -
   pipeline architecture, methodology, multi-signal consensus
   integration, final pick selection, live demo
 - **Team contributors:** see [`AUTHORS.md`](AUTHORS.md) for the full
@@ -285,23 +285,23 @@ A machine-readable [`CITATION.cff`](CITATION.cff) is included.
 
 ### Platform & venue partners
 
-- [muni.bio](https://muni.bio) — `onepot` catalog membership tool, CLI,
+- [muni.bio](https://muni.bio) - `onepot` catalog membership tool, CLI,
   and platform credits
-- [Rowan](https://labs.rowansci.com) — ADMET, docking, and
+- [Rowan](https://labs.rowansci.com) - ADMET, docking, and
   pose-analysis MD platform
-- [onepot.ai](https://www.onepot.ai) — virtual catalog and one-pot
+- [onepot.ai](https://www.onepot.ai) - virtual catalog and one-pot
   synthesis library
-- [Pillar VC](https://www.pillar.vc/) — Boston event venue
-- [TBXT Hackathon](https://tbxtchallenge.org) — organizers, mentors,
+- [Pillar VC](https://www.pillar.vc/) - Boston event venue
+- [TBXT Hackathon](https://tbxtchallenge.org) - organizers, mentors,
   and TEPs
 
 ### Datasets
 
-- **Naar SPR Kd dataset** (650 measured TBXT-binding affinities) —
+- **Naar SPR Kd dataset** (650 measured TBXT-binding affinities) -
   TBXT Hackathon 2026
-- **PDB 6F59** chain A — TBXT G177D + DNA construct (matches the
+- **PDB 6F59** chain A - TBXT G177D + DNA construct (matches the
   hackathon CF Labs SPR assay)
-- **muni.bio onepot.ai catalog** — ~1.4M one-pot-accessible virtual
+- **muni.bio onepot.ai catalog** - ~1.4M one-pot-accessible virtual
   compounds
 
 ### AI implementation assistance
@@ -316,7 +316,7 @@ all outcomes of this work.
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE). Use it, adapt it, share it. Attribution
+MIT - see [`LICENSE`](LICENSE). Use it, adapt it, share it. Attribution
 appreciated.
 
 ---

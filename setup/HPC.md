@@ -17,7 +17,7 @@ weekend to figure out.
 | Paralog selectivity scan (16 paralogs) | ~5 min |
 | **End-to-end** | **~6 h** |
 
-For the full HPC variant matrix (5 overnight variants — receptor
+For the full HPC variant matrix (5 overnight variants - receptor
 ensemble × site, dual-engine Boltz, MMGBSA + alchemical FEP, site-G
 re-dock), allocate ~12 h on a multi-GPU node.
 
@@ -27,7 +27,7 @@ re-dock), allocate ~12 h on a multi-GPU node.
   24 GB is comfortable for 570 compounds in single-batch mode.
 - **GNINA** runs comfortably in 8 GB but benefits from 16+ GB for
   the multi-seed (10-restart) pose-stability variant.
-- **Vina** is CPU-only and parallelizes by receptor conformation —
+- **Vina** is CPU-only and parallelizes by receptor conformation -
   one CPU per conformation × 6 conformations = 6 cores recommended.
 
 ## GLIBC: GNINA on older HPC clusters

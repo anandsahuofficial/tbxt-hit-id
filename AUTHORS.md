@@ -7,15 +7,20 @@ contribution.
 
 ## Project lead
 
-**Anand Sahu** &nbsp;`anandsahujnu11@gmail.com`
+**Anand Sahu** &nbsp;`anandsahuofficial@gmail.com`
 
-Designed the pipeline architecture, made the methodology and
+Conceptualized the project strategy and the multi-signal pipeline,
+designed the pipeline architecture, made the methodology and
 prioritization decisions, integrated the multi-signal consensus,
 selected the final picks, coordinated the team, and delivered the
 live demo at the hackathon.
 
 Specific responsibilities:
 
+- Idea conception and strategy design: target framing (G177D variant
+  + site F as the chordoma-selective pocket), the six-signals-with-
+  orthogonal-failure-modes design principle, the strict gate +
+  four-tier ranking methodology
 - 6-signal multi-method consensus design (Vina ensemble, GNINA CNN
   pose + pKd, TBXT-specific QSAR on 650 measured Naar SPR Kd,
   Boltz-2 co-folding, MMGBSA implicit-solvent refinement, and
@@ -36,14 +41,14 @@ Specific responsibilities:
 These team members ran simulations and generated the data that built
 our case across the 6-signal pipeline:
 
-- **Rabia** — independent onepot-style enumeration as a parallel run
+- **Rabia** - independent onepot-style enumeration as a parallel run
   for cross-checking the lead's reaction enumeration
-- **Mark M** — multi-seed GNINA dock at site F (10 seeds × 570
+- **Mark M** - multi-seed GNINA dock at site F (10 seeds × 570
   compounds) validating pose stability of the locked picks
-- **Jack** — independent local Boltz-2 full-pool run on the 570
+- **Jack** - independent local Boltz-2 full-pool run on the 570
   compounds; cross-validated the alternate-engine Boltz Kd
   predictions to within 1.01–1.13× on all 4 final picks
-- **Jake Weiss** — additional simulation runs supporting the
+- **Jake Weiss** - additional simulation runs supporting the
   multi-engine cross-validation evidence base
 
 ## Analysis & event-time build
@@ -76,15 +81,15 @@ and is documented here for transparency.
 Thanks to the platform, tooling, and venue partners that made this
 work possible:
 
-- **[muni.bio](https://muni.bio)** — `onepot` catalog membership tool,
+- **[muni.bio](https://muni.bio)** - `onepot` catalog membership tool,
   CLI, and tooling credits ([CLI docs](https://muni.bio/cli) ·
   [docs](https://muni.bio/docs))
-- **[Rowan](https://labs.rowansci.com)** — ADMET, docking, and
+- **[Rowan](https://labs.rowansci.com)** - ADMET, docking, and
   pose-analysis MD platform
-- **[onepot.ai](https://www.onepot.ai)** — virtual catalog and
+- **[onepot.ai](https://www.onepot.ai)** - virtual catalog and
   one-pot synthesis library
-- **[Pillar VC](https://www.pillar.vc/)** — Boston event venue
-- **[TBXT Hackathon](https://tbxtchallenge.org)** — organizers,
+- **[Pillar VC](https://www.pillar.vc/)** - Boston event venue
+- **[TBXT Hackathon](https://tbxtchallenge.org)** - organizers,
   mentors, and TEPs
 
 Most importantly, thank you to the organizers and the chordoma

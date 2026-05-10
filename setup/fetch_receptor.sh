@@ -7,7 +7,7 @@
 # Usage:
 #   bash setup/fetch_receptor.sh
 #
-# Idempotent — skips download if the file already exists with the right SHA.
+# Idempotent - skips download if the file already exists with the right SHA.
 
 set -euo pipefail
 

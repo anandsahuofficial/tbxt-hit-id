@@ -91,7 +91,7 @@ for r in flagged_tep:
     print(f"  {r['id']:12s} site={r['site']:6s} pains_filter={r['pains_filter']}")
 print(f"  Total: {len(flagged_tep)}")
 
-# Write FINDINGS.md — focus on actionable insight only
+# Write FINDINGS.md - focus on actionable insight only
 findings = []
 findings.append("# Prior-Art Findings (TBXT Hackathon)\n")
 findings.append("Generated from `prior_art_canonical.csv`. See `scripts/build_inventory.py` and `scripts/pains_and_findings.py` for the pipeline.\n")
@@ -103,7 +103,7 @@ for src, total in total_by_source.items():
     findings.append(f"- {src}: {total}")
 findings.append("")
 
-findings.append("## The 3 CF Labs SPR hits — your validated reference set\n")
+findings.append("## The 3 CF Labs SPR hits - your validated reference set\n")
 findings.append("| ID | Site | CF Kd (µM) | HA | MW | LogP | Rings | Fused | PAINS | SMILES |")
 findings.append("|---|---|---:|---:|---:|---:|---:|---:|---|---|")
 for hit_id in ["Z979336988", "Z795991852", "D203-0031"]:
@@ -118,8 +118,8 @@ findings.append("")
 findings.append("**Read this:** all three pass the Chordoma hard rule (LogP≤6, HBD≤6, HBA≤12, MW≤600) but **none** pass the strict lead-like rule (each has 6 rings; the rule wants <5). The validated binders are scaffolded compounds, not classical lead-likes. **Use the relaxed rule (HA≤35, rings≤6, fused≤2, no PAINS) for our shortlist.** A strict lead-like filter would exclude the only known binders.\n")
 
 findings.append("## Critical: prior-art near the CF Labs hits\n")
-findings.append("- **D203-0031 has a near-twin in the disclosed set: D203-0030 (Tanimoto 0.908).** Differs only in linker — OCO (methylenedioxy) vs OCCO (ethylenedioxy) on the piperonyl. The D203-* series is heavily explored and disclosed; *do not* propose linker variants of D203-0031.")
-findings.append("- **Z979336988** has a moderately similar Naar analog Z953858624 (T 0.436) that retains the methylbenzimidazole-piperidine core but swaps the phthalimide for a triazolopyridazinone — a PAINS-safer alternative that hasn't been CF-Labs-tested. Worth investigating.")
+findings.append("- **D203-0031 has a near-twin in the disclosed set: D203-0030 (Tanimoto 0.908).** Differs only in linker - OCO (methylenedioxy) vs OCCO (ethylenedioxy) on the piperonyl. The D203-* series is heavily explored and disclosed; *do not* propose linker variants of D203-0031.")
+findings.append("- **Z979336988** has a moderately similar Naar analog Z953858624 (T 0.436) that retains the methylbenzimidazole-piperidine core but swaps the phthalimide for a triazolopyridazinone - a PAINS-safer alternative that hasn't been CF-Labs-tested. Worth investigating.")
 findings.append("- **Z795991852** has only weak Naar neighbors (T 0.27). Its methylquinazolinone-triazole-amide chemotype is **the least-explored** of the three CF Labs scaffolds. **Most novel-friendly site F starting point.**\n")
 
 findings.append("## CF Labs hits are NOT close to TEP fragments\n")
@@ -127,8 +127,8 @@ findings.append("Max Tanimoto from any CF Labs hit to any TEP fragment is **0.32
 
 findings.append("## Naar set already explored ~16% of TEP-fragment chemistry\n")
 findings.append("**365 Naar compounds (16% of the screen)** have Tanimoto ≥ 0.5 to a TEP fragment.")
-findings.append("- Sites **G, A', B** are heavily co-explored (top T ≈ 0.7–0.78) — limited novel space")
-findings.append("- Site **F** TEP fragments have only moderate Naar similarity (T 0.6–0.69) — relatively underexplored, but the 3 CF Labs hits already validate parts of the pocket")
+findings.append("- Sites **G, A', B** are heavily co-explored (top T ≈ 0.7–0.78) - limited novel space")
+findings.append("- Site **F** TEP fragments have only moderate Naar similarity (T 0.6–0.69) - relatively underexplored, but the 3 CF Labs hits already validate parts of the pocket")
 findings.append("- Sites **A** has 20 fragments mostly with CSC* (ChemSpace) lookalikes screened\n")
 
 findings.append("## PAINS in the inventory\n")
@@ -144,7 +144,7 @@ if flagged_tep:
         findings.append(f"- `{r['id']}` (site {r['site']}, {r['pains_filter']})")
     findings.append("")
 
-findings.append("## Site F starting set — synthesised + validated chemistry\n")
+findings.append("## Site F starting set - synthesised + validated chemistry\n")
 findings.append("### TEP fragment hits (small starting points)")
 findings.append("| ID | CCD | HA | MW | LogP | SMILES | IUPAC |")
 findings.append("|---|---|---:|---:|---:|---|---|")
@@ -158,19 +158,19 @@ findings.append("Already included above. Treat all three as scaffolds for SAR ex
 
 findings.append("---\n")
 findings.append("## Strategy implications for the 4-pick\n")
-findings.append("1. **Site F is the productive site** — TEP-recommended, all CF Labs hits bind there. Bias the shortlist toward F.")
-findings.append("2. **Z795991852 chemotype** (methylquinazolinone-triazole-amide) is most novel-friendly — start here for one of the 4 picks.")
+findings.append("1. **Site F is the productive site** - TEP-recommended, all CF Labs hits bind there. Bias the shortlist toward F.")
+findings.append("2. **Z795991852 chemotype** (methylquinazolinone-triazole-amide) is most novel-friendly - start here for one of the 4 picks.")
 findings.append("3. **Phthalimide replacement** in Z979336988 is a known PAINS removal opportunity (Z953858624 already shows triazolopyridazinone works as a swap, but it's in the disclosed set so we'd need a *different* replacement).")
-findings.append("4. **D203-* series is too explored** — skip unless we have a structurally distinct linker variant.")
-findings.append("5. **Property filter:** apply Chordoma hard rule + relaxed lead-like (HA≤35, rings≤6, fused≤2, PAINS=N). The strict 'lead-like' rule from organizers excludes the only known µM binders — relax it.")
+findings.append("4. **D203-* series is too explored** - skip unless we have a structurally distinct linker variant.")
+findings.append("5. **Property filter:** apply Chordoma hard rule + relaxed lead-like (HA≤35, rings≤6, fused≤2, PAINS=N). The strict 'lead-like' rule from organizers excludes the only known µM binders - relax it.")
 findings.append("6. **Tanimoto-to-Naar ≥ 0.85 = duplication risk.** Compounds with T 0.4–0.7 to a CF Labs hit are 'inherits-binding-potential, novel-enough' candidates.")
 findings.append("7. **Diversify across sites for the 4-pick.** Suggested composition: 2× site F (chemotypes from Z795991852 and a TEP fragment elaboration), 1× site A (most fragment data), 1× wildcard (best orthogonal signal regardless of site).\n")
 
 findings.append("## Compounds to manually inspect next\n")
 findings.append("- `Z795991852` and 1–2 close Naar analogs (T 0.4–0.6) at site F")
-findings.append("- `FM001580` (site F TEP fragment) and Naar analog `UNC-AH-01-089` (T 0.65) — fragment growth path")
+findings.append("- `FM001580` (site F TEP fragment) and Naar analog `UNC-AH-01-089` (T 0.65) - fragment growth path")
 findings.append("- `FM001452` (site F TEP fragment, benzyloxyaniline) and `CSC000284925` (T 0.69)")
-findings.append("- The 19 remaining Naar compounds with T ≥ 0.5 to Z795991852 — manual chemistry curation\n")
+findings.append("- The 19 remaining Naar compounds with T ≥ 0.5 to Z795991852 - manual chemistry curation\n")
 
 with open(DATA / "FINDINGS.md", "w") as f:
     f.write("\n".join(findings))

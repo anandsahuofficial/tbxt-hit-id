@@ -35,11 +35,11 @@ cd "$REPO_ROOT"
 
 # ─── Sanity checks ───────────────────────────────────────────────
 [ -f data/receptor/6F59_chainA.pdb ] \
-  || { echo "ERROR: data/receptor/6F59_chainA.pdb missing — run: bash setup/fetch_receptor.sh"; exit 1; }
+  || { echo "ERROR: data/receptor/6F59_chainA.pdb missing - run: bash setup/fetch_receptor.sh"; exit 1; }
 [ -f data/pool/candidate_pool_570.csv ] \
-  || { echo "ERROR: data/pool/candidate_pool_570.csv missing — run: bash setup/fetch_data.sh"; exit 1; }
+  || { echo "ERROR: data/pool/candidate_pool_570.csv missing - run: bash setup/fetch_data.sh"; exit 1; }
 [ -f data/naar/naar_spr_kd_650.csv ] \
-  || { echo "ERROR: data/naar/naar_spr_kd_650.csv missing — run: bash setup/fetch_data.sh"; exit 1; }
+  || { echo "ERROR: data/naar/naar_spr_kd_650.csv missing - run: bash setup/fetch_data.sh"; exit 1; }
 
 mkdir -p data/scored results
 
@@ -58,7 +58,7 @@ if [ "$MODE" = "demo" ]; then
   log "Demo mode: using pre-computed signal CSVs from data/scored/"
   for f in vina gnina gnina_multiseed boltz mmgbsa qsar paralog; do
     [ -f data/scored/${f}_scores.csv ] \
-      || { echo "ERROR: data/scored/${f}_scores.csv missing — run: bash setup/fetch_data.sh --include-poses"; exit 1; }
+      || { echo "ERROR: data/scored/${f}_scores.csv missing - run: bash setup/fetch_data.sh --include-poses"; exit 1; }
   done
 else
   # ─── Stage 2: scoring (full mode) ─────────────────────────────

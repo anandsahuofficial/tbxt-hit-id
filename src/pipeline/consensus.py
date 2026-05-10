@@ -1,7 +1,7 @@
 """
 Aggregate signals from all strategies into a single consensus Tier-A list.
 
-Inputs (all optional — uses what's available):
+Inputs (all optional - uses what's available):
   --multiseed-csv        : data/full_pool_gnina_F_multiseed/dock_results_multiseed.csv
   --site-a-csv           : data/full_pool_gnina_A/dock_results_gnina.csv
   --boltz-csv            : data/boltz/full_pool_summary.csv

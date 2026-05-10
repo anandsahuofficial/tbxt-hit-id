@@ -6,8 +6,8 @@ Usage:
   python scripts/dock_ensemble.py --smiles-csv input.csv --site F --out-dir out/
 
 Outputs:
-  out/<receptor>/dock_results.csv  — per-receptor scores
-  out/ensemble_summary.csv         — per-compound consensus (mean, median, min, count_negative)
+  out/<receptor>/dock_results.csv  - per-receptor scores
+  out/ensemble_summary.csv         - per-compound consensus (mean, median, min, count_negative)
 """
 import argparse
 import csv

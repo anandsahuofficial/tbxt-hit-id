@@ -1,5 +1,5 @@
 """
-Strategy 9 (synthesis) — combine all orthogonal signals into a Tier-A ranking.
+Strategy 9 (synthesis) - combine all orthogonal signals into a Tier-A ranking.
 
 Inputs:
   data/analogs/all_candidates.csv          (503 enumerated analogs)
@@ -8,7 +8,7 @@ Inputs:
   data/qsar/predictions_analogs.csv        (QSAR pKd for the 503 enumerated)
   data/generative/generative_proposals.csv (QSAR pKd for the 67 generative)
   [optional] data/boltz/boltz_summary.csv  (Boltz-2 affinity for top picks)
-  data/dock/ensemble_summary.csv           (per-receptor ensemble scores — only on pre-set)
+  data/dock/ensemble_summary.csv           (per-receptor ensemble scores - only on pre-set)
   data/selectivity/site_F_residue_matrix.csv  (TBXT-unique residue list)
 
 Outputs:
@@ -53,7 +53,7 @@ def main():
     else:
         print(f"GNINA scores: NOT YET (waiting on {gnina_csv})")
 
-    # 3. QSAR scores — analogs
+    # 3. QSAR scores - analogs
     qsar = {}
     for r in load_csv(DATA / "qsar" / "predictions_analogs.csv"):
         qsar[r["id"]] = r
@@ -117,7 +117,7 @@ def main():
 
     # 6. Tier-A filter
     if not gnina:
-        print("\nGNINA not done yet — Tier-A filtering skipped. Run again after GNINA completes.")
+        print("\nGNINA not done yet - Tier-A filtering skipped. Run again after GNINA completes.")
         return
 
     def f_or_none(v):

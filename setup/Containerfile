@@ -1,4 +1,4 @@
-# tbxt-hit-id — all-batteries-included CUDA container.
+# tbxt-hit-id - all-batteries-included CUDA container.
 #
 # Build:
 #   docker build -f setup/Containerfile -t tbxt-hit-id:dev .
@@ -74,7 +74,7 @@ RUN $ENV_DIR/bin/pip install --no-deps --force-reinstall \
     && $ENV_DIR/bin/pip cache purge
 
 # ─── GNINA binary (Linux-only, glibc 2.35 from Ubuntu 22.04 base) ──
-# This is the single biggest reason to ship a container — no glibc
+# This is the single biggest reason to ship a container - no glibc
 # headaches on older HPC.
 RUN wget -qO /opt/gnina \
         https://github.com/gnina/gnina/releases/download/v1.0/gnina \

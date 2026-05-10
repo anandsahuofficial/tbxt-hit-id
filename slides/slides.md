@@ -1,5 +1,5 @@
 <!--
-slides.md — judges-facing deck delivered at the
+slides.md - judges-facing deck delivered at the
 TBXT Hit Identification Hackathon (Pillar VC, Boston, 2026-05-09).
 
 Render to PDF:
@@ -7,13 +7,13 @@ Render to PDF:
 (or via Marp CLI:  marp slides.md -o slides.pdf)
 
 Structure: three judging axes drive the narrative.
-  AXIS 1 — Scientific rationale (target, pipeline, filter chain)
-  AXIS 2 — Compound quality      (4 picks: overview + per-pick)
-  AXIS 3 — Hit ID judgment        (tradeoffs, cross-val, expectations)
+  AXIS 1 - Scientific rationale (target, pipeline, filter chain)
+  AXIS 2 - Compound quality      (4 picks: overview + per-pick)
+  AXIS 3 - Hit ID judgment        (tradeoffs, cross-val, expectations)
 
 Image assets in this folder:
-  architecture.png   — pipeline overview
-  renders/*.png      — 2D structures + 3D pose images for each pick
+  architecture.png   - pipeline overview
+  renders/*.png      - 2D structures + 3D pose images for each pick
 -->
 ---
 marp: true
@@ -173,17 +173,17 @@ Why these methods, why this target, why these 137 candidates.
 
 <span class="axis">Axis 1</span>
 
-- TBXT G177D (Brachyury) — chordoma's master transcription factor and lineage-defining oncogenic driver
+- TBXT G177D (Brachyury) - chordoma's master transcription factor and lineage-defining oncogenic driver
 - G177D variant (`rs2305089`) is present in &gt; 90% of Western chordoma cases
-- Site F pocket directly engages D177 — the variant residue itself
+- Site F pocket directly engages D177 - the variant residue itself
 - G177 is 0% conserved across the 16 T-box paralogs &nbsp;⇒&nbsp; structural basis for intrinsic selectivity
-- Receptor: PDB `6F59` chain A (G177D + DNA construct — matches CF Labs SPR assay)
+- Receptor: PDB `6F59` chain A (G177D + DNA construct - matches CF Labs SPR assay)
 
 > Why site F: TEP-recommended · all best Naar SPR binders predicted at site F · TBXT-unique residues anchor selectivity
 
 ---
 
-## The pipeline — 6 orthogonal signals
+## The pipeline - 6 orthogonal signals
 
 <span class="axis">Axis 1</span>
 
@@ -196,7 +196,7 @@ Why these methods, why this target, why these 137 candidates.
 | MMGBSA single-snapshot (top 30) | Free-energy refinement |
 | T-box paralog selectivity (16 paralogs) | Off-target risk |
 
-> Each signal has a known failure mode — caught by another signal in the stack
+> Each signal has a known failure mode - caught by another signal in the stack
 
 ---
 
@@ -259,7 +259,7 @@ The 4 picks: properties, evidence, and chemistry.
 
 ---
 
-## Pick 1 — `FM002150_analog_0083`
+## Pick 1 - `FM002150_analog_0083`
 
 <span class="axis a2">Axis 2</span>
 
@@ -270,7 +270,7 @@ The 4 picks: properties, evidence, and chemistry.
 - Strongest predicted Boltz Kd (3.2 µM) of any 100%-onepot non-covalent compound; dual-engine 1.02× agreement
 - Phenoxyacetic acid + thiophene; carboxylate H-bonds Y88 / D177 (variant residue)
 - Cheapest + lowest-risk of the 4: <span class="pill good">$125 · low/low</span>
-- MW 248.3 · LogP 3.02 · HBD 1 · HBA 4 — clean lead-like profile
+- MW 248.3 · LogP 3.02 · HBD 1 · HBA 4 - clean lead-like profile
 
 </div>
 <div class="figure">
@@ -281,7 +281,7 @@ The 4 picks: properties, evidence, and chemistry.
 
 ---
 
-## Pick 2 — `FM001452_analog_0104`
+## Pick 2 - `FM001452_analog_0104`
 
 <span class="axis a2">Axis 2</span>
 
@@ -289,9 +289,9 @@ The 4 picks: properties, evidence, and chemistry.
 <div>
 
 - SMILES: `Cc1ccccc1COc1cccc(N)c1`
-- Cleanest medchem in the pool — minimal heteroatom decoration
+- Cleanest medchem in the pool - minimal heteroatom decoration
 - Methyl-phenyl-CH₂-O-aniline; aniline-N H-bonds D177
-- Mass-efficient (MW 213.3) — best fragment-like starting point for SAR
+- Mass-efficient (MW 213.3) - best fragment-like starting point for SAR
 - Boltz Kd 3.7 / 4.97 µM (1.34×) · <span class="pill">$250 · med/med</span>
 
 </div>
@@ -303,7 +303,7 @@ The 4 picks: properties, evidence, and chemistry.
 
 ---
 
-## Pick 3 — `FM001452_analog_0201`
+## Pick 3 - `FM001452_analog_0201`
 ### urea / benzyl ether for R174 + D177
 
 <span class="axis a2">Axis 2</span>
@@ -326,7 +326,7 @@ The 4 picks: properties, evidence, and chemistry.
 
 ---
 
-## Pick 4 — `FM001452_analog_0171`
+## Pick 4 - `FM001452_analog_0171`
 ### pyridyl selectivity probe
 
 <span class="axis a2">Axis 2</span>
@@ -335,9 +335,9 @@ The 4 picks: properties, evidence, and chemistry.
 <div>
 
 - SMILES: `Nc1cccc(OCc2ccc(-c3ccncc3)cc2)c1`
-- Pyridyl introduces basic-N for selectivity probing — may differentiate TBXT from T-box paralogs
+- Pyridyl introduces basic-N for selectivity probing - may differentiate TBXT from T-box paralogs
 - Highest prob_binder (0.46) of the 4
-- Tightest dual-engine Boltz agreement (1.02×) — most reproducible Kd prediction
+- Tightest dual-engine Boltz agreement (1.02×) - most reproducible Kd prediction
 - <span class="pill">$250 · med/med</span> · LogP 3.91
 
 </div>
@@ -368,7 +368,7 @@ What we chose, what we didn't, and what to actually expect.
 - Rowan pose-analysis MD (explicit-solvent, 5 ns × 1 traj + 1 ns equil): protein-ligand RMSD trajectories captured per pick
 - Onepot.ai catalog (muni `onepot` tool): all 4 at similarity = 1.000 with price + chemistry_risk + supplier_risk
 
-> Every pick is supported by multiple independent lines of evidence — not a single-score gamble.
+> Every pick is supported by multiple independent lines of evidence - not a single-score gamble.
 
 ---
 
@@ -376,9 +376,9 @@ What we chose, what we didn't, and what to actually expect.
 
 <span class="axis a3">Axis 3</span>
 
-- All 4 site F — gives up site-A diversity. Defensible: the 100%-onepot non-covalent constraint dominated, and the strongest catalog-resident chemotype is site-F by structural heritage. Site-A backups are kept in our broader 24-compound submission for the experimental program.
-- T1 GOLD tier intentionally empty — no compound simultaneously hits Kd ≤ 5 µM AND low/low risk. We surface this honestly rather than overclaim.
-- Chemotype dominance (one family in 3 of 4 picks) is not artificially diversified — the catalog × binding-evidence intersection naturally selects this family. Our 20 additional submissions widen the chemotype envelope.
+- All 4 site F - gives up site-A diversity. Defensible: the 100%-onepot non-covalent constraint dominated, and the strongest catalog-resident chemotype is site-F by structural heritage. Site-A backups are kept in our broader 24-compound submission for the experimental program.
+- T1 GOLD tier intentionally empty - no compound simultaneously hits Kd ≤ 5 µM AND low/low risk. We surface this honestly rather than overclaim.
+- Chemotype dominance (one family in 3 of 4 picks) is not artificially diversified - the catalog × binding-evidence intersection naturally selects this family. Our 20 additional submissions widen the chemotype envelope.
 
 ---
 
@@ -386,7 +386,7 @@ What we chose, what we didn't, and what to actually expect.
 
 - Code, scoring outputs, and per-pick rationale are version-controlled and reproducible from a single setup command
 - Every one of the 137 strict-pass candidates carries per-criterion pass/fail flags for full audit
-- 24 compounds queued for the experimental program — 4 presented today, 20 additional first-batch
+- 24 compounds queued for the experimental program - 4 presented today, 20 additional first-batch
 - Full bundle (CSVs, poses, rendered structures, evidence files) available on request
 
 ---
@@ -395,17 +395,17 @@ What we chose, what we didn't, and what to actually expect.
 
 <div class="row3">
 <div class="kpi">
-  <div class="label" style="color:#0b5fff">Axis 1 — what we did</div>
+  <div class="label" style="color:#0b5fff">Axis 1 - what we did</div>
   <div class="value" style="font-size:1.0em;line-height:1.25">6 orthogonal signals + 7-criterion strict gate</div>
   <div class="sub">570 → 137 strictly compliant candidates</div>
 </div>
 <div class="kpi">
-  <div class="label" style="color:#0a8a4a">Axis 2 — what we picked</div>
+  <div class="label" style="color:#0a8a4a">Axis 2 - what we picked</div>
   <div class="value" style="font-size:1.0em;line-height:1.25;color:#0a8a4a">4 picks · 100% onepot · non-covalent · site F</div>
   <div class="sub">best Boltz Kd 3.2 µM · $875 to source all 4</div>
 </div>
 <div class="kpi">
-  <div class="label" style="color:#b15c00">Axis 3 — how we judged ourselves</div>
+  <div class="label" style="color:#b15c00">Axis 3 - how we judged ourselves</div>
   <div class="value" style="font-size:1.0em;line-height:1.25;color:#b15c00">Cross-validated, honest about expectations</div>
   <div class="sub">realistic SPR window 18–200 µM</div>
 </div>
@@ -415,9 +415,9 @@ What we chose, what we didn't, and what to actually expect.
 
 ### Take-aways for judges
 
-- A defensible, multi-signal pipeline — not a single-score gamble, every pick is corroborated
-- A strict, organizer-aligned hard gate — chordoma rule, non-covalent, novelty, lead-likeness, all enforced
-- Calibrated confidence — best-case Kd predictions surfaced, public-method over-prediction acknowledged
+- A defensible, multi-signal pipeline - not a single-score gamble, every pick is corroborated
+- A strict, organizer-aligned hard gate - chordoma rule, non-covalent, novelty, lead-likeness, all enforced
+- Calibrated confidence - best-case Kd predictions surfaced, public-method over-prediction acknowledged
 
 > Our 4 picks are the strongest catalog-resident, novel, non-covalent compounds that survive every constraint we believe a TBXT hit must satisfy.
 

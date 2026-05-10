@@ -3,8 +3,8 @@ Prepare an ensemble of TBXT receptor conformations for docking.
 
 Conformations:
   6F59 chain A: G177D + DNA (current default; KEEP existing prep)
-  6F59 chain B: G177D + DNA, dimer partner — may have different site F geometry
-  6F58 chain A: WT (G177) + DNA — for sanity comparison
+  6F59 chain B: G177D + DNA, dimer partner - may have different site F geometry
+  6F58 chain A: WT (G177) + DNA - for sanity comparison
   5QS9 chain A: G177D apo, fragment-bound at sites A-E
   5QSA chain A: WT apo, FM001580 (K2P) bound at site F
   5QSI chain A: WT apo, FM001452 (O1D) bound at site F

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-onepot_query.py — Playwright skeleton to submit SMILES queries to onepot.ai
+onepot_query.py - Playwright skeleton to submit SMILES queries to onepot.ai
 =============================================================================
 
 WHAT THIS DOES
@@ -44,7 +44,7 @@ EXAMPLE INVOCATIONS
     # Background / headless once selectors are confirmed:
     python scripts/team/onepot_query.py --headless --depth balanced
 
-ETHICAL NOTE — PLEASE READ BEFORE RUNNING AT SCALE
+ETHICAL NOTE - PLEASE READ BEFORE RUNNING AT SCALE
 --------------------------------------------------
 onepot.ai went out of its way to encrypt user SMILES end-to-end so that
 even *their own* server cannot see the molecules a user is querying. That
@@ -88,7 +88,7 @@ from typing import Iterable
 
 
 # ---------------------------------------------------------------------------
-# SELECTORS — TODO(user): confirm these against the live site before running
+# SELECTORS - TODO(user): confirm these against the live site before running
 # ---------------------------------------------------------------------------
 # How to confirm:
 #   1. Open https://www.onepot.ai/ in Chrome (logged out is fine).
@@ -104,10 +104,10 @@ from typing import Iterable
 SMILES_INPUT_SELECTOR = 'input[placeholder*="SMILES" i]'
 
 # Submit button. Site has no Quick/Balanced/Comprehensive selector on the
-# homepage — depth defaults to "Balanced" (returns up to 50 results).
+# homepage - depth defaults to "Balanced" (returns up to 50 results).
 SUBMIT_BUTTON_SELECTOR = 'button:has-text("Start Synthesis")'
 
-# Depth selector — NOT exposed on the homepage; site default is "balanced"
+# Depth selector - NOT exposed on the homepage; site default is "balanced"
 # (50 results). The --depth flag is currently a no-op; left in place for
 # forward-compat if the site adds an explicit selector later.
 DEPTH_BUTTON_SELECTOR_TEMPLATE = ''  # not used
@@ -217,7 +217,7 @@ def submit_one(page, smiles: str, depth: str, max_wait_s: int) -> dict:
     # 1. Navigate fresh each time so we don't carry state between queries.
     page.goto("https://www.onepot.ai/", wait_until="domcontentloaded")
 
-    # 2. Wait for the SPA to be interactive — the SMILES input must exist.
+    # 2. Wait for the SPA to be interactive - the SMILES input must exist.
     page.wait_for_selector(SMILES_INPUT_SELECTOR, timeout=20_000)
 
     # 3. React-friendly fill sequence (verified). Direct .fill() leaves the
@@ -249,7 +249,7 @@ def submit_one(page, smiles: str, depth: str, max_wait_s: int) -> dict:
     # 5. Submit the form.
     page.locator(SUBMIT_BUTTON_SELECTOR).click(timeout=10_000)
 
-    # 6. Wait for results — page renders in-place (no URL change).
+    # 6. Wait for results - page renders in-place (no URL change).
     deadline = time.time() + max_wait_s
     found = False
     no_results = False
@@ -360,7 +360,7 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
         "--rate-limit-s",
         type=float,
         default=10.0,
-        help="Sleep between submissions (be polite — site uses E2E crypto).",
+        help="Sleep between submissions (be polite - site uses E2E crypto).",
     )
     p.add_argument(
         "--max-wait-s",
@@ -489,7 +489,7 @@ def main(argv: Iterable[str] | None = None) -> int:
                     flush=True,
                 )
 
-                # Polite pacing — don't hammer the SPA.
+                # Polite pacing - don't hammer the SPA.
                 if i < len(todo):
                     time.sleep(args.rate_limit_s)
 

@@ -39,7 +39,7 @@ pool produces a per-compound pose-stability σ for the top-pose centroid.
 - σ &gt; 0.20 Å indicates a brittle pose that the CNN happens to like
 
 Pick #4 (`FM001452_analog_0171`) is in the most-stable subset of site-F
-picks — its top pose reproduces across all 10 seeds within < 0.05 Å.
+picks - its top pose reproduces across all 10 seeds within < 0.05 Å.
 
 ## 3. ADMET re-rank (Rowan)
 
@@ -65,12 +65,12 @@ in the broader 570-compound pool) is in
 
 Five overnight HPC variants of the pipeline were run as additional
 cross-validation. Per-variant outputs are in
-[`variants/`](variants/) — see that folder's README for what each
+[`variants/`](variants/) - see that folder's README for what each
 variant tested.
 
 ## What was attempted but not delivered
 
-See [`md_attempt_log.md`](md_attempt_log.md) — explicit-solvent
+See [`md_attempt_log.md`](md_attempt_log.md) - explicit-solvent
 pose-analysis MD was attempted on the top 4 picks but did not complete
 in the available compute window. Documented honestly rather than
 silently dropped.

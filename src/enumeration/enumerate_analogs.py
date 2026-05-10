@@ -2,12 +2,12 @@
 Analog enumeration for TBXT priority scaffolds.
 
 Three approaches combined:
-  1. BRICS decomposition + recombination — fragment-shuffle the elaborated scaffolds
+  1. BRICS decomposition + recombination - fragment-shuffle the elaborated scaffolds
      using RDKit's BRICS module. Best for large compounds like Z795991852.
-  2. Reaction-SMARTS bioisostere swaps — apply chemistry-aware substitutions
+  2. Reaction-SMARTS bioisostere swaps - apply chemistry-aware substitutions
      (carboxylate → amide/sulfonamide/tetrazole; phenyl → pyridyl; etc.). Best for
      small fragments where we want "same pharmacophore, different atom".
-  3. R-group attachment — grow small fragments by attaching curated R-groups at
+  3. R-group attachment - grow small fragments by attaching curated R-groups at
      aromatic/aliphatic positions.
 
 Filters applied to all candidates:
@@ -15,13 +15,13 @@ Filters applied to all candidates:
   • Relaxed lead-like rule: Chordoma hard + HA ≤ 35 + rings ≤ 6 + fused ≤ 2 + no PAINS
   • Tanimoto < 0.85 to ALL Naar (avoid duplication)
   • Tanimoto > 0.40 to parent (preserve binding signal)
-  • Onepot 7-reaction retro check is heuristic only — assume the on-day Onepot lookup
+  • Onepot 7-reaction retro check is heuristic only - assume the on-day Onepot lookup
     is the authoritative filter; we just bias toward common synthesizable motifs.
 
 Outputs:
-  data/analogs/<scaffold_id>_candidates.csv — per-scaffold pool (capped ~200)
-  data/analogs/all_candidates.csv          — combined master pool
-  data/analogs/enumeration_log.txt         — provenance + counts
+  data/analogs/<scaffold_id>_candidates.csv - per-scaffold pool (capped ~200)
+  data/analogs/all_candidates.csv          - combined master pool
+  data/analogs/enumeration_log.txt         - provenance + counts
 """
 import csv
 import logging
@@ -42,7 +42,7 @@ DATA = Path(__file__).resolve().parents[1] / "data"
 OUT = DATA / "analogs"
 OUT.mkdir(exist_ok=True)
 
-# Priority scaffolds — see FINDINGS.md / PROGRESS.md for selection rationale
+# Priority scaffolds - see FINDINGS.md / PROGRESS.md for selection rationale
 SCAFFOLDS = {
     "Z795991852": ("Cn1c(=O)c2ccccc2n2c(COC(=O)c3cccc(NC(=O)C4Cc5ccccc5O4)c3)nnc12",
                    "BRICS",
@@ -406,7 +406,7 @@ def main():
                 w = csv.DictWriter(f, fieldnames=cols)
                 w.writeheader()
                 w.writerows(candidates)
-        log_lines.append(f"## {sid} ({method}) — {comment}")
+        log_lines.append(f"## {sid} ({method}) - {comment}")
         log_lines.append(f"- Parent SMILES: `{smi}`")
         for k, v in stats.items():
             log_lines.append(f"- {k}: {v}")

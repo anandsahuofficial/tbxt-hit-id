@@ -1,4 +1,4 @@
-# tbxt-hit-id — single-command environment spec.
+# tbxt-hit-id - single-command environment spec.
 #
 # Create:
 #   conda env create -f environment.yml
@@ -14,7 +14,7 @@
 #   - For GPU runs: conda installs PyTorch CPU; the pip layer upgrades
 #     to the matching CUDA wheel if `nvidia-smi` is available
 #     (handled by setup/fetch_data.sh on first run).
-#   - GNINA is shipped as a binary, not via conda — see setup/HPC.md.
+#   - GNINA is shipped as a binary, not via conda - see setup/HPC.md.
 
 name: tbxt-hit-id
 channels:
@@ -76,6 +76,6 @@ dependencies:
   - pip:
     - boltz                    # Boltz-2 co-folding
     - playwright               # used by tools/render_slides.py for slide PDFs
-    - markdown                 # same — Markdown -> HTML for the renderer
+    - markdown                 # same - Markdown -> HTML for the renderer
     - pubchempy                # used by enumeration scripts
     - molfeat                  # additional descriptor backends

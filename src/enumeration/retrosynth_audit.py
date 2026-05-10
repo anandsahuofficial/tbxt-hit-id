@@ -1,9 +1,9 @@
 """
-Audit a candidate pool for onepot 7-reaction synthesizability — ADVISORY ONLY.
+Audit a candidate pool for onepot 7-reaction synthesizability - ADVISORY ONLY.
 
 ⚠ KNOWN LIMITATION: This script is currently OVER-CONSERVATIVE because the
 SMARTS templates count bonds INSIDE fused heteroaromatic ring systems as
-"uncovered" — but those bonds are part of BUILDING BLOCKS in onepot's
+"uncovered" - but those bonds are part of BUILDING BLOCKS in onepot's
 enumeration, not products of the 7 diversification reactions. So a "red"
 verdict from this script does NOT mean the compound is unsynthesizable; it
 just means the script's coverage logic isn't sophisticated enough to recognize
@@ -17,7 +17,7 @@ useful for:
     (n_amide, n_suzuki, n_buchwald, ... columns)
   - Flagging compounds with NO recognizable onepot reactions at all
     (those would be the most concerning, even with limitations)
-  - Identifying sulfonamides (NOT in onepot's listed 7 — flagged separately)
+  - Identifying sulfonamides (NOT in onepot's listed 7 - flagged separately)
 
 Onepot's 3.4B-compound enumeration uses these 7 reactions:
   1. Amide coupling
@@ -44,12 +44,12 @@ from rdkit.Chem import AllChem
 
 # Retrosynthetic SMARTS for each reaction's product bond.
 # Each entry: (reaction_name, product_SMARTS pattern matching the formed bond).
-# These are pragmatic "what does the resulting bond look like" patterns —
+# These are pragmatic "what does the resulting bond look like" patterns -
 # imperfect but conservative enough for screening.
 REACTION_PATTERNS = [
     # Amide coupling: R-C(=O)-N(R')(R'')
     ("amide_coupling",         "[#6]C(=O)[N;!$(N=*);!$(NC=O)]"),
-    # Sulfonamide formation (technically NOT in onepot's listed 7 reactions —
+    # Sulfonamide formation (technically NOT in onepot's listed 7 reactions -
     # but we flag separately so callers can choose to allow or reject)
     ("sulfonamide_formation",  "[#6]S(=O)(=O)N"),
     # Suzuki–Miyaura: aryl–aryl C–C bond
@@ -60,9 +60,9 @@ REACTION_PATTERNS = [
     ("urea_synthesis",         "N[C;X3](=O)N"),
     # Thiourea: N-C(=S)-N
     ("thiourea_synthesis",     "N[C;X3](=S)N"),
-    # N-alkylation (sp3 C–N) — broad
+    # N-alkylation (sp3 C–N) - broad
     ("n_alkylation",           "[CX4][N;!$(N=*);!$(NC=O);!$(NS(=O)(=O))]"),
-    # O-alkylation (sp3 C–O–C) — broad
+    # O-alkylation (sp3 C–O–C) - broad
     ("o_alkylation",           "[CX4]O[#6;!$(C=O)]"),
 ]
 
@@ -107,10 +107,10 @@ def classify(smiles):
         bond = mol.GetBondBetweenAtoms(i, j)
         if bond is None: continue
         if bond.GetIsAromatic() and a1.GetIsAromatic() and a2.GetIsAromatic():
-            # in-ring aromatic bond — formed by ring synthesis, not 7-rxn
+            # in-ring aromatic bond - formed by ring synthesis, not 7-rxn
             continue
         if a1.GetAtomicNum() == 6 and a2.GetAtomicNum() == 6 and not bond.GetIsAromatic():
-            # sp3 C-C — not a target bond for the 7 reactions
+            # sp3 C-C - not a target bond for the 7 reactions
             continue
         if not (a1.GetIsAromatic() or a2.GetIsAromatic() or
                 a1.GetAtomicNum() != 6 or a2.GetAtomicNum() != 6):

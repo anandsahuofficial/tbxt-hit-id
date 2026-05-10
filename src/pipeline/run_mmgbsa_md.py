@@ -1,5 +1,5 @@
 """
-MMGBSA-style binding-energy estimation — FIXED version.
+MMGBSA-style binding-energy estimation - FIXED version.
 
 Builds three SEPARATE OpenMM systems (complex / apo / ligand) and computes the
 potential energy of each in the minimized-complex geometry. This avoids the
@@ -7,7 +7,7 @@ ghost-atom bonded-energy bug in scripts/run_mmgbsa.py.
 
 ΔE_bind = E_complex - E_protein - E_ligand    (kcal/mol)
 
-Single-snapshot — no MD averaging. Suitable for ranking; ~5 min/compound.
+Single-snapshot - no MD averaging. Suitable for ranking; ~5 min/compound.
 
 Usage:
   python run_mmgbsa_fixed.py --smiles-csv <input.csv> --pose-dir <dir>

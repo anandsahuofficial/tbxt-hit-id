@@ -1,4 +1,4 @@
-# `src/` — Pipeline Source
+# `src/` - Pipeline Source
 
 This is the working pipeline. Modules are grouped by stage; the
 [`docs/methodology.md`](../docs/methodology.md) describes the
@@ -9,14 +9,14 @@ each module to the stage it implements.
 
 ```
 src/
-├── enumeration/    — building one-pot virtual catalogs from reactions + reagents
-├── pipeline/       — the six orthogonal scoring signals
-├── filters/        — seven-criterion strict gate (PAINS, motifs, lead-likeness, novelty, solubility)
-├── ranking/        — four-tier classifier
-└── viz/            — pose / structure rendering helpers
+├── enumeration/    - building one-pot virtual catalogs from reactions + reagents
+├── pipeline/       - the six orthogonal scoring signals
+├── filters/        - seven-criterion strict gate (PAINS, motifs, lead-likeness, novelty, solubility)
+├── ranking/        - four-tier classifier
+└── viz/            - pose / structure rendering helpers
 ```
 
-## Stage 0 — enumeration
+## Stage 0 - enumeration
 
 Build the candidate pool. Either drop in your own pool CSV, or use
 these to enumerate one from a building-block library + reaction set.
@@ -30,7 +30,7 @@ these to enumerate one from a building-block library + reaction set.
 | [`enumeration/onepot_reachability.py`](enumeration/onepot_reachability.py) | Per-compound reachability score via the 7 one-pot reactions |
 | [`enumeration/retrosynth_audit.py`](enumeration/retrosynth_audit.py) | Audit retrosynthetic accessibility for a candidate set |
 
-## Stage 1 — receptor preparation
+## Stage 1 - receptor preparation
 
 | Module | Role |
 |---|---|
@@ -38,7 +38,7 @@ these to enumerate one from a building-block library + reaction set.
 | [`pipeline/prep_ensemble.py`](pipeline/prep_ensemble.py) | Sample 6 receptor conformations from short MD relaxation |
 | [`pipeline/define_pockets.py`](pipeline/define_pockets.py) | Define site F + site A grid centroids and box dimensions |
 
-## Stage 2 — six orthogonal scoring signals
+## Stage 2 - six orthogonal scoring signals
 
 These implement the scoring half of the pipeline (see
 [`docs/methodology.md`](../docs/methodology.md) for the design rationale).
@@ -54,7 +54,7 @@ These implement the scoring half of the pipeline (see
 | Paralog selectivity | [`pipeline/paralog_selectivity.py`](pipeline/paralog_selectivity.py) | Per-paralog binding-score gap (16 T-box paralogs) |
 | Alchemical FEP (advisory) | [`pipeline/run_fep.py`](pipeline/run_fep.py) | Single-pose ΔΔG; not used to re-rank |
 
-## Stage 3 — consensus
+## Stage 3 - consensus
 
 | Module | Role |
 |---|---|
@@ -62,25 +62,25 @@ These implement the scoring half of the pipeline (see
 | [`pipeline/consensus.py`](pipeline/consensus.py) | Unweighted-mean consensus + top-quartile flag |
 | [`pipeline/analyze_poses.py`](pipeline/analyze_poses.py) | Per-pick pose summary (interaction map, distances) |
 
-## Stage 4 — strict gate (7 criteria)
+## Stage 4 - strict gate (7 criteria)
 
 | Module | Role |
 |---|---|
-| [`filters/strict_gate.py`](filters/strict_gate.py) | Orchestrates all 7 criteria — outputs a CSV with C1–C7 pass/fail flag columns |
-| [`filters/pains_and_motifs.py`](filters/pains_and_motifs.py) | C5 — PAINS A/B/C + reactive-motif SMARTS |
-| [`filters/onepot_membership.py`](filters/onepot_membership.py) | C1 — onepot.ai 100% catalog match via muni.bio |
+| [`filters/strict_gate.py`](filters/strict_gate.py) | Orchestrates all 7 criteria - outputs a CSV with C1–C7 pass/fail flag columns |
+| [`filters/pains_and_motifs.py`](filters/pains_and_motifs.py) | C5 - PAINS A/B/C + reactive-motif SMARTS |
+| [`filters/onepot_membership.py`](filters/onepot_membership.py) | C1 - onepot.ai 100% catalog match via muni.bio |
 
 The C2–C4 + C7 criteria are implemented inline inside
 `strict_gate.py` because they are short SMARTS / descriptor checks
 that don't merit their own modules.
 
-## Stage 5 — tier classification + ranking
+## Stage 5 - tier classification + ranking
 
 | Module | Role |
 |---|---|
 | [`ranking/tier_classify.py`](ranking/tier_classify.py) | Assigns T1_GOLD / T2_SILVER / T3_BRONZE / T4_RELAXED per [`docs/tier_definitions.md`](../docs/tier_definitions.md); sorts strict-first then by Boltz Kd |
 
-## Stage 6 — visualization
+## Stage 6 - visualization
 
 | Module | Role |
 |---|---|

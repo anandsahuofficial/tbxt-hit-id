@@ -1,5 +1,5 @@
 """
-Multi-seed GNINA docking — averages CNN pose / Vina / pKd scores across N seeds
+Multi-seed GNINA docking - averages CNN pose / Vina / pKd scores across N seeds
 to reduce run-to-run variance.
 
 Usage:

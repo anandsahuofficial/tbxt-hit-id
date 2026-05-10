@@ -3,9 +3,9 @@ Boltz-2 co-folding for TBXT G177D + ligand pairs.
 
 Input: SMILES CSV with columns id, smiles
 Output:
-  data/boltz/<id>.yaml          — Boltz input
-  data/boltz/runs/<id>/         — co-folded structure(s) + confidence + affinity
-  data/boltz/boltz_summary.csv  — per-compound: pLDDT, ipTM, predicted affinity, etc.
+  data/boltz/<id>.yaml          - Boltz input
+  data/boltz/runs/<id>/         - co-folded structure(s) + confidence + affinity
+  data/boltz/boltz_summary.csv  - per-compound: pLDDT, ipTM, predicted affinity, etc.
 """
 import argparse
 import csv
@@ -23,7 +23,7 @@ BOLTZ_OUT.mkdir(exist_ok=True)
 (BOLTZ_OUT / "yaml").mkdir(exist_ok=True)
 (BOLTZ_OUT / "runs").mkdir(exist_ok=True)
 
-# TBXT G177D DBD — extracted directly from 6F59 chain A (PDB residues 41–224, 178 aa).
+# TBXT G177D DBD - extracted directly from 6F59 chain A (PDB residues 41–224, 178 aa).
 # Verified G→D at position 177.
 TBXT_G177D_DBD = (
     "ELRVGLEESELWLRFKELTNEMIVTKNGRRMFPVLKVNVSGLDPNAMYSFLLDFVAADNHRWKYVNGEWVP"

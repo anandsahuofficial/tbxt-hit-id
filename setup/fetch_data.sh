@@ -120,7 +120,7 @@ fi
 # ─── GPU torch upgrade if available ─────────────────────────────────
 if command -v nvidia-smi >/dev/null && nvidia-smi >/dev/null 2>&1; then
   if python -c "import torch; assert torch.cuda.is_available()" 2>/dev/null; then
-    log "torch CUDA already available — skipping torch upgrade"
+    log "torch CUDA already available - skipping torch upgrade"
   else
     log "Upgrading torch to CUDA 12.8 wheel (NVIDIA GPU detected) ..."
     pip install --quiet --force-reinstall --no-deps \

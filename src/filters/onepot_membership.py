@@ -1,10 +1,10 @@
 """
-Onepot library membership filter — to be run on May 9 once organizers provide the lookup interface.
+Onepot library membership filter - to be run on May 9 once organizers provide the lookup interface.
 
 This is a SHIM. The actual interface is unknown until 1:30 pm announcements. Most likely:
-  Option A: Web UI — copy SMILES list, paste, get back in-library subset
-  Option B: REST API — POST SMILES, GET in-library boolean
-  Option C: File-based — provided as bulk catalog SMILES file we filter against locally
+  Option A: Web UI - copy SMILES list, paste, get back in-library subset
+  Option B: REST API - POST SMILES, GET in-library boolean
+  Option C: File-based - provided as bulk catalog SMILES file we filter against locally
 
 This script implements Option C (the most general) and stubs A/B for adaptation on the day.
 """
@@ -49,7 +49,7 @@ def filter_against_catalog_file(candidates_smiles, catalog_path):
 
 
 def filter_against_api(candidates_smiles, api_url):
-    """Option B: query API. Stub — fill in actual API on the day."""
+    """Option B: query API. Stub - fill in actual API on the day."""
     import requests  # noqa
     in_library = []
     not_in = []

@@ -1,4 +1,4 @@
-# Filter Chain — Seven-Criterion Strict Gate
+# Filter Chain - Seven-Criterion Strict Gate
 
 This document defines the seven hard criteria every candidate must
 satisfy to be eligible for the final ranked list. The scoring half
@@ -16,14 +16,14 @@ Hackathon organizers and the experimental program define hard
 constraints (catalog membership, non-covalent, drug-like). Treating
 those as soft penalty terms in a ranking score would let a high-
 confidence compound that fails one constraint outrank a fully
-compliant compound — which is how submissions get disqualified.
+compliant compound - which is how submissions get disqualified.
 
 A strict pass/fail gate makes "compliant or not" a tier-0 decision,
 and ranking happens only over the surviving population.
 
 ## The seven criteria
 
-### C1 — onepot 100% catalog match
+### C1 - onepot 100% catalog match
 
 - **Rule:** Tanimoto similarity = 1.000 against the onepot.ai
   virtual catalog, queried via the muni.bio CLI `onepot` tool.
@@ -34,11 +34,11 @@ and ranking happens only over the surviving population.
   compounds present in the onepot.ai catalog; near-matches require
   re-routing through medchem and are out of scope for the hackathon
   submission window.
-- **Failure mode:** none — the muni.bio API is the authoritative
+- **Failure mode:** none - the muni.bio API is the authoritative
   source. The only ambiguity is canonicalization, which RDKit
   handles deterministically.
 
-### C2 — strictly non-covalent
+### C2 - strictly non-covalent
 
 - **Rule:** the compound contains no SMARTS patterns matching
   reactive electrophiles known to form covalent bonds with cysteine,
@@ -53,9 +53,9 @@ and ranking happens only over the surviving population.
   require kinact/Ki kinetics, not equilibrium SPR Kd).
 - **Notable enforcement:** the `[B]` (any boron) pattern was used
   rather than `[B;!H0]` because boronic acids are reversible
-  covalent binders — even reversible covalency is excluded.
+  covalent binders - even reversible covalency is excluded.
 
-### C3 — Chordoma chemistry rule
+### C3 - Chordoma chemistry rule
 
 - **Rule:** simultaneously
   - MW ≤ 600 Da
@@ -68,7 +68,7 @@ and ranking happens only over the surviving population.
   red flags. A lighter version of Lipinski for a target where
   CNS-leaning permeability is desirable.
 
-### C4 — Lead-like ideal
+### C4 - Lead-like ideal
 
 - **Rule:** simultaneously
   - 10 ≤ heavy atoms ≤ 30
@@ -77,12 +77,12 @@ and ranking happens only over the surviving population.
   - rings &lt; 5
   - fused rings ≤ 2
 - **Why:** lead-likeness anchors the picks to chemistry that has
-  room to grow during hit-to-lead — adding a methyl or a small
+  room to grow during hit-to-lead - adding a methyl or a small
   H-bond donor without immediately violating Lipinski. Compounds
   that already saturate the Chordoma rule (C3) leave no headroom
   for SAR.
 
-### C5 — PAINS + forbidden motifs
+### C5 - PAINS + forbidden motifs
 
 - **Rule:** no SMARTS hit against any of:
   - PAINS A, B, C lists (Baell & Holloway 2010)
@@ -97,22 +97,22 @@ and ranking happens only over the surviving population.
   forbidden motifs catch synthetically tractable but pharmacologically
   fragile chemistry.
 
-### C6 — Novelty (Tanimoto < 0.85 to organizer DBs)
+### C6 - Novelty (Tanimoto < 0.85 to organizer DBs)
 
 - **Rule:** maximum Tanimoto similarity against three reference
   sets is &lt; 0.85:
   - Naar SPR-measured TBXT binders (650 compounds)
   - TEP-suggested fragment list (curated by hackathon TEPs)
-  - `prior_art_canonical` — public TBXT/Brachyury inhibitor
+  - `prior_art_canonical` - public TBXT/Brachyury inhibitor
     literature compounds, canonicalized via RDKit
 - **Why:** the experimental program rewards novel chemotypes, not
   Naar-similar analogs. 0.85 is the hackathon-defined threshold
   above which a compound is considered a Naar lookalike.
 
-### C7 — ESOL log S > -5 (predicted solubility)
+### C7 - ESOL log S > -5 (predicted solubility)
 
 - **Rule:** ESOL-predicted log(S) &gt; -5, where S is in mol/L.
-  This corresponds to ~10 µg/mL aqueous solubility — sufficient for
+  This corresponds to ~10 µg/mL aqueous solubility - sufficient for
   DMSO @ 10 mM stock dilution into aqueous SPR buffer at 50 µM
   working concentration without precipitation.
 - **Why:** SPR assays fail silently when the analyte precipitates,
@@ -139,7 +139,7 @@ After applying all seven criteria to the 570-compound pool:
 | After C7 (ESOL solubility) | **137** |
 
 The "approximate" counts at intermediate steps are because criteria
-are applied as a single set logically, not sequentially — the table
+are applied as a single set logically, not sequentially - the table
 is illustrative of the contribution of each gate, not a literal
 serial filter trace.
 

@@ -12,10 +12,10 @@ Pipeline per compound:
         E_ligand  = nonbonded(ligand only, protein removed)
         ΔE_bind   = E_complex - E_protein - E_ligand
   6. Add a simple Generalized-Born solvation term via OBC GBSA implicit-solvent
-     for ΔG_solv (single-snapshot — no MD averaging, faster than full MD)
+     for ΔG_solv (single-snapshot - no MD averaging, faster than full MD)
   7. Output ΔG_MMGBSA estimate per compound
 
-This is a "single-snapshot MMGBSA" — fast (~minutes per compound on CPU/GPU)
+This is a "single-snapshot MMGBSA" - fast (~minutes per compound on CPU/GPU)
 but noisy compared to MD-averaged MMGBSA. For pre-event validation of the
 toolchain, this is sufficient. On-day use the same pipeline on top 8-15 picks.
 """

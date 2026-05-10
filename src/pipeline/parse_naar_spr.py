@@ -5,7 +5,7 @@ Each file contains 'Data summary' (or ' Data summary' / 'Data summary ' / 'Evalu
 listing per-compound SPR fits across multiple replicate wells.
 
 Strategy:
-  1. Use the 'Data summary' sheet variants — most reliable across the 15 campaigns.
+  1. Use the 'Data summary' sheet variants - most reliable across the 15 campaigns.
   2. Locate columns dynamically by header name: "Compounds" / "Compound ID" / " Compounds",
      "Kinetics Chi²" + "KD (M)" (kinetics fit), "Affinity Chi²" + "KD" (steady-state fit).
   3. For each compound replicate: prefer steady-state Kd when affinity fit Chi² ≤ 5; fall back
@@ -60,7 +60,7 @@ def normalize_id(raw):
 
 def find_data_sheet(wb):
     """Return the most useful sheet for per-compound Kd fits."""
-    # Prefer 'Data summary' variants — most consistent column layout
+    # Prefer 'Data summary' variants - most consistent column layout
     for sn in wb.sheetnames:
         if sn.strip().lower() in ("data summary", "data summary"):
             return sn
@@ -103,7 +103,7 @@ def parse_spr_file(xlsx_path):
     try:
         wb = openpyxl.load_workbook(xlsx_path, data_only=True, read_only=True)
     except Exception as e:
-        print(f"  FAIL load: {xlsx_path.name} — {e}")
+        print(f"  FAIL load: {xlsx_path.name} - {e}")
         return out
 
     sheet_name = find_data_sheet(wb)

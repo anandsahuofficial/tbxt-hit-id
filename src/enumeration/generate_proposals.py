@@ -1,5 +1,5 @@
 """
-Strategy 7 — Generative chemistry via BRICS recombination across the prior-art reservoir.
+Strategy 7 - Generative chemistry via BRICS recombination across the prior-art reservoir.
 
 Approach:
   1. Decompose all 42 TEP fragments + 135 Naar disclosed Sheet compounds + 4 priority
@@ -15,9 +15,9 @@ Approach:
 Why BRICS-recombination counts as "generative":
   - Outputs are novel SMILES not in any existing database (we filter T < 0.85)
   - Fragments come from both validated TBXT binders (Naar) and crystallographically-
-    bound TEP fragments — giving the model a pharmacophore-rich starting set
+    bound TEP fragments - giving the model a pharmacophore-rich starting set
   - BRICSBuild's bond-rule constraints ensure synthesizable connections (mostly
-    amide/ester/aryl-aryl/CH-CH bonds — overlap with Onepot's 7 reactions)
+    amide/ester/aryl-aryl/CH-CH bonds - overlap with Onepot's 7 reactions)
 
 This is not pocket-conditioned (no 3D), but the QSAR scoring is target-specific
 TBXT, which is the closest substitute available without installing pocket-conditioned
@@ -154,7 +154,7 @@ def main():
             fragment_mols.append(m)
     print(f"  Unique BRICS fragments: {len(fragment_mols)}")
 
-    # BRICSBuild — generate novel molecules
+    # BRICSBuild - generate novel molecules
     print("\nBRICS-building novel molecules...")
     t0 = time.time()
     generated = []

@@ -4,7 +4,7 @@ Implements the rules documented in ``docs/filter_chain.md``. Every
 candidate gets per-criterion pass/fail flag columns; the strict-pass
 subset is the rows where every flag is `'✓'`.
 
-This module does not own the *evaluation* of each criterion — those
+This module does not own the *evaluation* of each criterion - those
 live in their own modules under ``src/filters/`` (e.g. PAINS lives
 in ``filters/pains_and_motifs.py``, onepot membership in
 ``filters/onepot_membership.py``). This module is the orchestrator
@@ -64,7 +64,7 @@ def _smarts_match(mol: Chem.Mol, smarts: str) -> bool:
 
 
 def _esol_log_s(mol: Chem.Mol) -> float:
-    """ESOL (Delaney 2004) log(S) — fast solubility predictor."""
+    """ESOL (Delaney 2004) log(S) - fast solubility predictor."""
     logp = Crippen.MolLogP(mol)
     mw = Descriptors.MolWt(mol)
     rotb = Lipinski.NumRotatableBonds(mol)

@@ -8,7 +8,7 @@ table format expected by task8.sh, so downstream consumers don't change.
 Pipeline:
   1. Read candidates CSV (id, smiles columns)
   2. For each candidate AND the reference, compute MMGBSA ΔE on the docked pose
-     (uses scripts/team/run_mmgbsa_fixed.py logic — separate complex/apo/ligand systems)
+     (uses scripts/team/run_mmgbsa_fixed.py logic - separate complex/apo/ligand systems)
   3. ΔΔG = ΔE_candidate − ΔE_reference   (kcal/mol)
   4. Error estimate from short MD jitter (Brownian noise on the minimized geometry)
 

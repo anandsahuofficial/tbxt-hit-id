@@ -14,11 +14,11 @@ Hackathon** (Pillar VC, Boston, 2026-05-09).
 
 The deck is organized around the three judging axes:
 
-1. **Scientific rationale** — target biology, six-signal pipeline,
+1. **Scientific rationale** - target biology, six-signal pipeline,
    pipeline architecture, seven-criterion strict filter
-2. **Compound quality** — picks at a glance + a per-pick deep-dive
+2. **Compound quality** - picks at a glance + a per-pick deep-dive
    slide for each of the four picks (with 2D + 3D pose renders)
-3. **Hit-ID judgment** — cross-validation, tradeoffs we made
+3. **Hit-ID judgment** - cross-validation, tradeoffs we made
 
 Closes with reproducibility, a conclusion slide, and a Q&A slide
 carrying the InChIKey table for the four picks.
@@ -45,9 +45,9 @@ npx @marp-team/marp-cli slides/slides.md -o slides/slides.pdf
 
 For the technical detail behind the deck, see:
 
-- [`docs/methodology.md`](../docs/methodology.md) — six-signal
+- [`docs/methodology.md`](../docs/methodology.md) - six-signal
   scoring pipeline
-- [`docs/filter_chain.md`](../docs/filter_chain.md) — seven-criterion
+- [`docs/filter_chain.md`](../docs/filter_chain.md) - seven-criterion
   strict gate
-- [`docs/tier_definitions.md`](../docs/tier_definitions.md) —
+- [`docs/tier_definitions.md`](../docs/tier_definitions.md) -
   four-tier ranking

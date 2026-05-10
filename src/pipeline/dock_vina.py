@@ -94,7 +94,7 @@ def main():
     sx, sy, sz = g["box_size_A"]
     log.info(f"Site {args.site} grid: center=({cx},{cy},{cz}) size=({sx},{sy},{sz})")
 
-    # Initialize Vina once and reuse — receptor and maps are slow
+    # Initialize Vina once and reuse - receptor and maps are slow
     log.info("Initializing Vina (vina, n_cpu=auto)...")
     v = Vina(sf_name="vina", verbosity=0)
     v.set_receptor(str(RECEPTOR_PDBQT))

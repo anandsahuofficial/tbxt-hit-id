@@ -1,4 +1,4 @@
-# Methodology — Six-Signal Consensus Pipeline
+# Methodology - Six-Signal Consensus Pipeline
 
 This document explains the scoring half of the pipeline: the six
 orthogonal signals that turn a virtual catalog of 570 compounds into
@@ -28,7 +28,7 @@ is allowed to veto a candidate that the rest of the stack endorses.
 - **Protein:** human TBXT (Brachyury), 435 aa, T-box DBD residues 42–219.
 - **Variant:** G177D (`rs2305089`), allele frequency ~0.42, present in
   &gt; 90% of Western chordoma cases.
-- **Receptor structure:** PDB `6F59` chain A — TBXT G177D + DNA. Matches
+- **Receptor structure:** PDB `6F59` chain A - TBXT G177D + DNA. Matches
   the CF Labs SPR construct used by the hackathon experimental program.
 - **Pocket of interest:** site F (Y88 / D177 / L42). The variant
   residue D177 is part of the pocket itself, which makes the pocket
@@ -41,13 +41,13 @@ is allowed to veto a candidate that the rest of the stack endorses.
 
 The 570-compound pool is the union of three sources:
 
-1. **Onepot enumeration** — 7 chordoma-relevant one-pot reactions
+1. **Onepot enumeration** - 7 chordoma-relevant one-pot reactions
    (amide, sulfonamide, urea, reductive amination, Suzuki, ether,
    Buchwald–Hartwig) applied to a building-block library, then
    deduplicated and salted.
-2. **Naar prior-art neighborhood** — Tanimoto-similar analogs of
+2. **Naar prior-art neighborhood** - Tanimoto-similar analogs of
    weak Naar SPR hits, capped at < 0.85 similarity to ensure novelty.
-3. **TEP-suggested fragments** — the hackathon TEPs nominated a small
+3. **TEP-suggested fragments** - the hackathon TEPs nominated a small
    list of fragment scaffolds; we expanded each with single-step SAR.
 
 After deduplication the pool is fixed at exactly 570 unique SMILES,
@@ -64,7 +64,7 @@ which becomes the substrate for every downstream signal.
 - **Per-compound score:** `min(vina_affinity)` across the 6
   conformations. The minimum (most favorable) is used so that one
   compatible receptor conformation is enough to qualify.
-- **Failure mode:** Vina rewards contact maximization — a fragment
+- **Failure mode:** Vina rewards contact maximization - a fragment
   with a long flexible tail that fills volume can score better than
   a more rigid binder with a real H-bond. Caught downstream by GNINA
   CNN re-ranking and Boltz-2 affinity classification.
@@ -93,7 +93,7 @@ which becomes the substrate for every downstream signal.
   available.
 - **Models:** Random Forest + XGBoost regression on Morgan-2 (radius 2,
   nBits 2048) ECFP4 fingerprints. Both report on a held-out 20%
-  validation split with R² ≈ 0.4–0.55 — modest, as expected for
+  validation split with R² ≈ 0.4–0.55 - modest, as expected for
   small-molecule SAR with limited data.
 - **Per-compound output:** ensemble-mean predicted log Kd plus
   per-model standard deviation as an uncertainty estimate.
@@ -158,7 +158,7 @@ signal across the 570-compound pool, invert the QSAR/Boltz/MMGBSA
 signals so that "more positive = better" everywhere, and compute an
 unweighted mean. Compounds in the top quartile of this consensus
 score are then re-run through Boltz-2 and GNINA at higher exhaustiveness
-to confirm — this is the "consensus rerun" step in the architecture
+to confirm - this is the "consensus rerun" step in the architecture
 diagram.
 
 We chose unweighted mean over a learned weighting because the
@@ -170,7 +170,7 @@ and robust to single-signal outliers.
 
 - **No free-energy perturbation (FEP) at scale.** Alchemical FEP was
   attempted as a variant on the top 8 picks (`v4 MMGBSA + alchemical
-  FEP` overnight HPC variant), but the results are advisory only —
+  FEP` overnight HPC variant), but the results are advisory only -
   single-pose FEP is unreliable enough that we did not let it
   re-rank.
 - **No experimental MD pose-validation in the final.** We attempted

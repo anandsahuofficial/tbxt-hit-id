@@ -1,5 +1,5 @@
 """
-TBXT-specific QSAR model — Strategy 1.
+TBXT-specific QSAR model - Strategy 1.
 
 Inputs: data/qsar/naar_kd_dataset.csv  (653 compounds with SMILES + measured pKd)
 Features: Morgan fingerprints (r=2, 2048 bits) + 8 RDKit descriptors
@@ -18,7 +18,7 @@ Validation:
 Held-out testing on:
   - 3 CF Labs hits (Z795991852 10 µM, Z979336988 30 µM, D203-0031 17 µM)
     Note: these ARE in our training set (curated Sheet IDs), so this is leakage check
-  - 3 site F TEP fragments (FM001580, FM001452, FM002150) — never SPR-tested at CF Labs
+  - 3 site F TEP fragments (FM001580, FM001452, FM002150) - never SPR-tested at CF Labs
   - 503-compound analog pool (compare rank vs GNINA)
 
 Outputs:

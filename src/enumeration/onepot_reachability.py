@@ -1,11 +1,11 @@
 """
-Onepot reachability score — retrosynthesis-based.
+Onepot reachability score - retrosynthesis-based.
 
 Per the onepot CORE preprint (arXiv:2601.12603), CORE = enumerate(7 reactions ×
 ~320K building blocks) + ML feasibility filter. Their building-block list is
 proprietary, so we cannot verify CORE membership pre-event. We CAN, however,
 score each candidate on whether it is *retrosynthesizable* via the 7 onepot
-reactions — a necessary condition for being in CORE.
+reactions - a necessary condition for being in CORE.
 
 For each candidate compound:
   1. Apply each of 7 reverse-reaction SMARTS to find disconnection points
