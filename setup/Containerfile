@@ -25,7 +25,7 @@ LABEL org.opencontainers.image.description="Multi-signal computational pipeline 
 LABEL org.opencontainers.image.source="https://github.com/anandsahuofficial/tbxt-hit-id"
 LABEL org.opencontainers.image.url="https://github.com/anandsahuofficial/tbxt-hit-id"
 LABEL org.opencontainers.image.documentation="https://github.com/anandsahuofficial/tbxt-hit-id#readme"
-LABEL org.opencontainers.image.licenses="AGPL-3.0-or-later"
+LABEL org.opencontainers.image.licenses="MIT"
 LABEL org.opencontainers.image.vendor="Anand Sahu and contributors"
 
 # Avoid tzdata interactive prompt and locale weirdness

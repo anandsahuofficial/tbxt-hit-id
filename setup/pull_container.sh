@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 # Pull the all-batteries-included tbxt-hit-id container from GHCR.
 #
 # Output: ./tbxt-hit-id.sif (Apptainer SIF file, ~6-12 GB)

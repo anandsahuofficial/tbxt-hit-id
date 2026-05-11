@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 # Fetch the bulk data assets that are too large for git but required to
 # run the pipeline end-to-end:
 #   - 570-compound novelty-filtered candidate pool (SMILES CSV)

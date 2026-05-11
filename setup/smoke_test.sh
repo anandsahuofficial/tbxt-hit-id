@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 # Smoke test - confirms the local setup is ready for a real pipeline run.
 #
 # Run AFTER:    setup/fetch_receptor.sh + setup/fetch_data.sh

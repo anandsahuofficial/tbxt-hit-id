@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Run PAINS filter on the inventory and write a structured FINDINGS.md.
 """

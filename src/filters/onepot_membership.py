@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Onepot library membership filter - to be run on May 9 once organizers provide the lookup interface.
 

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Parse decrypted Naar SPR XLSX files into a single training set.
 

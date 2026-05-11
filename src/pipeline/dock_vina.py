@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Vina docking pipeline against TBXT G177D (6F59 chain A) at sites F or A.
 

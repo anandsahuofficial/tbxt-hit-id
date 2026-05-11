@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """Render a Marp-style markdown deck to PDF via markdown -> HTML -> Chromium.
 
 This bypasses Marp CLI (which requires Node) by:

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Boltz launcher that monkey-patches torch.load to weights_only=False before
 boltz tries to load its checkpoint. Required for torch 2.6+ where the default

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Boltz-2 co-folding for TBXT G177D + ligand pairs.
 

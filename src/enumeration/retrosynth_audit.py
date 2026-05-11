@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Audit a candidate pool for onepot 7-reaction synthesizability - ADVISORY ONLY.
 

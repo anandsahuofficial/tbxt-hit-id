@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Enumerate compound products from a building-block list using onepot CORE's
 7 reactions (per arXiv:2601.12603). Forward direction.

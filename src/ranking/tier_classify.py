@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """Four-tier ranking of strict-pass candidates.
 
 Implements the tier rules documented in ``docs/tier_definitions.md``::

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Multi-seed GNINA docking - averages CNN pose / Vina / pKd scores across N seeds
 to reduce run-to-run variance.

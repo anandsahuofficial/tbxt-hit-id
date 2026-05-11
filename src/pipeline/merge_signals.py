@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Strategy 9 (synthesis) - combine all orthogonal signals into a Tier-A ranking.
 

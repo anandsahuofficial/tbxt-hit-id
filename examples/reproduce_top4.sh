@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 # Reproduce the top-4 picks end-to-end from a fresh clone.
 #
 # Two modes:

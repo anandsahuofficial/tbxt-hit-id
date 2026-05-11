@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Ensemble docking: dock each compound against all prepped receptor conformations,
 compute consensus scores.

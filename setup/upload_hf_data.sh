@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 # Package the bulk data assets into the layout that `fetch_data.sh`
 # expects, write CHECKSUMS.sha256, and upload everything to a
 # HuggingFace dataset repo.

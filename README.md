@@ -22,6 +22,26 @@ ranked submission.
 > [Rowan](https://labs.rowansci.com) and
 > [onepot.ai](https://www.onepot.ai).
 
+> **Note on history.** This repository is the cleaned, post-hackathon
+> version of the pipeline. The original development repository -
+> including the full commit history from the pre-event build phase and
+> the hackathon weekend - is preserved at
+> [`anandsahuofficial/tbxt-hit-id-dev`](https://github.com/anandsahuofficial/tbxt-hit-id-dev).
+
+---
+
+## Citation
+
+If you use this pipeline or adapt it for your own targets, please cite:
+
+> Sahu, A. and contributors (2026). *tbxt-hit-id: Multi-signal
+> computational pipeline for TBXT (Brachyury) hit identification.*
+> https://github.com/anandsahuofficial/tbxt-hit-id
+
+A machine-readable [`CITATION.cff`](CITATION.cff) is included for
+automated citation tools (GitHub renders this as a "Cite this
+repository" button in the right sidebar).
+
 ---
 
 ## Why this matters
@@ -204,7 +224,7 @@ and cross-validation harness all generalize.
 ```
 tbxt-hit-id/
 ├── README.md                  ← you are here
-├── LICENSE  NOTICE          ← AGPL-3.0-or-later + provenance
+├── LICENSE  NOTICE          ← MIT + provenance
 ├── AUTHORS.md  CITATION.cff
 ├── environment.yml            ← one-command conda env
 │
@@ -323,16 +343,10 @@ all outcomes of this work.
 
 ## License
 
-**[GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later)](LICENSE)**.
-See also [`NOTICE`](NOTICE) for authorship + provenance + the patent
-grant + commercial-use terms.
-
-Short version: you may run, study, copy, modify, and redistribute this
-software, but any derivative or service that incorporates it must
-itself be AGPL-3.0-or-later and ship its full source - including for
-network-accessed services (no SaaS loophole). Asserting patents over
-this work or its methodology terminates your license. For
-non-AGPL commercial licensing, contact the copyright holder.
+MIT - see [`LICENSE`](LICENSE). Use it, adapt it, share it.
+Attribution required; see [`NOTICE`](NOTICE) for the authorship +
+provenance record and [`CITATION.cff`](CITATION.cff) for the
+preferred citation.
 
 ---
 

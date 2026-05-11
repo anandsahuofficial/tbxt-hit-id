@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 # Fetch the TBXT G177D receptor structure (PDB 6F59 chain A) from RCSB.
 #
 # Output: data/receptor/6F59_chainA.pdb

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Define Vina docking grids for sites F and A on the prepped 6F59 chain A receptor.
 

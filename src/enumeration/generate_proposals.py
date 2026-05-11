@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Strategy 7 - Generative chemistry via BRICS recombination across the prior-art reservoir.
 

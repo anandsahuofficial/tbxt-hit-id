@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Analyze docked poses: for each compound + site, parse the top pose and report
 which receptor residues are within 4 Å of any ligand heavy atom.

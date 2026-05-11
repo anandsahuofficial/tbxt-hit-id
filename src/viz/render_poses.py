@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 Generate publication-quality PyMOL renders of docked poses + RDKit 2D structures.
 

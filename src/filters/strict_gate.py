@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """Apply the seven-criterion strict gate to a scored candidate set.
 
 Implements the rules documented in ``docs/filter_chain.md``. Every

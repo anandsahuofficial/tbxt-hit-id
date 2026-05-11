@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2026 Anand Sahu and contributors
 """
 onepot_query.py - Playwright skeleton to submit SMILES queries to onepot.ai
 =============================================================================
