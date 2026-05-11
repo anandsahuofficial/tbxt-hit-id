@@ -5,7 +5,7 @@ Identification Hackathon project (Pillar VC, Boston, 2026-05-09).
 Roles below are grouped by the principal nature of each person's
 contribution.
 
-## Project lead
+## Team Lead
 
 **Anand Sahu** &nbsp;`anandsahuofficial@gmail.com`
 
@@ -70,7 +70,7 @@ assistance (Claude) under **Anand Sahu's** guidance. All scientific
 decisions, parameter choices, judgment calls, and final outputs were
 reviewed and accepted by Anand, who is responsible for all outcomes
 of this work. Earlier commits' `Co-Authored-By: Claude` trailers were
-removed at the project lead's request to consolidate the audit trail
+removed at the team lead's request to consolidate the audit trail
 under the human author.
 
 This is the modern norm for compute-heavy projects with AI tooling

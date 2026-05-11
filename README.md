@@ -284,7 +284,7 @@ A machine-readable [`CITATION.cff`](CITATION.cff) is included.
 
 ## Credits
 
-- **Project lead:** [Anand Sahu](https://github.com/anandsahuofficial) -
+- **Team Lead:** [Anand Sahu](https://github.com/anandsahuofficial) -
   pipeline architecture, methodology, multi-signal consensus
   integration, final pick selection, live demo
 - **Team contributors:** see [`AUTHORS.md`](AUTHORS.md) for the full
@@ -314,9 +314,9 @@ A machine-readable [`CITATION.cff`](CITATION.cff) is included.
 ### AI implementation assistance
 
 Substantial portions of code, scripts, and prose were drafted with
-AI assistance (Claude) under the project lead's direction. All
+AI assistance (Claude) under the team lead's direction. All
 scientific decisions, parameter choices, and final outputs were
-reviewed and accepted by the project lead, who is responsible for
+reviewed and accepted by the team lead, who is responsible for
 all outcomes of this work.
 
 ---

@@ -7,7 +7,7 @@ authors:
   - family-names: "Sahu"
     given-names: "Anand"
     email: "anandsahuofficial@gmail.com"
-    affiliation: "Project lead"
+    affiliation: "Team Lead"
   - given-names: "Rabia"
   - family-names: "M"
     given-names: "Mark"
@@ -47,7 +47,7 @@ abstract: >
   GNINA CNN pose + pKd, TBXT-specific QSAR on 653 measured Naar SPR Kd,
   Boltz-2 generative co-folding, MMGBSA implicit-solvent refinement, and
   T-box paralog selectivity) gated by a 100%-onepot non-covalent + Chordoma
-  chemistry filter chain. Developed by the project lead and team for the
+  chemistry filter chain. Developed by the team lead and team for the
   2026 TBXT Hit Identification Hackathon (Boston, hosted by muni.bio in
   collaboration with Rowan and onepot). The workflow yields 137 fully
   organizer-compliant candidate molecules ranked across 4 tiers, with 4
