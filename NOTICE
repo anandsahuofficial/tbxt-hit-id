@@ -1,0 +1,90 @@
+tbxt-hit-id
+===========
+
+Copyright (c) 2026 Anand Sahu and the contributors listed in
+AUTHORS.md.
+
+First publication: 2026-05-09, in connection with the TBXT Hit
+Identification Hackathon (Pillar VC, Boston, MA).
+
+Licensed under the GNU Affero General Public License v3.0 or later
+(AGPL-3.0-or-later). See LICENSE for the full license text.
+
+------------------------------------------------------------------
+
+Authorship + provenance
+
+The pipeline architecture, methodology, idea conception, and overall
+design of the work in this repository are the original work of
+**Anand Sahu** (anandsahuofficial@gmail.com), with team contributions
+itemized in AUTHORS.md. Authorship is further evidenced by:
+
+  - The git commit history on
+    https://github.com/anandsahuofficial/tbxt-hit-id
+  - The dated tag `v0.1.0` (first public release)
+  - The published companion container image at
+    ghcr.io/anandsahuofficial/tbxt-hit-id
+  - The dated Hugging Face dataset at
+    https://huggingface.co/datasets/anandsahuofficial/tbxt-hit-id-data
+  - The CITATION.cff manifest and AUTHORS.md credit document
+
+These dated, public artifacts collectively establish prior art and
+authorship.
+
+------------------------------------------------------------------
+
+Permitted use
+
+Under AGPL-3.0-or-later you may run, study, copy, modify, and
+redistribute this software, **provided that**:
+
+  1. The original copyright notice and this NOTICE file remain
+     intact in any redistribution or derivative work.
+  2. Any derivative work, modification, or work incorporating any
+     part of this codebase is distributed under the same
+     AGPL-3.0-or-later license, with full source available to all
+     recipients - including users who interact with the derivative
+     work over a network (e.g. as a hosted service or web API).
+  3. No party may claim authorship of the original work, its
+     methodology, or its architectural design. The original work
+     is attributed in AUTHORS.md and the git history.
+
+------------------------------------------------------------------
+
+Patent grant + retaliation
+
+AGPL-3.0-or-later includes an explicit patent grant from
+contributors. Section 11 of the license further provides that any
+contributor or recipient who initiates patent litigation alleging
+that this work or a derivative infringes a patent automatically
+loses their rights under the license. Filing or asserting patents
+covering the original methodology, architecture, or any work
+derived from this codebase against the copyright holders or other
+contributors is not permitted.
+
+------------------------------------------------------------------
+
+Commercial use
+
+This software is licensed under AGPL-3.0-or-later, which is
+**strong copyleft**: commercial use is permitted, but any
+commercial derivative or service that uses or modifies this code
+must:
+
+  1. Be itself licensed under AGPL-3.0-or-later, AND
+  2. Make complete corresponding source code available to all
+     users of the commercial product (including those who interact
+     only over a network).
+
+If you wish to use this work under terms other than
+AGPL-3.0-or-later - including in a closed-source or proprietary
+commercial context - contact the copyright holder
+(anandsahuofficial@gmail.com) to negotiate alternative licensing.
+
+------------------------------------------------------------------
+
+Disclaimer
+
+This work is provided "AS IS", without warranty of any kind, as
+described in the LICENSE file. No part of this software or its
+predictions constitutes medical, regulatory, or clinical advice.

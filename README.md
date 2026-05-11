@@ -204,7 +204,7 @@ and cross-validation harness all generalize.
 ```
 tbxt-hit-id/
 ├── README.md                  ← you are here
-├── LICENSE                    ← MIT
+├── LICENSE  NOTICE          ← AGPL-3.0-or-later + provenance
 ├── AUTHORS.md  CITATION.cff
 ├── environment.yml            ← one-command conda env
 │
@@ -323,8 +323,16 @@ all outcomes of this work.
 
 ## License
 
-MIT - see [`LICENSE`](LICENSE). Use it, adapt it, share it. Attribution
-appreciated.
+**[GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later)](LICENSE)**.
+See also [`NOTICE`](NOTICE) for authorship + provenance + the patent
+grant + commercial-use terms.
+
+Short version: you may run, study, copy, modify, and redistribute this
+software, but any derivative or service that incorporates it must
+itself be AGPL-3.0-or-later and ship its full source - including for
+network-accessed services (no SaaS loophole). Asserting patents over
+this work or its methodology terminates your license. For
+non-AGPL commercial licensing, contact the copyright holder.
 
 ---
 
